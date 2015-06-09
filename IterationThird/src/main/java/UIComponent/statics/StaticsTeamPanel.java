@@ -69,7 +69,7 @@ public void initComponent(){
 			return false;
 		}
 	};
-	numTable=new MyTable(nummodel);
+	numTable=new MyTable(nummodel,0,1);
 	numjsp=new MyScrollPane(numTable);
 	for(int i=0;i<30;i++){
 		nummodel.addRow(new String[]{"as","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1"});
@@ -93,7 +93,7 @@ public void initComponent(){
 			return false;
 		}
 	};
-	rateTable=new MyTable(ratemodel);
+	rateTable=new MyTable(ratemodel,0,-1);
 	ratejsp=new MyScrollPane(rateTable);
 	ratejsp.setBounds(0, 175, 900, 445);
 	 TableColumnModel tcm2 = rateTable.getColumnModel();

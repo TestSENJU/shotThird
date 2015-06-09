@@ -1,6 +1,8 @@
 package UIComponent.statics;
 
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -86,7 +88,7 @@ public void initComponent(){
 			return false;
 		}
 	};
-	numTable=new MyTable(nummodel);
+	numTable=new MyTable(nummodel,0,1);
 	numjsp=new MyScrollPane(numTable);
 	for(int i=0;i<30;i++){
 		nummodel.addRow(new String[]{"1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1"});
@@ -104,7 +106,7 @@ public void initComponent(){
 			return false;
 		}
 	};
-	rateTable=new MyTable(ratemodel);
+	rateTable=new MyTable(ratemodel,0,-1);
 	ratejsp=new MyScrollPane(rateTable);
 	ratejsp.setBounds(0, 135, 900, 445);
 	 TableColumnModel tcm2 = rateTable.getColumnModel();
@@ -247,6 +249,11 @@ public void addComponent(){
 	this.add(rateOption);
 }
 public void setListener(){
+	seasonbox.addActionListener(new ActionListener(){
+		public void actionPerformed(ActionEvent e){
+			
+		}
+	});
 	num.addMouseListener(new MouseAdapter(){
         public void mouseClicked(MouseEvent e){
         	num.setBackground(MyColor.LIGHTBLUE.getColor());

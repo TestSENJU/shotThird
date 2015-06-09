@@ -68,7 +68,7 @@ public void init(){
 		}
 	};
 	initTable();
-	table=new MyTable(model);
+	table=new MyTable(model,1,2);
 	
 	      TableColumnModel tcm = table.getColumnModel();
 	        tcm.getColumn(0).setPreferredWidth(100);

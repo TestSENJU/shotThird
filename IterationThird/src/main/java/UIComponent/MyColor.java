@@ -22,7 +22,7 @@ public enum MyColor{
 	    BLACK(80,51,51),
 	    DARKWHITE(220,220,220),
 	    BLUE(77,137,193),
-	    LIGHTBLUE(232,242,254);
+	    LIGHTBLUE(200,212,254);
 	    
 
 	    private final int r;

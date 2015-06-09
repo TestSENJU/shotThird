@@ -64,7 +64,7 @@ public void initComponent(){
 	loserName.setBounds(320,130,100,30);
 	loserName.setHorizontalAlignment(SwingConstants.CENTER);
 	
-	scoreTable=new MyTable(new String[][]{{"85-112","27-25","29-31","13-25","16-31"}},new String[]{"总比分","第一场","第二场","第三场","第四场"}){
+	scoreTable=new MyTable(new String[][]{{"85-112","27-25","29-31","13-25","16-31"}},new String[]{"总比分","第一场","第二场","第三场","第四场"},0,0){
 		/**
 		 * 
 		 */
@@ -77,7 +77,7 @@ public void initComponent(){
 	scoreTable.getTableHeader().setBounds(70, 180, 375, 20);
 	scoreTable.setBounds(70, 200, 400, 50);
 	
-	playerTable=new MyTable(new String[][]{},new String[]{"","",""});
+	playerTable=new MyTable(new String[][]{},new String[]{"","",""},0,0);
 }
 public void initPanel(){
 	this.setBackground(MyColor.WHITE.getColor());

@@ -82,7 +82,7 @@ public void init(){
 		}
 	};
 	initTable();
-	table=new MyTable(model) {  
+	table=new MyTable(model,1,2) {  
 
 		private static final long serialVersionUID = 1L;
 

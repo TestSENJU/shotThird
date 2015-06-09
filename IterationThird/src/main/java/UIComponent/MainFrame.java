@@ -21,6 +21,7 @@ import javax.swing.border.MatteBorder;
 
 import UIComponent.Match.MatchExplorerPanel;
 import UIComponent.Player.PlayerExplorerPanel;
+import UIComponent.Search.SearchPanel;
 import UIComponent.Team.TeamExplorerPanel;
 import UIComponent.statics.StaticsPanel;
 
@@ -209,7 +210,7 @@ public void setListener(){
 	});
 	statics.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
-			if(!(center.getComponentAt(0,20) instanceof TeamExplorerPanel)){
+			if(!(center.getComponentAt(0,20) instanceof StaticsPanel)){
 					StaticsPanel total=new StaticsPanel();
 					center.remove(center.getComponentAt(200,300));
 		center.add(total);
@@ -219,8 +220,12 @@ public void setListener(){
 	});
 	search.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
-			center.remove(center.getComponentAt(200,300));
-			center.repaint();
+			if(!(center.getComponentAt(0,20) instanceof SearchPanel)){
+				SearchPanel total=new SearchPanel();
+				center.remove(center.getComponentAt(200,300));
+	center.add(total);
+	center.repaint();
+		}
 		}
 	});
 }

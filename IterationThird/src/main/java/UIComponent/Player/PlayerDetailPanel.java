@@ -30,6 +30,8 @@ JLabel rightside;
 JPanel photoPanel;
 ImageIcon icon1,icon2;
 JLabel change1,change2;
+JLabel high,basic,match,compare;
+//TODO
 public PlayerDetailPanel(String playername){
 	this.player=playername;
 
