@@ -19,6 +19,7 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 import javax.swing.border.MatteBorder;
 
+import UIComponent.Home.HomePanel;
 import UIComponent.Match.MatchExplorerPanel;
 import UIComponent.Player.PlayerExplorerPanel;
 import UIComponent.Search.SearchPanel;
@@ -65,16 +66,34 @@ public void init(){
 	closeButton=new CloseButton();
 	first=new JLabel(new ImageIcon("img/home.png"));
 	first.setBounds(20,40 ,60 ,80 );
+	first.setOpaque(true);
+	first.setBackground(MyColor.LIGHTBLUE.getColor());
+	
 	player=new JLabel(new ImageIcon("img/player.png"));
+	player.setOpaque(true);
+	player.setBackground(MyColor.WHITE.getColor());
 	player.setBounds(20,120 ,60 ,80 );
+	
 	team=new JLabel(new ImageIcon("img/team.png"));
 	team.setBounds(20,200 ,60 ,80 );
+	team.setOpaque(true);
+	team.setBackground(MyColor.WHITE.getColor());
+	
 	match=new JLabel(new ImageIcon("img/match.png"));
 	match.setBounds(20,280 ,60 ,80 );
+	match.setOpaque(true);
+	match.setBackground(MyColor.WHITE.getColor());
+	
 	statics=new JLabel(new ImageIcon("img/statics.png"));
 	statics.setBounds(20,360 ,60 ,80 );
+	statics.setOpaque(true);
+	statics.setBackground(MyColor.WHITE.getColor());
+	
 	search=new JLabel(new ImageIcon("img/search.png"));
 	search.setBounds(20,440 ,60 ,80 );
+	search.setOpaque(true);
+	search.setBackground(MyColor.WHITE.getColor());
+	
 	refresh=new JLabel(new ImageIcon("img/refresh.png"));
 //	refresh.setBounds(20,520 ,60 ,80 );
 	
@@ -83,7 +102,10 @@ public void init(){
 	center.setBounds(100, 0, 900, 600);
 	center.setLayout(null);
 	center.setBorder(new MatteBorder(1,1,1,1,MyColor.GREY.getColor()));
-
+	
+	HomePanel home=new HomePanel();
+	   center.add(home);
+	   
 	title=new JPanel();
 	title.setBackground(Color.white);
 	title.setBounds(0, 0, 900, 20);
@@ -118,6 +140,7 @@ public void addComponent(){
    west.add(statics);
 //   west.add(refresh);
    west.add(currentTime);
+
 	center.add(title,0);
 	
 	frame.getContentPane().add(west);
@@ -173,14 +196,36 @@ public void setListener(){
 		 });
 	first.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
-			center.remove(center.getComponentAt(200,300));
-			center.repaint();
+			if(!(center.getComponentAt(0,20) instanceof HomePanel)){
+				player.setBackground(MyColor.WHITE.getColor());
+				team.setBackground(MyColor.WHITE.getColor());
+				first.setBackground(MyColor.WHITE.getColor());
+				search.setBackground(MyColor.WHITE.getColor());
+				match.setBackground(MyColor.WHITE.getColor());
+				statics.setBackground(MyColor.WHITE.getColor());
+				first.setBackground(MyColor.LIGHTBLUE.getColor());
+				
+				HomePanel total=new HomePanel();
+				center.remove(center.getComponentAt(200,300));
+				center.add(total);
+				center.repaint();
+		}
 		}
 	});
 	player.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
 			if(!(center.getComponentAt(0,20) instanceof PlayerExplorerPanel)){
+				player.setBackground(MyColor.WHITE.getColor());
+				team.setBackground(MyColor.WHITE.getColor());
+				first.setBackground(MyColor.WHITE.getColor());
+				search.setBackground(MyColor.WHITE.getColor());
+				match.setBackground(MyColor.WHITE.getColor());
+				statics.setBackground(MyColor.WHITE.getColor());
+				
+				player.setBackground(MyColor.LIGHTBLUE.getColor());
+				
 					PlayerExplorerPanel total=new PlayerExplorerPanel();
+					player.setBackground(MyColor.LIGHTBLUE.getColor());
 					center.remove(center.getComponentAt(200,300));
 					center.add(total);
 					center.repaint();
@@ -190,6 +235,15 @@ public void setListener(){
 	match.addMouseListener(new MouseAdapter(){
           public void mouseClicked(MouseEvent e){
   			if(!(center.getComponentAt(0,20) instanceof MatchExplorerPanel)){
+  				player.setBackground(MyColor.WHITE.getColor());
+				team.setBackground(MyColor.WHITE.getColor());
+				first.setBackground(MyColor.WHITE.getColor());
+				search.setBackground(MyColor.WHITE.getColor());
+				statics.setBackground(MyColor.WHITE.getColor());
+				match.setBackground(MyColor.WHITE.getColor());
+				
+				match.setBackground(MyColor.LIGHTBLUE.getColor());
+				
   				MatchExplorerPanel total=new MatchExplorerPanel();
   				center.remove(center.getComponentAt(200,300));
 			center.add(total);
@@ -200,6 +254,14 @@ public void setListener(){
 	team.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
   			if(!(center.getComponentAt(0,20) instanceof TeamExplorerPanel)){
+  				player.setBackground(MyColor.WHITE.getColor());
+				team.setBackground(MyColor.WHITE.getColor());
+				first.setBackground(MyColor.WHITE.getColor());
+				search.setBackground(MyColor.WHITE.getColor());
+				statics.setBackground(MyColor.WHITE.getColor());
+				team.setBackground(MyColor.LIGHTBLUE.getColor());
+				match.setBackground(MyColor.WHITE.getColor());
+				
   					TeamExplorerPanel total=new TeamExplorerPanel();
   					center.remove(center.getComponentAt(200,300));
 			center.add(total);
@@ -211,6 +273,14 @@ public void setListener(){
 	statics.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
 			if(!(center.getComponentAt(0,20) instanceof StaticsPanel)){
+				player.setBackground(MyColor.WHITE.getColor());
+				team.setBackground(MyColor.WHITE.getColor());
+				first.setBackground(MyColor.WHITE.getColor());
+				search.setBackground(MyColor.WHITE.getColor());
+				statics.setBackground(MyColor.WHITE.getColor());
+				statics.setBackground(MyColor.LIGHTBLUE.getColor());
+				match.setBackground(MyColor.WHITE.getColor());
+				
 					StaticsPanel total=new StaticsPanel();
 					center.remove(center.getComponentAt(200,300));
 		center.add(total);
@@ -221,6 +291,14 @@ public void setListener(){
 	search.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
 			if(!(center.getComponentAt(0,20) instanceof SearchPanel)){
+				player.setBackground(MyColor.WHITE.getColor());
+				team.setBackground(MyColor.WHITE.getColor());
+				first.setBackground(MyColor.WHITE.getColor());
+				search.setBackground(MyColor.WHITE.getColor());
+				statics.setBackground(MyColor.WHITE.getColor());
+				match.setBackground(MyColor.WHITE.getColor());
+				
+				search.setBackground(MyColor.LIGHTBLUE.getColor());
 				SearchPanel total=new SearchPanel();
 				center.remove(center.getComponentAt(200,300));
 	center.add(total);

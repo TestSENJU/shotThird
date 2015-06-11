@@ -1,6 +1,8 @@
 package UIComponent.Search;
 
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -87,6 +89,22 @@ public class SearchMatchPanel extends JPanel{
 		}
 		dayBox1=new MyComboBox(day1);
 		dayBox1.setBounds(310, 5, 40, 25);
+		
+		String[] day2=new String[31];
+		day2[0]=" ";
+		for(int i=1;i<day2.length;i++){
+			day2[i]=i+"";
+		}
+		dayBox2=new MyComboBox(day2);
+		dayBox2.setBounds(310, 5, 40, 25);
+		
+		String[] day3=new String[29];
+		day3[0]=" ";
+		for(int i=1;i<day3.length;i++){
+			day3[i]=i+"";
+		}
+		dayBox3=new MyComboBox(day3);
+		dayBox3.setBounds(310, 5, 40, 25);
 		
 		isAfter=new JLabel("季后赛");
 		isAfter.setForeground(MyColor.BLUE.getColor());
@@ -176,5 +194,44 @@ public class SearchMatchPanel extends JPanel{
     			
     		}
     	});
+    	isAfter.addMouseListener(new MouseAdapter(){
+    		public void mouseClicked(MouseEvent e){
+    			noAfter.setBackground(MyColor.WHITE.getColor());
+    			isAfter.setBackground(MyColor.LIGHTBLUE.getColor());
+    		}
+    	});
+    	noAfter.addMouseListener(new MouseAdapter(){
+    		public void mouseClicked(MouseEvent e){
+    			isAfter.setBackground(MyColor.WHITE.getColor());
+    			noAfter.setBackground(MyColor.LIGHTBLUE.getColor());
+    		}
+    	});
+    	search.addMouseListener(new MouseAdapter(){
+    		public void mouseClicked(MouseEvent e){
+    			
+    		}
+    		public void mouseExited(MouseEvent e){
+    			search.setForeground(MyColor.BLACK.getColor());
+    		}
+    		public void mouseEntered(MouseEvent e){
+    			search.setForeground(MyColor.BLUE.getColor());
+    		}
+    	});
+    	monthBox.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				String month=(String) monthBox.getSelectedItem();
+				if((month.equals("1"))||(month.equals("3"))||(month.equals("5"))||(month.equals("7"))||
+						(month.equals("8"))||(month.equals("10"))||(month.equals("12"))){
+					remove(getComponentAt(310,5));
+					add(dayBox1);
+				}else if((month.equals("4"))||(month.equals("6"))||(month.equals("9"))||(month.equals("11"))){
+					remove(getComponentAt(310,5));
+					add(dayBox2);
+				}else{
+					remove(getComponentAt(310,5));
+					add(dayBox3);
+				}
+			}});
     }
 }

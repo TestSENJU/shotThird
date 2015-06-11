@@ -51,20 +51,18 @@ public void initComponent(){
 	loserIcon.setBounds(320, 20,100,100);
 	
 	winnerName=new JLabel("胜方: ATL");
-	winnerName.setBackground(MyColor.WHITE.getColor());
 	winnerName.setForeground(MyColor.RED.getColor());
 	winnerName.setFont(new Font("黑体",Font.PLAIN,16));
 	winnerName.setBounds(80,130,100,30);
 	winnerName.setHorizontalAlignment(SwingConstants.CENTER);
 	
 	loserName=new JLabel("负方: HOU");
-	loserName.setBackground(MyColor.WHITE.getColor());
 	loserName.setForeground(MyColor.BLACK.getColor());
 	loserName.setFont(new Font("黑体",Font.PLAIN,16));
 	loserName.setBounds(320,130,100,30);
 	loserName.setHorizontalAlignment(SwingConstants.CENTER);
 	
-	scoreTable=new MyTable(new String[][]{{"85-112","27-25","29-31","13-25","16-31"}},new String[]{"总比分","第一场","第二场","第三场","第四场"},0,0){
+	scoreTable=new MyTable(new String[][]{{"85-112","27-25","29-31","13-25","16-31"}},new String[]{"总比分","第一场","第二场","第三场","第四场"},-1,-1){
 		/**
 		 * 
 		 */

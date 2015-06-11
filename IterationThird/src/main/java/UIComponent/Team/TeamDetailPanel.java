@@ -24,6 +24,7 @@ JLabel name;
 JLabel shortName,chineseName,league,gym,date;
 JLabel leftside;
 JLabel rightside;
+JLabel player,high,basic,dayhot,seasonhot,match,compare;
 public TeamDetailPanel(String teamName){
 	this.team=teamName;
 	initComponent();

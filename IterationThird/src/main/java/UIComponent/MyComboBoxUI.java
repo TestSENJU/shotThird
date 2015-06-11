@@ -15,6 +15,7 @@ import javax.swing.JComponent;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
+import javax.swing.border.LineBorder;
 import javax.swing.plaf.basic.BasicComboBoxUI;
 import javax.swing.plaf.basic.BasicComboPopup;
 import javax.swing.plaf.basic.ComboPopup;
@@ -34,9 +35,8 @@ public class MyComboBoxUI extends BasicComboBoxUI {
 		arrow.setIcon(new ImageIcon("img/arrowright.png"));
 		arrow.setRolloverEnabled(true);
 		arrow.setRolloverIcon(new ImageIcon("img/arrowdown.png"));//XUtil.defaultComboBoxArrowIcon_Into
-		arrow.setBorder(null);
-		arrow.setBackground(Color.BLUE);//XUtil.defaultComboBoxColor
-		arrow.setOpaque(false);
+		arrow.setBorder(new LineBorder(MyColor.GREY.getColor()));
+		arrow.setOpaque(true);
 		arrow.setContentAreaFilled(false);
 		return arrow;
 	}
