@@ -120,12 +120,7 @@ public void init(){
 		
 	frame=new JFrame();
 
-	frame.setSize(1000, 600);	
-	frame.setLayout(null);
-	frame.setLocationRelativeTo(null);
-	frame.setUndecorated(true);
-	frame.setVisible(false);
-	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
 }
 public void addComponent(){
 
@@ -145,6 +140,13 @@ public void addComponent(){
 	
 	frame.getContentPane().add(west);
 	frame.getContentPane().add(center);
+	
+	frame.setSize(1000, 600);	
+	frame.setLayout(null);
+	frame.setLocationRelativeTo(null);
+	frame.setUndecorated(true);
+	frame.setVisible(false);
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
 }
 public void setBasicListener(){

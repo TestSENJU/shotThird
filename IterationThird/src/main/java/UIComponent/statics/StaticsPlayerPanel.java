@@ -24,13 +24,15 @@ public class StaticsPlayerPanel extends JPanel{
 	 */
 	private static final long serialVersionUID = 1L;
 	JPanel rateOption;
-	JLabel[] option=new JLabel[14];
+	JLabel[] option=new JLabel[29];
 	JLabel choose;
 	JLabel season;
 	JLabel aver;
 	JLabel all;
 	JLabel current;
 	JLabel after;
+	JLabel isOn;
+	JLabel isNotOn;
 	MyComboBox seasonbox;
 	JLabel num,rate;
 	DefaultTableModel nummodel;
@@ -44,10 +46,11 @@ public class StaticsPlayerPanel extends JPanel{
 	
 	private boolean average=true;
 	private boolean now=true;
-
-	private String[] optionName=new String[]{"得分","篮板","助攻","得分/篮板/助攻",
-			"盖帽","抢断","犯规","失误","分钟","效率","投篮","三分","罚球"
-			,"两双"}; 
+	private boolean on=true;
+	
+	private String[] optionName=new String[]{"得分/篮板/助攻","两双","参赛场数","先发场数","在场时间","投篮命中率"
+			,"三分命中率","罚球命中率","助攻数","篮板数","进攻数","防守数","抢断数","盖帽数","失误数","犯规数"
+			,"得分","效率","GmSc","真实命中率","投篮效率","篮板率","进攻篮板率","防守篮板率","助攻率","抢断率","盖帽率","失误率","使用率"}; 
 	private String[] numTableHeader=new String[]{"名字","所属球队","参赛场数","先发场数","篮板","助攻","在场时间"
 			,"进攻数","防守数","抢断数","盖帽数","失误数","犯规数","得分"};
 	private String rateTableHeader[]=new String[]{"名字","效率","投篮","GmSc ","真实命中","投篮命中","三分命中","罚球命中"
@@ -93,7 +96,7 @@ public void initComponent(){
 	for(int i=0;i<30;i++){
 		nummodel.addRow(new String[]{"1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1"});
 	}
-	numjsp.setBounds(0, 135, 900, 445);
+	numjsp.setBounds(0, 175, 900, 445);
 	 TableColumnModel tcm1 = numTable.getColumnModel();
      tcm1.getColumn(0).setPreferredWidth(120);
 	ratemodel=new DefaultTableModel(null,rateTableHeader){
@@ -108,7 +111,7 @@ public void initComponent(){
 	};
 	rateTable=new MyTable(ratemodel,0,-1);
 	ratejsp=new MyScrollPane(rateTable);
-	ratejsp.setBounds(0, 135, 900, 445);
+	ratejsp.setBounds(0, 175, 900, 445);
 	 TableColumnModel tcm2 = rateTable.getColumnModel();
      tcm2.getColumn(0).setPreferredWidth(120);
      tcm2.getColumn(1).setPreferredWidth(40);
@@ -129,7 +132,7 @@ public void initComponent(){
 	num.setBackground(MyColor.WHITE.getColor());
 	num.setHorizontalAlignment(SwingConstants.CENTER);
 	num.setFont(new Font("黑体",Font.PLAIN,14));
-	num.setBounds(10, 90, 40, 40);
+	num.setBounds(10, 130, 40, 40);
 	
 	rate=new JLabel("%");
 	rate.setForeground(MyColor.BLUE.getColor());
@@ -137,7 +140,7 @@ public void initComponent(){
 	rate.setBackground(MyColor.LIGHTBLUE.getColor());
 	rate.setHorizontalAlignment(SwingConstants.CENTER);
 	rate.setFont(new Font("黑体",Font.PLAIN,14));
-	rate.setBounds(60, 90, 40, 40);
+	rate.setBounds(60, 130, 40, 40);
 
 	season=new JLabel("赛季");
 	season.setForeground(MyColor.BLUE.getColor());
@@ -184,35 +187,62 @@ public void initComponent(){
 	after.setBounds(690, 5, 60, 30);
 	after.setOpaque(true);
 	after.setBackground(MyColor.WHITE.getColor());
+	
+	 isOn=new JLabel("现役");
+	 isOn.setForeground(MyColor.BLUE.getColor());
+	 isOn.setHorizontalAlignment(SwingConstants.CENTER);
+	 isOn.setFont(new Font("黑体",Font.PLAIN,14));
+	 isOn.setBounds(775, 5, 60, 30);
+	 isOn.setOpaque(true);
+	 isOn.setBackground(MyColor.LIGHTBLUE.getColor());
+		
+	isNotOn=new JLabel("退役");
+	isNotOn.setForeground(MyColor.BLUE.getColor());
+	isNotOn.setHorizontalAlignment(SwingConstants.CENTER);
+	isNotOn.setFont(new Font("黑体",Font.PLAIN,14));
+	isNotOn.setBounds(840, 5, 58, 30);
+	isNotOn.setOpaque(true);
+	isNotOn.setBackground(MyColor.WHITE.getColor());
 			
 	choose=new JLabel("排序依据");
 	choose.setForeground(MyColor.BLUE.getColor());
 	choose.setFont(new Font("黑体",Font.PLAIN,14));
 	choose.setBounds(0, 0, 60, 40);
 	
-	for(int i=0;i<3;i++){
+	option[0]=new JLabel(optionName[0]);
+	option[0].setForeground(MyColor.BLACK.getColor());
+	option[0].setFont(new Font("微软雅黑",Font.PLAIN,12));
+	option[0].setOpaque(true);
+	option[0].setBackground(MyColor.WHITE.getColor());
+	option[0].setBounds(60, 0, 100, 40);
+	option[0].setHorizontalAlignment(SwingConstants.CENTER);
+	
+	for(int i=1;i<8;i++){
 		option[i]=new JLabel(optionName[i]);
 		option[i].setForeground(MyColor.BLACK.getColor());
 		option[i].setFont(new Font("微软雅黑",Font.PLAIN,12));
 		option[i].setOpaque(true);
 		option[i].setBackground(MyColor.WHITE.getColor());
-		option[i].setBounds(60+i*50, 0, 50, 40);
+		option[i].setBounds(160+(i-1)*70, 0, 70, 40);
 		option[i].setHorizontalAlignment(SwingConstants.CENTER);
 	}
-	option[3]=new JLabel(optionName[3]);
-	option[3].setForeground(MyColor.BLACK.getColor());
-	option[3].setFont(new Font("微软雅黑",Font.PLAIN,12));
-	option[3].setOpaque(true);
-	option[3].setBackground(MyColor.WHITE.getColor());
-	option[3].setBounds(210, 0, 100, 40);
-	option[3].setHorizontalAlignment(SwingConstants.CENTER);
-	for(int i=4;i<14;i++){
+	for(int i=8;i<14;i++){
 		option[i]=new JLabel(optionName[i]);
 		option[i].setForeground(MyColor.BLACK.getColor());
 		option[i].setFont(new Font("微软雅黑",Font.PLAIN,12));
 		option[i].setOpaque(true);
 		option[i].setBackground(MyColor.WHITE.getColor());
-		option[i].setBounds(310+(i-4)*50, 0, 50, 40);
+		option[i].setBounds(650+(i-8)*50, 0, 50, 40);
+		option[i].setHorizontalAlignment(SwingConstants.CENTER);	
+	}
+	
+	for(int i=14;i<29;i++){
+		option[i]=new JLabel(optionName[i]);
+		option[i].setForeground(MyColor.BLACK.getColor());
+		option[i].setFont(new Font("微软雅黑",Font.PLAIN,12));
+		option[i].setOpaque(true);
+		option[i].setBackground(MyColor.WHITE.getColor());
+		option[i].setBounds(60+(i-14)*70, 40, 70, 40);
 		option[i].setHorizontalAlignment(SwingConstants.CENTER);
 	}
 	
@@ -221,7 +251,7 @@ public void initPanel(){
 
 	rateOption=new JPanel();
 	rateOption.setBackground(MyColor.WHITE.getColor());
-	rateOption.setBounds(0, 40, 900, 40);
+	rateOption.setBounds(0, 40, 900, 80);
 	rateOption.setLayout(null);
 	
 	this.setLayout(null);
@@ -244,11 +274,27 @@ public void addComponent(){
 	this.add(all);
 	this.add(current);
 	this.add(after);
+	this.add(isOn);
+	this.add(isNotOn);
 	this.add(season);
 	this.add(seasonbox);
 	this.add(rateOption);
 }
 public void setListener(){
+	isOn.addMouseListener(new MouseAdapter(){
+		 public void mouseClicked(MouseEvent e){
+			 isOn.setBackground(MyColor.LIGHTBLUE.getColor());
+			 isNotOn.setBackground(MyColor.WHITE.getColor());
+			 on=true;
+			}
+	});
+	isNotOn.addMouseListener(new MouseAdapter(){
+		 public void mouseClicked(MouseEvent e){
+			 isNotOn.setBackground(MyColor.LIGHTBLUE.getColor());
+			 isOn.setBackground(MyColor.WHITE.getColor());
+			 on=false;
+			}
+	});
 	seasonbox.addActionListener(new ActionListener(){
 		public void actionPerformed(ActionEvent e){
 			

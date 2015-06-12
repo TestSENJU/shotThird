@@ -271,7 +271,7 @@ public void initPanel(){
 		    left.setBounds(0, 0, 400, 580);
 }
 public void initFrame(){
-	//left.add(jsp);
+//	left.add(jsp);
 	
 	this.setLayout(null);
 	this.setBounds(0, 20, 900, 580);

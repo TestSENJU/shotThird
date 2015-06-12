@@ -11,6 +11,8 @@ import javax.swing.border.LineBorder;
 import javax.swing.border.MatteBorder;
 
 import UIComponent.MyColor;
+import UIComponent.MyScrollPane;
+import UIComponent.MyTable;
 
 public class TeamDetailPanel extends JPanel{
 /**
@@ -19,12 +21,11 @@ public class TeamDetailPanel extends JPanel{
 	private static final long serialVersionUID = 1L;
 private String team;
 JLabel teamIcon;
-JLabel undo,forward;
 JLabel name;
 JLabel shortName,chineseName,league,gym,date;
-JLabel leftside;
-JLabel rightside;
-JLabel player,high,basic,dayhot,seasonhot,match,compare;
+JLabel player,number,rate;
+MyScrollPane playerjsp;
+MyTable playertable;
 public TeamDetailPanel(String teamName){
 	this.team=teamName;
 	initComponent();
@@ -34,15 +35,6 @@ public TeamDetailPanel(String teamName){
 	setListener();
 }
 public void initComponent(){
-	leftside=new JLabel();
-	leftside.setBackground(MyColor.WHITE.getColor());
-	leftside.setBounds(0, 0, 20, 580);
-	leftside.setVisible(true);
-
-	rightside=new JLabel();
-	rightside.setBackground(MyColor.WHITE.getColor());
-	rightside.setBounds(490, 0, 20, 580);
-	rightside.setVisible(true);
 	
 	teamIcon=new JLabel(new ImageIcon("team/CHA.png"));
 	teamIcon.setBounds(20, 50, 100, 100);
@@ -85,8 +77,6 @@ public void initPanel(){
 	this.setLayout(null);
 }
 public void addComponent(){
-	this.add(leftside);
-	this.add(rightside);
 	this.add(name);
 	this.add(teamIcon);
 	this.add(shortName);
@@ -96,46 +86,7 @@ public void addComponent(){
 	this.add(date);
 }
 public void setListener(){
-	leftside.addMouseListener(new MouseAdapter(){
-		public void mouseEntered(MouseEvent e){
-			undo=new JLabel(new ImageIcon("img/undo.png"));
-			undo.setBounds(0, 275, 50, 50);
 
-			add(undo);
-			repaint();
-		}
-		public void mouseExited(MouseEvent e){
-			remove(undo);
-			repaint();
-		}
-	});
-	rightside.addMouseListener(new MouseAdapter(){
-		public void mouseEntered(MouseEvent e){
-			forward=new JLabel(new ImageIcon("img/do.png"));
-			forward.setBounds(450, 275, 50, 50);
-			
-			add(forward,0);
-			repaint();
-		}
-		public void mouseExited(MouseEvent e){
-			remove(forward);
-			repaint();
-		}
-	});
-	if(undo!=null){
-		undo.addMouseListener(new MouseAdapter(){
-		public void mouseClicked(MouseEvent e){
-			
-		}
-	});
-	}
-	if(forward!=null){
-		forward.addMouseListener(new MouseAdapter(){
-			public void mouseClicked(MouseEvent e){
-				
-			}
-		});
-	}
 }
 public String getTeam(){
 	return this.team;

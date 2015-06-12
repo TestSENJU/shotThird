@@ -16,10 +16,7 @@ public class MyScrollPane extends JScrollPane{
 		super(table);
 		init();
 	}
-	public MyScrollPane(){
-		super();
-		init();
-	}
+	
 	public MyScrollPane(JPanel jp){
 		super(jp);
 		init();
@@ -33,7 +30,7 @@ public class MyScrollPane extends JScrollPane{
 		this.setVerticalScrollBar(scroll);//
 		JLabel jl=new JLabel();
 		jl.setBackground(MyColor.WHITE.getColor());
-		jl.setOpaque(true);
+		jl.setOpaque(false);
 		this.setCorner(UPPER_RIGHT_CORNER, jl);
 
 	}
