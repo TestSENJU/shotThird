@@ -1,13 +1,12 @@
 package po;
 
-public class PlayerHotPO {
+public class PlayerShortPO {
 	String playerid;
 	String playername;
 	String team;
 	String location;
 	boolean isAfter;
-	double data;
-	public PlayerHotPO(String s){
+	public PlayerShortPO(String s){
 		this.playerid=s;
 		
 	}
