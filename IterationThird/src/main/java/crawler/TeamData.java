@@ -1,6 +1,8 @@
 package crawler;
 import java.io.File;
 import java.io.PrintStream;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +12,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
 public class TeamData {
@@ -35,8 +36,11 @@ public class TeamData {
 		
 		//打开主页
 		System.out.println("打开NBA主页");
-		HtmlPage indexPage = (HtmlPage) webClient.getPage("http://china.nba.com/playerindex/");
-		
+		//String url = "http://www.stat-nba.com/query.php?QueryType=all&AllType=season&AT=avg&order=1&crtcol=pts&PageNum=2000";
+		String url = "http://china.nba.com/stats/players/index.html";
+		HtmlPage indexPage = (HtmlPage) webClient.getPage(url);
+		//http://www.stat-nba.com/query.php?page=1&QueryType=all&AllType=season&AT=avg&order=1&crtcol=pts&PageNum=2000000#label_show_result
+		//http://www.stat-nba.com/query.php?QueryType=all&AllType=season&AT=avg&order=1&crtcol=pts&PageNum=2000000
 		//选择查看球员信息的那个按钮
 /*		System.out.println("选择球员");
 		//根据名字“球员”找到了那个按钮
@@ -64,13 +68,17 @@ public class TeamData {
 		Document documentT = Jsoup.parse(indexPage.asXml(), "UTF-8");
 		List<String> listT = new ArrayList<String>();
 		//doc.select("div#page>div#content>div#main>div.left>div#recommend>ul>li>a"); 
-		Elements elementsT = documentT.select("div#app-container>div.contianer>div.row container-row>div.col-xl-8 col-lg-12 content-container>div.content>div.ng-scope>div.row>div.col-sm-12>div.sib-table-container sib-table-player-index>div.ng-scope>table");
+		//Elements elementsT = documentT.select("div#app-container>div.contianer>div.row container-row>div.col-xl-8 col-lg-12 content-container>div.content>div.ng-scope>div.row>div.col-sm-12>div.sib-table-container sib-table-player-index>div.ng-scope>table");
+		Elements elementsT = documentT.select("tr").select("td").select("a");
 		for (Element elementT : elementsT) {
 			//String href = elementT.attr("href");  
 	        //String title = elementT.text();  
 	        //System.out.println(title + ":" + href);
-			//listT.add(elementT.text());
-			System.out.println(elementT.text());
+			//String[] ele = elementT.text().split(" ");
+			
+			System.out.println(elementT.select("a[href]").select("img"));
+			//System.out.println(elementT.select("img"));
+			//http://china.nba.com/media/img/players/head/132x132/203919.png
 		}
 		
 		//关闭客户端
