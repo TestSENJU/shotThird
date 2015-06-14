@@ -5,13 +5,12 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-import specialpo.PlayerBaseInfoPO;
 import specialpo.TeamAverageRegularDataPO;
 
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
-public class TeamPlayOffFourToFive {
+public class TeamAverageRegularData {
 
 	public static void main(String[] args) throws Exception {
 		test();
