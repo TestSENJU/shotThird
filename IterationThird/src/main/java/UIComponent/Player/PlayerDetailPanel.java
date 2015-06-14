@@ -11,7 +11,10 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.MatteBorder;
 
+import UIComponent.AnalysisFrame;
 import UIComponent.MyColor;
+import VO.PlayerNumberVO;
+import VO.PlayerRateVO;
 
 public class PlayerDetailPanel extends JPanel{
 /**
@@ -23,17 +26,18 @@ private String player;
 JLabel name;
 JLabel number;
 JLabel position,height,weight,birth,age,exp,school,team;
-JLabel undo,forward;
 JLabel photo;
-JLabel leftside;
-JLabel rightside;
 JPanel photoPanel;
 ImageIcon icon1,icon2;
 JLabel change1,change2;
-JLabel high,basic,match,compare;
+JLabel showmore;
+JLabel avernumber,allnumber,rate;
+PlayerAllNumberPanel playerallPanel;
+PlayerAverageNumberPanel playeraverPanel;
+PlayerRatePanel playerratepanel;
 //TODO
-public PlayerDetailPanel(String playername){
-	this.player=playername;
+public PlayerDetailPanel(String playerid){
+	this.player=playerid;
 
 	initJLabel();
 	initJPanel();
@@ -42,23 +46,51 @@ public PlayerDetailPanel(String playername){
 	setListener();
 }
 public void initJLabel(){
-	leftside=new JLabel();
-	leftside.setBackground(MyColor.WHITE.getColor());
-	leftside.setBounds(0, 0, 20, 580);
-	leftside.setVisible(true);
-
-	rightside=new JLabel();
-	rightside.setBackground(MyColor.WHITE.getColor());
-	rightside.setBounds(490, 0, 20, 580);
-	rightside.setVisible(true);
+	playerallPanel=new PlayerAllNumberPanel(new PlayerNumberVO("0"));
+	playerallPanel.setBounds(0,290,500,290);
+	playeraverPanel=new PlayerAverageNumberPanel(new PlayerNumberVO("0"));
+	playeraverPanel.setBounds(0,290,500,290);
+	playerratepanel=new PlayerRatePanel(new PlayerRateVO("0"));
+	playerratepanel.setBounds(0,290,500,290);
+		
+	avernumber=new JLabel("场均");
+	avernumber.setForeground(MyColor.BLUE.getColor());
+	avernumber.setOpaque(true);
+	avernumber.setBackground(MyColor.LIGHTBLUE.getColor());
+	avernumber.setHorizontalAlignment(SwingConstants.CENTER);
+	avernumber.setFont(new Font("黑体",Font.PLAIN,16));
+	avernumber.setBounds(10,260,40,30);
+	
+	allnumber=new JLabel("赛季");
+	allnumber.setForeground(MyColor.BLUE.getColor());
+	allnumber.setOpaque(true);
+	allnumber.setBackground(MyColor.WHITE.getColor());
+	allnumber.setHorizontalAlignment(SwingConstants.CENTER);
+	allnumber.setFont(new Font("黑体",Font.PLAIN,16));
+	allnumber.setBounds(55,260,40,30);
+	
+	rate=new JLabel("%");
+	rate.setForeground(MyColor.BLUE.getColor());
+	rate.setOpaque(true);
+	rate.setBackground(MyColor.WHITE.getColor());
+	rate.setHorizontalAlignment(SwingConstants.CENTER);
+	rate.setFont(new Font("黑体",Font.PLAIN,16));
+	rate.setBounds(100,260,40,30);
+	
+	showmore=new JLabel("<HTML><U>"+"显示更多"+"<HTML><U>");
+	showmore.setForeground(MyColor.BLACK.getColor());
+	showmore.setFont(new Font("微软雅黑",Font.PLAIN,14));
+	showmore.setBounds(420, 260, 80, 20);
 	
 	photoPanel=new JPanel();
 
+	photoPanel.setLayout(null);
 	photoPanel.setBackground(MyColor.WHITE.getColor());
 	photoPanel.setBorder(new MatteBorder(1,1,1,1,MyColor.GREY.getColor()));
 	photoPanel.setBounds(40, 50, 150, 200);
 	
 	photo=new JLabel();
+	
 	photo.setBounds(0,0,150,180);
 	icon1=new ImageIcon("playerHead/"+player+".png");
 	 icon1=new ImageIcon(icon1.getImage().getScaledInstance(photo.getWidth(), photo.getHeight()-60, Image.SCALE_DEFAULT));    
@@ -142,8 +174,7 @@ public void initJPanel(){
 	this.setLayout(null);
 }
 public void addComponent(){
-	this.add(leftside);
-	this.add(rightside);
+	this.add(playeraverPanel);
 	this.add(name);
 	this.add(number);
 	this.add(position);
@@ -154,12 +185,63 @@ public void addComponent(){
 	this.add(exp);
 	this.add(school);
 	this.add(team);
+	this.add(showmore);
+	this.add(allnumber);
+	this.add(avernumber);
+	this.add(rate);
 	photoPanel.add(photo);
 	photoPanel.add(change1);
 	photoPanel.add(change2);
 	this.add(photoPanel);
 }
 public void setListener(){
+	showmore.addMouseListener(new MouseAdapter(){
+		public void mouseClicked(MouseEvent e){
+			AnalysisFrame frame=new AnalysisFrame(0,player);
+		}
+		public void mouseEntered(MouseEvent e){
+			showmore.setForeground(MyColor.BLUE.getColor());
+		}
+		public void mouseExited(MouseEvent e){
+			showmore.setForeground(MyColor.BLACK.getColor());
+		}
+	});
+	allnumber.addMouseListener(new MouseAdapter(){
+		public void mouseClicked(MouseEvent e){
+			allnumber.setBackground(MyColor.WHITE.getColor());
+			avernumber.setBackground(MyColor.WHITE.getColor());
+			rate.setBackground(MyColor.WHITE.getColor());
+			
+			allnumber.setBackground(MyColor.LIGHTBLUE.getColor());
+			remove(getComponentAt(0,290));
+			add(playerallPanel);
+			repaint();
+		}
+	});
+	avernumber.addMouseListener(new MouseAdapter(){
+		public void mouseClicked(MouseEvent e){
+			allnumber.setBackground(MyColor.WHITE.getColor());
+			avernumber.setBackground(MyColor.WHITE.getColor());
+			rate.setBackground(MyColor.WHITE.getColor());
+			
+			avernumber.setBackground(MyColor.LIGHTBLUE.getColor());
+			remove(getComponentAt(0,290));
+			add(playeraverPanel);
+			repaint();
+		}
+	});
+	rate.addMouseListener(new MouseAdapter(){
+		public void mouseClicked(MouseEvent e){
+			allnumber.setBackground(MyColor.WHITE.getColor());
+			avernumber.setBackground(MyColor.WHITE.getColor());
+			rate.setBackground(MyColor.WHITE.getColor());
+			
+			rate.setBackground(MyColor.LIGHTBLUE.getColor());
+			remove(getComponentAt(0,290));
+			add(playerratepanel);
+			repaint();
+		}
+	});
     change1.addMouseListener(new MouseAdapter(){
     	public void mouseEntered(MouseEvent e){
     		
@@ -188,46 +270,6 @@ public void setListener(){
     		
     	}
     });
-	leftside.addMouseListener(new MouseAdapter(){
-		public void mouseEntered(MouseEvent e){
-			undo=new JLabel(new ImageIcon("img/undo.png"));
-			undo.setBounds(0, 275, 50, 50);
-
-			add(undo);
-			repaint();
-		}
-		public void mouseExited(MouseEvent e){
-			remove(undo);
-			repaint();
-		}
-	});
-	rightside.addMouseListener(new MouseAdapter(){
-		public void mouseEntered(MouseEvent e){
-			forward=new JLabel(new ImageIcon("img/do.png"));
-			forward.setBounds(450, 275, 50, 50);
-			
-			add(forward,0);
-			repaint();
-		}
-		public void mouseExited(MouseEvent e){
-			remove(forward);
-			repaint();
-		}
-	});
-	if(undo!=null){
-		undo.addMouseListener(new MouseAdapter(){
-		public void mouseClicked(MouseEvent e){
-			
-		}
-	});
-	}
-	if(forward!=null){
-		forward.addMouseListener(new MouseAdapter(){
-			public void mouseClicked(MouseEvent e){
-				
-			}
-		});
-	}
 	
 }
 public String getName(){

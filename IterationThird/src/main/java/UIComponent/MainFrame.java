@@ -227,7 +227,8 @@ public void setListener(){
 				player.setBackground(MyColor.LIGHTBLUE.getColor());
 				
 					PlayerExplorerPanel total=new PlayerExplorerPanel();
-					player.setBackground(MyColor.LIGHTBLUE.getColor());
+					total.setBounds(0, 20, 900, 580);
+				
 					center.remove(center.getComponentAt(200,300));
 					center.add(total);
 					center.repaint();
@@ -247,6 +248,7 @@ public void setListener(){
 				match.setBackground(MyColor.LIGHTBLUE.getColor());
 				
   				MatchExplorerPanel total=new MatchExplorerPanel();
+  				total.setBounds(0, 20, 900, 580);
   				center.remove(center.getComponentAt(200,300));
 			center.add(total);
 			center.repaint();
@@ -265,6 +267,7 @@ public void setListener(){
 				match.setBackground(MyColor.WHITE.getColor());
 				
   					TeamExplorerPanel total=new TeamExplorerPanel();
+  					total.setBounds(0, 20, 900, 580);
   					center.remove(center.getComponentAt(200,300));
 			center.add(total);
 			center.repaint();
@@ -284,6 +287,7 @@ public void setListener(){
 				match.setBackground(MyColor.WHITE.getColor());
 				
 					StaticsPanel total=new StaticsPanel();
+					total.setBounds(0, 20, 900, 580);
 					center.remove(center.getComponentAt(200,300));
 		center.add(total);
 		center.repaint();
@@ -302,6 +306,7 @@ public void setListener(){
 				
 				search.setBackground(MyColor.LIGHTBLUE.getColor());
 				SearchPanel total=new SearchPanel();
+				total.setBounds(0, 20, 900, 580);
 				center.remove(center.getComponentAt(200,300));
 	center.add(total);
 	center.repaint();

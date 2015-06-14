@@ -11,7 +11,7 @@ public interface MatchBL {
 	public ArrayList<MatchShortVO> getMatch();
 	
 	//----------------------根据比赛的id获取该比赛的详细信息，主要使用在根据比赛的简短信息获取详细信息时----------------------//
-	public ArrayList<MatchVO> getMatchByMatchId(String matchid);
+	public MatchVO getMatchByMatchId(String matchid);
 	
 	//---------------------查找比赛的界面里面用于根据输入的多个条件获取比赛的简短信息，其中任意一个条件可以为空-----------------------//
 	public ArrayList<MatchShortVO> getMatchByConditions(String playername,String teamname,boolean isAfter,String time,String season);

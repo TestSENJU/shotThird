@@ -15,7 +15,6 @@ import javax.swing.table.TableColumnModel;
 import UIComponent.MyColor;
 import UIComponent.MyScrollPane;
 import UIComponent.MyTable;
-import UIComponent.Player.PlayerDetailPanel;
 
 public class MatchExplorerPanel extends JPanel{
 	/**
@@ -68,7 +67,7 @@ public void init(){
 		}
 	};
 	initTable();
-	table=new MyTable(model,1,2);
+	table=new MyTable(model,-1,-1);
 	
 	      TableColumnModel tcm = table.getColumnModel();
 	        tcm.getColumn(0).setPreferredWidth(100);
@@ -88,9 +87,9 @@ public void initTable(){
 	for(int i=0;i<200;i++){
 		Object[] ob=new Object[4];
 		ob[0]="13-12";
-		ob[1]="Lebron James";
+		ob[1]="CHA";
 		ob[2]="NOP";
-		ob[3]="A";
+		ob[3]="110-101";
 		model.addRow(ob);
 		list.add((String) ob[1]);
 	}

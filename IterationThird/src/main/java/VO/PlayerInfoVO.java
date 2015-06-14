@@ -16,4 +16,32 @@ String playerid;
 String playername;
 String data[]=new String[8];
 
+public PlayerInfoVO(String id){
+	this.playerid=id;
+	this.playername=" ";
+	for(int i=0;i<data.length;i++){
+		this.data[i]=" ";
+	}
+}
+
+public String getPlayername() {
+	return playername;
+}
+
+public void setPlayername(String playername) {
+	this.playername = playername;
+}
+
+public String[] getData() {
+	return data;
+}
+
+public void setData(String[] data) {
+	this.data = data;
+}
+
+public String getPlayerid() {
+	return playerid;
+}
+
 }

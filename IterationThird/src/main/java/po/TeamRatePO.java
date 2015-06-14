@@ -2,7 +2,9 @@ package po;
 
 public class TeamRatePO {
 String teamname;
-double rate[];
+String season;
+int isAfter;
+double rate[]=new double[];
 public TeamRatePO(String name){
 	this.teamname=name;
 }
