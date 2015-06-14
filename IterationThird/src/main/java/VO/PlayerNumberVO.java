@@ -2,7 +2,9 @@ package VO;
 /**
  * 
  * @author wyt
- *
+ *String time;//,"上场时间",
+int number;//"参赛场数"
+int firstnum;//"先发场数"
  * 0"篮板数"
  * 1"助攻数",
 	2"进攻篮板数"

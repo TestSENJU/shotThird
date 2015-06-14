@@ -23,6 +23,7 @@ public class PlayerRateVO {
 String playerid;
 String playername;
 String season;
+int isAfter;
 double rate[]=new double[15];
 public PlayerRateVO(String id){
 	this.playerid=id;
@@ -31,7 +32,18 @@ public PlayerRateVO(String id){
 	for(int i=0;i<rate.length;i++){
 		this.rate[i]=0.0;
 	}
+	this.isAfter=-1;
+	
 }
+
+public int getIsAfter() {
+	return isAfter;
+}
+
+public void setIsAfter(int isAfter) {
+	this.isAfter = isAfter;
+}
+
 public String getPlayername() {
 	return playername;
 }

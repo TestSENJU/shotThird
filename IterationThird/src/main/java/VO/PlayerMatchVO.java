@@ -7,6 +7,7 @@ String location;
 String time;
 String team;
 String opponent;
+String playingtime;
 String season;
 String matchid;
 double[] data=new double[15];
@@ -14,14 +15,23 @@ double[] data=new double[15];
 public PlayerMatchVO(String id,String matchid){
 	this.matchid=matchid;
 	this.playerid=id;
-	this.playername=" ";
+	this.playername="";
 	this.location=" ";
-	this.team=" ";
-	this.opponent=" ";
-	this.season="2014-2015";
+	this.team="";
+	this.playingtime="";
+	this.opponent="";
+	this.season="";
 	for(int i=0;i<data.length;i++){
 		this.data[i]=0.0;
 	}
+}
+
+public String getPlayingtime() {
+	return playingtime;
+}
+
+public void setPlayingtime(String playingtime) {
+	this.playingtime = playingtime;
 }
 
 public String getPlayername() {

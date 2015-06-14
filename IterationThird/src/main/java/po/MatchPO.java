@@ -2,7 +2,6 @@ package po;
 
 import java.util.ArrayList;
 
-import VO.PlayerMatchVO;
 /**
  * 
  * @author wyt
@@ -26,8 +25,8 @@ public class MatchPO {
 	int isAfter;
 	String score;
 	ArrayList<String> scorelist=new ArrayList<String>();
-	ArrayList<PlayerMatchVO> winnerlist=new ArrayList<PlayerMatchVO>();
-	ArrayList<PlayerMatchVO> loserlist=new ArrayList<PlayerMatchVO>();
+	ArrayList<PlayerMatchPO> winnerlist=new ArrayList<PlayerMatchPO>();
+	ArrayList<PlayerMatchPO> loserlist=new ArrayList<PlayerMatchPO>();
 
 	public MatchPO(String id){
 		this.matchid=id;
@@ -95,19 +94,19 @@ public class MatchPO {
 		this.scorelist = scorelist;
 	}
 
-	public ArrayList<PlayerMatchVO> getWinnerlist() {
+	public ArrayList<PlayerMatchPO> getWinnerlist() {
 		return winnerlist;
 	}
 
-	public void setWinnerlist(ArrayList<PlayerMatchVO> winnerlist) {
+	public void setWinnerlist(ArrayList<PlayerMatchPO> winnerlist) {
 		this.winnerlist = winnerlist;
 	}
 
-	public ArrayList<PlayerMatchVO> getLoserlist() {
+	public ArrayList<PlayerMatchPO> getLoserlist() {
 		return loserlist;
 	}
 
-	public void setLoserlist(ArrayList<PlayerMatchVO> loserlist) {
+	public void setLoserlist(ArrayList<PlayerMatchPO> loserlist) {
 		this.loserlist = loserlist;
 	}
 

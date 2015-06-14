@@ -1,17 +1,17 @@
 package VO;
 
 public class PlayerShortVO {
-String playerid;
-String playername;
-String team;
-String location;
-boolean isAfter;
+	String playerid;
+	String playername;
+	String team;
+	String location;
+	boolean isOn;
 public PlayerShortVO(String s){
 	this.playerid=s;
 	this.playername=" ";
 	this.team=" ";
 	this.location=" ";
-	this.isAfter=false;
+	this.isOn=false;
 }
 public String getPlayername() {
 	return playername;
@@ -32,10 +32,10 @@ public void setLocation(String location) {
 	this.location = location;
 }
 public boolean isAfter() {
-	return isAfter;
+	return isOn;
 }
 public void setAfter(boolean isAfter) {
-	this.isAfter = isAfter;
+	this.isOn = isAfter;
 }
 public String getPlayerid() {
 	return playerid;

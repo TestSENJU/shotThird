@@ -5,7 +5,7 @@ public class PlayerHotVO {
 	String playername;
 	String team;
 	String location;
-	boolean isAfter;
+	int isAfter;
 	double data;
 	public PlayerHotVO(String s){
 		this.playerid=s;
@@ -31,10 +31,10 @@ public class PlayerHotVO {
 	public void setLocation(String location) {
 		this.location = location;
 	}
-	public boolean isAfter() {
+	public int isAfter() {
 		return isAfter;
 	}
-	public void setAfter(boolean isAfter) {
+	public void setAfter(int isAfter) {
 		this.isAfter = isAfter;
 	}
 	public double getData() {

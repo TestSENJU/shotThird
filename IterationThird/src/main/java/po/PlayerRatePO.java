@@ -37,7 +37,17 @@ public PlayerRatePO(String id){
 	for(int i=0;i<rate.length;i++){
 		this.rate[i]=0.0;
 	}
+	this.isAfter=-1;
 }
+
+public int getIsAfter() {
+	return isAfter;
+}
+
+public void setIsAfter(int isAfter) {
+	this.isAfter = isAfter;
+}
+
 public String getPlayername() {
 	return playername;
 }
