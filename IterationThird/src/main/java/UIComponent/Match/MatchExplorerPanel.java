@@ -112,18 +112,17 @@ public void setListener(){
 	table.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
 			int row=table.getSelectedRow();
-			String time=(String)table.getValueAt(row, 0);
-			String winner=(String)table.getValueAt(row, 1);
+			
 			if(getComponentAt(550,275)instanceof JLabel){
-				MatchDetailPanel match=new MatchDetailPanel(time,winner);
+				MatchDetailPanel match=new MatchDetailPanel(list.get(row));
 				match.setBounds(400,20,500, 580);
 				remove(tip);
 				add(match);
 				repaint();
 			}else if(getComponentAt(550,275)instanceof MatchDetailPanel){
 				MatchDetailPanel matchold=(MatchDetailPanel)getComponentAt(550,275);
-				if(!time.equals(matchold.getTime())&&!winner.equals(matchold.getWinner())){
-					MatchDetailPanel match=new MatchDetailPanel(time,winner);
+				if(list.get(row).equals(matchold.getID())){
+					MatchDetailPanel match=new MatchDetailPanel(list.get(row));
 					match.setBounds(400,20,500, 580);
 					remove(getComponentAt(550,275));
 					add(match);

@@ -198,6 +198,7 @@ public void setListener(){
 	showmore.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
 			AnalysisFrame frame=new AnalysisFrame(0,player);
+			frame.open();
 		}
 		public void mouseEntered(MouseEvent e){
 			showmore.setForeground(MyColor.BLUE.getColor());

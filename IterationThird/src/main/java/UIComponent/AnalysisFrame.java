@@ -73,7 +73,7 @@ public class AnalysisFrame extends JFrame{
 		this.setLayout(null);
 		this.setLocationRelativeTo(null);
 		this.setUndecorated(true);
-		this.setVisible(true);
+		this.setVisible(false);
 		
 		this.addMouseListener(new MouseAdapter() {
 				 public void mousePressed(MouseEvent e) {
@@ -97,5 +97,8 @@ public class AnalysisFrame extends JFrame{
 				} 
 				 }
 				 });
+	}
+	public void open(){
+		this.setVisible(true);
 	}
 }

@@ -66,6 +66,7 @@ public class PlayerAnalysisPanel extends JPanel{
 		this.add(change);
 		this.add(compare);
 		this.add(data);
+		this.setBackground(MyColor.WHITE.getColor());
 	}
 	public void setListener(){
 		
