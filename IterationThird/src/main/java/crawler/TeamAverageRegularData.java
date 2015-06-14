@@ -16,7 +16,7 @@ public class TeamAverageRegularData {
 		test();
 	}
 
-	public static void test() throws Exception {
+	public static ArrayList<TeamAverageRegularDataPO> test() throws Exception {
 		/*
 		 * 用到了HtmlUnit和Jsoup两个jar包
 		 * HtmlUnit是一个无界面浏览器，可以模拟浏览器行为
@@ -45,10 +45,11 @@ public class TeamAverageRegularData {
 			String[] data = elements.get(i).text().toString().split("\\s+");
 			teamARD.add(new TeamAverageRegularDataPO(data[1],data[2],data[3],data[4], data[5],data[6],data[7],data[8],data[9],data[10],data[11],data[12],data[13],data[14],data[15],data[16],data[17],data[18],data[19],data[20],data[21],data[22],data[23]));
 		}
-		for (int k=0;k < teamARD.size();k++) {
+		//for (int k=0;k < teamARD.size();k++) {
 			//System.out.println(teamARD.get(k).getMuff());
-		}
+		//}
 		//关闭客户端
 		webClient.close();
+		return teamARD;
 	}
 }
