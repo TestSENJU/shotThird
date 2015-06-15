@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Data {
 	public static final String Driver = "com.mysql.jdbc.Driver";
-	public static final String url = "jdbc:mysql://localhost:3306/books";
+	public static final String url = "jdbc:mysql://localhost:3306/nbadata";
 	public static final String user = "root";
 	public static final String password = "something123??";
 	
