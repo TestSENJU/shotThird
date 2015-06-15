@@ -1,5 +1,7 @@
 package VO;
 
+import po.TeamInfoPO;
+
 public class TeamInfoVO {
 	String shortname;
 	String name;
@@ -12,6 +14,13 @@ public TeamInfoVO(String str){
 	this.league="";
 	this.gym="";
 	this.year="";
+}
+public TeamInfoVO(TeamInfoPO po){
+	this.shortname=po.getShortname();
+	this.name=po.getName();
+	this.league=po.getLeague();
+	this.gym=po.getGym();
+	this.year=po.getYear();
 }
 public String getName() {
 	return name;

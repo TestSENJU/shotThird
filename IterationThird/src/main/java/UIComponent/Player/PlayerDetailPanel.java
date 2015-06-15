@@ -11,6 +11,8 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.MatteBorder;
 
+import sqlData.PlayerData;
+import sqlData.PlayerDataService;
 import UIComponent.AnalysisFrame;
 import UIComponent.MyColor;
 import VO.PlayerNumberVO;
@@ -21,6 +23,7 @@ public class PlayerDetailPanel extends JPanel{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private PlayerDataService playerdata=PlayerData.getInstance();
 	
 private String player;
 JLabel name;
@@ -46,7 +49,7 @@ public PlayerDetailPanel(String playerid){
 	setListener();
 }
 public void initJLabel(){
-	playerallPanel=new PlayerAllNumberPanel(new PlayerNumberVO("0"));
+	playerallPanel=new PlayerAllNumberPanel(playerdata.get);
 	playerallPanel.setBounds(0,290,500,290);
 	playeraverPanel=new PlayerAverageNumberPanel(new PlayerNumberVO("0"));
 	playeraverPanel.setBounds(0,290,500,290);

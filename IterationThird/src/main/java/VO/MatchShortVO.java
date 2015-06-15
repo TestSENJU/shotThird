@@ -1,5 +1,7 @@
 package VO;
 
+import po.MatchShortPO;
+
 public class MatchShortVO {
 String matchid;
 String winner;
@@ -16,6 +18,15 @@ public MatchShortVO(String id){
 	this.time="";
 	this.season="";
 	this.isAfter=-1;
+}
+public MatchShortVO(MatchShortPO po){
+	this.matchid=po.getMatchid();
+	this.winner=po.getWinner();
+	this.loser=po.getLoser();
+	this.score=po.getScore();
+	this.time=po.getTime();
+	this.season=po.getSeason();
+	this.score=po.getScore();
 }
 public String getWinner() {
 	return winner;

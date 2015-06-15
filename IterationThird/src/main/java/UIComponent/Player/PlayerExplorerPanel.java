@@ -14,12 +14,16 @@ import javax.swing.border.MatteBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 
+import po.PlayerShortPO;
+import sqlData.PlayerData;
+import sqlData.PlayerDataService;
 import UIComponent.MyColor;
 import UIComponent.MyScrollPane;
 import UIComponent.MyTable;
 
 public class PlayerExplorerPanel extends JPanel{
 	private static final long serialVersionUID = 1L;
+	private PlayerDataService playerdata=new PlayerData();
 	JLabel title;
 	JScrollPane jsp;
 	MyTable table;
@@ -29,7 +33,7 @@ public class PlayerExplorerPanel extends JPanel{
 	JPanel left;
 	JLabel tip;
 	private String titlename[]=new String[]{"头像","姓名","球队","位置"};
-	private ArrayList<String>list=new ArrayList<String>();
+	private ArrayList<String>idlist=new ArrayList<String>();
 	public PlayerExplorerPanel(){
 		initComponent();
 		addComponent();
@@ -107,26 +111,36 @@ public class PlayerExplorerPanel extends JPanel{
 		left.add(jsp);
 		this.add(left);
 		this.add(tip);
-//	    playerList.add(" ");
 	}
 	public void initTable(){
-		Object[] ob=new Object[4];
-		ob[0]=new ImageIcon("img/search.png");
-		ob[1]="Aaron Brooks";
-		ob[2]="NOP";
-		ob[3]="A";
-		model.addRow(ob);
-		list.add((String) ob[1]);
-		for(int i=0;i<200;i++){
-			ob=new Object[4];
-			ob[0]=new ImageIcon("img/search.png");
-			ob[1]="Lebron James";
-			ob[2]="NOP";
-			ob[3]="A";
+		ArrayList<PlayerShortPO>list=playerdata.getAllPlayer();
+		for(int i=0;i<list.size();i++){
+			Object[] ob=new Object[4];
+			ob[0]=new ImageIcon("playerHead/"+list.get(i).getPlayername()+".png");
+			ob[1]=list.get(i).getPlayername();
+			ob[2]=list.get(i).getTeam();
+			ob[3]=list.get(i).getLocation();
 			model.addRow(ob);
-			list.add((String) ob[1]);
+			idlist.add(list.get(i).getPlayerid());
 		}
-		
+	
+//		Object[] ob=new Object[4];
+//		ob[0]=new ImageIcon("img/search.png");
+//		ob[1]="Aaron Brooks";
+//		ob[2]="NOP";
+//		ob[3]="A";
+//		model.addRow(ob);
+//		list.add((String) ob[1]);
+//		for(int i=0;i<200;i++){
+//			ob=new Object[4];
+//			ob[0]=new ImageIcon("img/search.png");
+//			ob[1]="Lebron James";
+//			ob[2]="NOP";
+//			ob[3]="A";
+//			model.addRow(ob);
+//			list.add((String) ob[1]);
+//		}
+//		
 	}
 	public void setListener(){
 		table.addMouseListener(new MouseAdapter(){
@@ -161,7 +175,7 @@ public class PlayerExplorerPanel extends JPanel{
 				showall.setForeground(MyColor.BLUE.getColor());
 			}
 			public void mouseClicked(MouseEvent e){
-				list=new ArrayList<String>();
+				idlist=new ArrayList<String>();
 				for(int i=model.getRowCount()-1;i>=0;i--){
 						model.removeRow(i);
 				}
@@ -179,7 +193,7 @@ public class PlayerExplorerPanel extends JPanel{
 				//TODO
 				String playerName=text.getText();
 				if(playerName!=null){
-					if(list.contains(playerName)){
+					if(idlist.contains(playerName)){
 						for(int i=model.getRowCount()-1;i>=0;i--){
 							if(!model.getValueAt(i, 1).equals(playerName)){
 								model.removeRow(i);
@@ -188,7 +202,7 @@ public class PlayerExplorerPanel extends JPanel{
 						
 					}else{
 						ArrayList<String>players=new ArrayList<String>();
-						for(String key:list){
+						for(String key:idlist){
 							if(key.contains(playerName)){
 								players.add(key);
 							}

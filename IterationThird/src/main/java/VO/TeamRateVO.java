@@ -1,4 +1,7 @@
 package VO;
+
+import po.TeamRatePO;
+
 /**
  * 
  * @author wyt
@@ -30,6 +33,12 @@ public TeamRateVO(String name){
 	for(int i=0;i<rate.length;i++){
 		this.rate[i]=0.0;
 	}
+}
+public TeamRateVO(TeamRatePO po){
+	this.teamname=po.getTeamname();
+	this.season=po.getSeason();
+	this.isAfter=po.getIsAfter();
+	this.rate=po.getRate();
 }
 public String getTeamname() {
 	return teamname;

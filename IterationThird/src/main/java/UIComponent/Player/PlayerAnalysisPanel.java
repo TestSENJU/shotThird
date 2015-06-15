@@ -20,6 +20,10 @@ public class PlayerAnalysisPanel extends JPanel{
 	JLabel photo;
 	ImageIcon icon1,icon2;
 	JLabel change1,change2;
+	JPanel playershortpanel;
+	JPanel select;
+	JPanel draw;
+	
 	
 	public PlayerAnalysisPanel(String id){
 		this.playerid=id;

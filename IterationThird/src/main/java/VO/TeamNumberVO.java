@@ -1,4 +1,7 @@
 package VO;
+
+import po.TeamNumberPO;
+
 /**
  * 
  * @author wyt
@@ -33,6 +36,13 @@ public class TeamNumberVO {
 		for(int i=0;i<data.length;i++){
 			this.data[i]=0.0;
 		}
+	}
+	public TeamNumberVO(TeamNumberPO po){
+		this.teamname=po.getTeamname();
+		this.number=po.getNumber();
+		this.season=po.getSeason();
+		this.isAfter=po.getIsAfter();
+		this.data=po.getData();
 	}
 	public int getNumber() {
 		return number;
