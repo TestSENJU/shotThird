@@ -31,6 +31,7 @@ public class SearchPlayerPanel extends JPanel{
 	MyTable playerTable;
 	DefaultTableModel model;
 	MyScrollPane jsp;
+	JLabel confirm;
 	public SearchPlayerPanel(){
 		initComponent();
 		initPanel();
@@ -71,6 +72,11 @@ public class SearchPlayerPanel extends JPanel{
 		location.setForeground(MyColor.BLUE.getColor());
 		location.setFont(new Font("黑体",Font.PLAIN,14));
 		location.setBounds(10, 0, 60, 40);
+		
+		confirm=new JLabel("筛选");
+		confirm.setForeground(MyColor.BLUE.getColor());
+		confirm.setFont(new Font("黑体",Font.PLAIN,14));
+		confirm.setBounds(530, 0, 60, 40);
 		
 		locationBox=new MyComboBox(new String[]{" ","前锋","中锋","后卫"});
 		locationBox.setBounds(70, 5, 60, 25);
@@ -136,6 +142,7 @@ public class SearchPlayerPanel extends JPanel{
 		 this.add(isAtWork);
 		 this.add(isAtWorkBox);
 		 this.add(team);
+		 this.add(confirm);
 		 this.add(teamBox);
 		 this.add(jsp);
 		 for(int i=0;i<alphabeta.length;i++){
@@ -143,6 +150,17 @@ public class SearchPlayerPanel extends JPanel{
 			}
 		}
     private void setListener() {
+    	confirm.addMouseListener(new MouseAdapter(){
+    		public void mouseClicked(MouseEvent e){
+    			
+    		}
+    		public void mouseEntered(MouseEvent e){
+    			confirm.setForeground(MyColor.BLUE.getColor());
+    		}
+    		public void mouseExited(MouseEvent e){
+    			confirm.setForeground(MyColor.BLACK.getColor());
+    		}
+    	});
     	playerTable.addMouseListener(new MouseAdapter(){
     		public void mouseClicked(MouseEvent e){
     			

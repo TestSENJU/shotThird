@@ -31,7 +31,7 @@ static JFrame frame;
 JPanel west,center;
 JPanel title;
 JPanel total,detail;
-JLabel first,player,team,match,statics,search,refresh;
+JLabel first,player,team,match,statics,search;
 CloseButton closeButton;
 MiniButton miniButton;
 JLabel currentTime;
@@ -53,7 +53,6 @@ public void open(){
 	frame.setVisible(true);
 }
 public void init(){
-//	--------------虽然我很想写出来时钟的效果，但是这个好像线程不太安全会影响到我别的界面的东西，还是不要写了-------------------
 	currentTime=new JLabel();
 	currentTime.setForeground(MyColor.PURPLE.getColor());
     currentTime.setFont(new Font("黑体",Font.PLAIN,12));
@@ -94,17 +93,14 @@ public void init(){
 	search.setOpaque(true);
 	search.setBackground(MyColor.WHITE.getColor());
 	
-	refresh=new JLabel(new ImageIcon("img/refresh.png"));
-//	refresh.setBounds(20,520 ,60 ,80 );
-	
 	center=new JPanel();
 	center.setBackground(MyColor.WHITE.getColor());
 	center.setBounds(100, 0, 900, 600);
 	center.setLayout(null);
 	center.setBorder(new MatteBorder(1,1,1,1,MyColor.GREY.getColor()));
 	
-	HomePanel home=new HomePanel();
-	   center.add(home);
+//	HomePanel home=new HomePanel();
+//	   center.add(home);
 	   
 	title=new JPanel();
 	title.setBackground(Color.white);
@@ -133,7 +129,6 @@ public void addComponent(){
    west.add(match);
    west.add(search);
    west.add(statics);
-//   west.add(refresh);
    west.add(currentTime);
 
 	center.add(title,0);

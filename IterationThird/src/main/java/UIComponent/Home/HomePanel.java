@@ -10,17 +10,15 @@ import javax.swing.SwingConstants;
 import javax.swing.border.MatteBorder;
 
 import UIComponent.MyColor;
-import UIComponent.statics.StaticsTeamPanel;
 
 public class HomePanel extends JPanel{
 /**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-JLabel dayplayer,seasonplayer,match,dayteam,seasonteam,improveplayer;
+JLabel dayplayer,seasonplayer,match,seasonteam,improveplayer;
 HomeDayPlayerPanel dayplayerpanel;
 HomeSeasonPlayerPanel seasonplayerpanel;
-HomeDayTeamPanel dayteampanel;
 HomeSeasonTeamPanel seasonteampanel;
 HomeMatchPanel matchpanel;
 HomeMostImprovedPanel improvedpanel;
@@ -58,18 +56,10 @@ public void initComponent(){
 	seasonplayer.setBackground(MyColor.WHITE.getColor());
 	seasonplayer.setHorizontalAlignment(SwingConstants.CENTER);
 	
-	dayteam=new JLabel("当天热点球队");
-	dayteam.setForeground(MyColor.BLUE.getColor());
-	dayteam.setFont(new Font("黑体",Font.PLAIN,16));
-	dayteam.setBounds(325,0,100,30);
-	dayteam.setOpaque(true);
-	dayteam.setBackground(MyColor.WHITE.getColor());
-	dayteam.setHorizontalAlignment(SwingConstants.CENTER);
-	
 	seasonteam=new JLabel("赛季热点球队");
 	seasonteam.setForeground(MyColor.BLUE.getColor());
 	seasonteam.setFont(new Font("黑体",Font.PLAIN,16));
-	seasonteam.setBounds(430,0,100,30);
+	seasonteam.setBounds(325,0,100,30);
 	seasonteam.setOpaque(true);
 	seasonteam.setBackground(MyColor.WHITE.getColor());
 	seasonteam.setHorizontalAlignment(SwingConstants.CENTER);
@@ -77,7 +67,7 @@ public void initComponent(){
 	improveplayer=new JLabel("进步最快球员");
 	improveplayer.setForeground(MyColor.BLUE.getColor());
 	improveplayer.setFont(new Font("黑体",Font.PLAIN,16));
-	improveplayer.setBounds(535,0,100,30);
+	improveplayer.setBounds(430,0,100,30);
 	improveplayer.setOpaque(true);
 	improveplayer.setBackground(MyColor.WHITE.getColor());
 	improveplayer.setHorizontalAlignment(SwingConstants.CENTER);
@@ -90,10 +80,6 @@ public void initComponent(){
 	seasonplayerpanel=new HomeSeasonPlayerPanel();
 	seasonplayerpanel.setBorder(new MatteBorder(1,0,1,1,MyColor.GREY.getColor()));
 	seasonplayerpanel.setBounds(0, 30, 900, 550);
-	
-	dayteampanel=new HomeDayTeamPanel();
-	dayteampanel.setBounds(0, 30, 900,550);
-	dayteampanel.setBorder(new MatteBorder(1,0,1,1,MyColor.GREY.getColor()));
 
 	seasonteampanel=new HomeSeasonTeamPanel();
 	seasonteampanel.setBounds(0, 30, 900,550);
@@ -113,7 +99,6 @@ public void addComponent(){
 	this.add(dayplayer);
 	this.add(seasonplayer);
 	this.add(match);
-	this.add(dayteam);
 	this.add(seasonteam);
 	this.add(improveplayer);
 }
@@ -132,7 +117,6 @@ public void setListener(){
 		}
 		public void mouseClicked(MouseEvent e){
 			dayplayer.setBackground(MyColor.WHITE.getColor());
-			dayteam.setBackground(MyColor.WHITE.getColor());
 			seasonteam.setBackground(MyColor.WHITE.getColor());
 			seasonplayer.setBackground(MyColor.WHITE.getColor());
 			match.setBackground(MyColor.WHITE.getColor());
@@ -157,7 +141,6 @@ public void setListener(){
 		}
 		public void mouseClicked(MouseEvent e){
 			dayplayer.setBackground(MyColor.WHITE.getColor());
-			dayteam.setBackground(MyColor.WHITE.getColor());
 			seasonteam.setBackground(MyColor.WHITE.getColor());
 			seasonplayer.setBackground(MyColor.WHITE.getColor());
 			match.setBackground(MyColor.WHITE.getColor());
@@ -173,30 +156,7 @@ public void setListener(){
 			}
 		}
 	});
-	dayteam.addMouseListener(new MouseAdapter(){
-		public void mouseEntered(MouseEvent e){
-			dayteam.setForeground(MyColor.BLACK.getColor());
-		}
-		public void mouseExited(MouseEvent e){
-			dayteam.setForeground(MyColor.BLUE.getColor());
-		}
-		public void mouseClicked(MouseEvent e){
-			dayplayer.setBackground(MyColor.WHITE.getColor());
-			dayteam.setBackground(MyColor.WHITE.getColor());
-			seasonteam.setBackground(MyColor.WHITE.getColor());
-			seasonplayer.setBackground(MyColor.WHITE.getColor());
-			match.setBackground(MyColor.WHITE.getColor());
-			
-			dayteam.setBackground(MyColor.LIGHTBLUE.getColor());
-		if(getComponentAt(100, 30)instanceof HomeDayTeamPanel){
-				
-			}else{
-				remove(getComponentAt(100, 30));
-				add(dayteampanel);
-				repaint();
-			}
-		}
-	});
+
 	seasonplayer.addMouseListener(new MouseAdapter(){
 		public void mouseEntered(MouseEvent e){
 			seasonplayer.setForeground(MyColor.BLACK.getColor());
@@ -206,7 +166,6 @@ public void setListener(){
 		}
 		public void mouseClicked(MouseEvent e){
 			dayplayer.setBackground(MyColor.WHITE.getColor());
-			dayteam.setBackground(MyColor.WHITE.getColor());
 			seasonteam.setBackground(MyColor.WHITE.getColor());
 			seasonplayer.setBackground(MyColor.WHITE.getColor());
 			match.setBackground(MyColor.WHITE.getColor());
@@ -231,7 +190,6 @@ public void setListener(){
 		}
 		public void mouseClicked(MouseEvent e){
 			dayplayer.setBackground(MyColor.WHITE.getColor());
-			dayteam.setBackground(MyColor.WHITE.getColor());
 			seasonteam.setBackground(MyColor.WHITE.getColor());
 			seasonplayer.setBackground(MyColor.WHITE.getColor());
 			match.setBackground(MyColor.WHITE.getColor());
@@ -256,7 +214,6 @@ public void setListener(){
 		}
 		public void mouseClicked(MouseEvent e){
 			dayplayer.setBackground(MyColor.WHITE.getColor());
-			dayteam.setBackground(MyColor.WHITE.getColor());
 			seasonteam.setBackground(MyColor.WHITE.getColor());
 			seasonplayer.setBackground(MyColor.WHITE.getColor());
 			match.setBackground(MyColor.WHITE.getColor());

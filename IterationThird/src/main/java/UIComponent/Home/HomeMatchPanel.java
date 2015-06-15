@@ -3,6 +3,7 @@ package UIComponent.Home;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -10,8 +11,14 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.MatteBorder;
 
+import logic.MatchBL;
+import logic.MatchBL_Impl;
+import UIComponent.JumpFrame;
 import UIComponent.MyColor;
 import UIComponent.MyTable;
+import UIComponent.Match.MatchDetailPanel;
+import UIComponent.Team.TeamDetailPanel;
+import VO.MatchShortVO;
 
 public class HomeMatchPanel extends JPanel{
 
@@ -19,7 +26,8 @@ public class HomeMatchPanel extends JPanel{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	private MatchBL matchbl=MatchBL_Impl.getInstance();
+	
 	JPanel panels[]=new JPanel[5];
 	JLabel winnericons[]=new JLabel[5];
 	JLabel losericons[]=new JLabel[5];
@@ -27,9 +35,11 @@ public class HomeMatchPanel extends JPanel{
 	JLabel losernames[]=new JLabel[5];
 	JLabel matchtime[]=new JLabel[5];
 	MyTable scoretables[]=new MyTable[5];
-	
+	private 		ArrayList<MatchShortVO> list;
 	
 	public HomeMatchPanel(){
+
+		list=matchbl.getRecentMatches(5);
 		initComponent();
 		addComponent();
 		initPanel();
@@ -46,31 +56,51 @@ public class HomeMatchPanel extends JPanel{
 			winnericons[i]=new JLabel(new ImageIcon("team/NOP.png"));
 			losericons[i]=new JLabel(new ImageIcon("team/NOP.png"));
 			
-			winnernames[i]=new JLabel("<HTML><U>"+"胜方：nop"+"<U><HTML>");
+			winnernames[i]=new JLabel("<HTML><U>"+"胜方:"+list.get(i).getWinner()+"<U><HTML>");
 			winnernames[i].setForeground(MyColor.RED.getColor());
 			winnernames[i].setFont(new Font("微软雅黑",Font.PLAIN,16));
 			winnernames[i].setHorizontalAlignment(SwingConstants.CENTER);
 			
-			losernames[i]=new JLabel("<HTML><U>"+"负方：nop"+"<U><HTML>");
+			losernames[i]=new JLabel("<HTML><U>"+"负方:"+list.get(i).getLoser()+"<U><HTML>");
 			losernames[i].setForeground(MyColor.BLACK.getColor());
 			losernames[i].setFont(new Font("微软雅黑",Font.PLAIN,16));
 			losernames[i].setHorizontalAlignment(SwingConstants.CENTER);
 			
-			matchtime[i]=new JLabel("时间:12-14");
+			matchtime[i]=new JLabel("时间:"+list.get(i).getTime());
 			matchtime[i].setForeground(MyColor.BLACK.getColor());
 			matchtime[i].setFont(new Font("微软雅黑",Font.PLAIN,16));
 			matchtime[i].setHorizontalAlignment(SwingConstants.CENTER);
 			
-			scoretables[i]=new MyTable(new String[][]{{"85-112","27-25","29-31","13-25","16-31"}},new String[]{"总比分","第一场","第二场","第三场","第四场"},-1,-1){
-				/**
-				 * 
-				 */
-				private static final long serialVersionUID = 1L;
+			ArrayList<String>score=matchbl.getScoreListByShortVO(list.get(i));
+			String data[][]=new String[score.size()+1][1];
+			data[0][0]=list.get(i).getScore();
+			for(int j=1;j<score.size();j++){
+				data[i][0]=score.get(j);
+			}
+			if(score.size()==4){
+				scoretables[i]=new MyTable(data,new String[]{"总比分","第一节","第二节","第三节","第四节"},-1,-1){
+					/**
+					 * 
+					 */
+					private static final long serialVersionUID = 1L;
 
-				public boolean isCellEditable(int row,int column){
-					return false;
-				}
-			};	
+					public boolean isCellEditable(int row,int column){
+						return false;
+					}
+				};	
+			}else if(score.size()==5){
+				scoretables[i]=new MyTable(data,new String[]{"总比分","第一节","第二节","第三节","第四节","加时赛"},-1,-1){
+					/**
+					 * 
+					 */
+					private static final long serialVersionUID = 1L;
+
+					public boolean isCellEditable(int row,int column){
+						return false;
+					}
+				};	
+			}
+	
 		}
 	}
 	public void addComponent(){
@@ -103,10 +133,30 @@ public class HomeMatchPanel extends JPanel{
 	}
 	public void setListener(){
 		for(int i=0;i<5;i++){
+			panels[i].addMouseListener(new MouseAdapter(){
+				public void mouseClicked(MouseEvent e){
+					if(e.getClickCount()==2){
+						JPanel tmp=(JPanel) e.getSource();
+						for(int j=0;j<5;j++){
+							if(tmp.equals(panels[j])){
+								MatchDetailPanel matchpanel=new MatchDetailPanel(list.get(j).getMatchid());
+								JumpFrame frame=new JumpFrame(matchpanel);
+								frame.open();
+							}
+						}
+					}
+				}
+			});
+		}
+		for(int i=0;i<5;i++){
 			winnernames[i].addMouseListener(new MouseAdapter(){
 				public void mouseClicked(MouseEvent e){
 					JLabel tmp=(JLabel)e.getSource();
-					
+					String str=tmp.getText();
+					String teamname=str.split(":")[1].split("<")[0];
+					TeamDetailPanel  teampanel=new TeamDetailPanel(teamname);
+					JumpFrame frame=new JumpFrame(teampanel);
+					frame.open();
 				}
 				public void mouseEntered(MouseEvent e){
 					JLabel tmp=(JLabel)e.getSource();
@@ -123,6 +173,11 @@ public class HomeMatchPanel extends JPanel{
 			losernames[i].addMouseListener(new MouseAdapter(){
 				public void mouseClicked(MouseEvent e){
 					JLabel tmp=(JLabel)e.getSource();
+					String str=tmp.getText();
+					String teamname=str.split(":")[1].split("<")[0];
+					TeamDetailPanel  teampanel=new TeamDetailPanel(teamname);
+					JumpFrame frame=new JumpFrame(teampanel);
+					frame.open();
 				}
 				public void mouseEntered(MouseEvent e){
 					JLabel tmp=(JLabel)e.getSource();

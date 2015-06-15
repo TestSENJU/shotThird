@@ -13,16 +13,13 @@ import javax.swing.border.MatteBorder;
 
 import logic.MatchBL;
 import logic.MatchBL_Impl;
+import UIComponent.JumpFrame;
 import UIComponent.MyColor;
 import UIComponent.MyScrollPane;
 import UIComponent.MyTable;
-import UIComponent.Player.PlayerAllNumberPanel;
-import UIComponent.Player.PlayerAverageNumberPanel;
-import UIComponent.Player.PlayerRatePanel;
+import UIComponent.Team.TeamDetailPanel;
 import VO.MatchVO;
 import VO.PlayerMatchVO;
-import VO.PlayerNumberVO;
-import VO.PlayerRateVO;
 
 public class MatchDetailPanel extends JPanel{
 /**
@@ -68,13 +65,18 @@ public String[][] getStringArrays(ArrayList<PlayerMatchVO>list){
 }
 public void initComponent(){
 	
-	kingpanel=new MatchKingPanel();
+	kingpanel=new MatchKingPanel(this.id);
 	kingpanel.setBounds(0,290,500,290);
 	
-//	winnertable=new MyTable(getStringArrays(this.match.getWinnerlist()),new String[]{""});
-//	winnerjsp=new MyScrollPane();
+	winnertable=new MyTable(getStringArrays(this.match.getWinnerlist()),new String[]{"姓名","位置","时间","投篮命中数","三分命中数","三分出手数","罚球命中数","罚球出手数","进攻篮板数"
+		,"防守篮板数","总篮板数","助攻数","抢断数","盖帽数","失误数","犯规数","得分"},-1,0);
+	winnerjsp=new MyScrollPane(winnertable);
+	winnerjsp.setBounds(0,290,500,290);
 	
-
+	losertable=new MyTable(getStringArrays(this.match.getLoserlist()),new String[]{"姓名","位置","时间","投篮命中数","三分命中数","三分出手数","罚球命中数","罚球出手数","进攻篮板数"
+		,"防守篮板数","总篮板数","助攻数","抢断数","盖帽数","失误数","犯规数","得分"},-1,0);
+	loserjsp=new MyScrollPane(losertable);
+	loserjsp.setBounds(0,290,500,290);
 		
 	winner=new JLabel("胜方");
 	winner.setForeground(MyColor.BLUE.getColor());
@@ -189,13 +191,15 @@ public void setListener(){
 	});
 	winnerName.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
-			
+			TeamDetailPanel jp=new TeamDetailPanel(match.getWinner());
+			JumpFrame frame=new JumpFrame(jp);
+			frame.open();
 		}
 		public void mouseEntered(MouseEvent e){
-			
+			winnerName.setForeground(MyColor.BLUE.getColor());
 		}
 		public void mouseExited(MouseEvent e){
-			
+			winnerName.setForeground(MyColor.RED.getColor());
 		}
 	});
 	loserName.addMouseListener(new MouseAdapter(){
@@ -203,10 +207,10 @@ public void setListener(){
 			
 		}
 		public void mouseEntered(MouseEvent e){
-			
+			loserName.setForeground(MyColor.BLUE.getColor());
 		}
 		public void mouseExited(MouseEvent e){
-			
+			loserName.setForeground(MyColor.BLACK.getColor());
 		}
 	});
 }

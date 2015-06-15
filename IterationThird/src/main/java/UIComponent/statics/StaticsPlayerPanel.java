@@ -1,8 +1,6 @@
 package UIComponent.statics;
 
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -28,11 +26,7 @@ public class StaticsPlayerPanel extends JPanel{
 	JLabel choose;
 	JLabel season;
 	JLabel aver;
-	JLabel all;
-	JLabel current;
-	JLabel after;
 	JLabel isOn;
-	JLabel isNotOn;
 	MyComboBox seasonbox;
 	JLabel num,rate;
 	DefaultTableModel nummodel;
@@ -42,7 +36,10 @@ public class StaticsPlayerPanel extends JPanel{
 	DefaultTableModel ratemodel;
 	MyScrollPane ratejsp;
 	JLabel location,league;
-	MyComboBox loca,leag;
+	MyComboBox loca,leag,isafter,ison,isaver;
+	JLabel after;
+	JLabel confirm;
+
 	
 	private boolean average=true;
 	private boolean now=true;
@@ -63,24 +60,53 @@ public class StaticsPlayerPanel extends JPanel{
 		
 	}
 public void initComponent(){
+	aver=new JLabel("平均");
+	aver.setForeground(MyColor.BLUE.getColor());
+	aver.setFont(new Font("黑体",Font.PLAIN,14));
+	aver.setHorizontalAlignment(SwingConstants.CENTER);
+	aver.setBounds(370, 5, 40, 30);
+	isaver=new MyComboBox(new String[]{" ","平均","赛季"});
+	isaver.setBounds(410,8,60,25);
+	
+	 isOn=new JLabel("现役");
+	 isOn.setForeground(MyColor.BLUE.getColor());
+	 isOn.setHorizontalAlignment(SwingConstants.CENTER);
+	 isOn.setFont(new Font("黑体",Font.PLAIN,14));
+	 isOn.setBounds(480, 5, 40, 30);
+		ison=new MyComboBox(new String[]{" ","现役","退役"});
+		ison.setBounds(520,8,60,25);
+	 
+	confirm=new JLabel("<HTML><U>"+"筛选"+"<HTML><U>");
+	confirm.setBounds(720,0,40,40);
+	confirm.setForeground(MyColor.BLUE.getColor());
+	confirm.setFont(new Font("黑体",Font.PLAIN,14));
+	confirm.setHorizontalAlignment(SwingConstants.CENTER);
+	
+	after=new JLabel("常规赛");
+	after.setForeground(MyColor.BLUE.getColor());
+	after.setFont(new Font("黑体",Font.PLAIN,14));
+	after.setBounds(590, 0, 50, 40);
+	after.setHorizontalAlignment(SwingConstants.CENTER);
+	isafter=new MyComboBox(new String[]{" ","季前赛","常规赛","季后赛"});
+	isafter.setBounds(640,8,60,25);
 	
 	location=new JLabel("位置");
 	location.setForeground(MyColor.BLUE.getColor());
 	location.setFont(new Font("黑体",Font.PLAIN,14));
-	location.setBounds(0, 0, 60, 40);
+	location.setBounds(0, 0, 40, 40);
 	location.setHorizontalAlignment(SwingConstants.CENTER);
 	
 	league=new JLabel("联盟");
 	league.setForeground(MyColor.BLUE.getColor());
 	league.setFont(new Font("黑体",Font.PLAIN,14));
-	league.setBounds(130, 0, 60, 40);
+	league.setBounds(110, 0, 40, 40);
 	league.setHorizontalAlignment(SwingConstants.CENTER);
 
 	loca=new MyComboBox(new String[]{" ","前锋","中锋","后卫"});
-	loca.setBounds(60, 8, 60, 25);
+	loca.setBounds(40, 8, 60, 25);
 	
 	leag=new MyComboBox(new String[]{" ","大西洋分区","中央分区","东南分区","西北分区","太平洋分区","西南分区"});
-	leag.setBounds(190,8,60,25);
+	leag.setBounds(150,8,60,25);
 	nummodel=new DefaultTableModel(null, numTableHeader){
 		/**
 		 * 
@@ -145,65 +171,17 @@ public void initComponent(){
 	season=new JLabel("赛季");
 	season.setForeground(MyColor.BLUE.getColor());
 	season.setFont(new Font("黑体",Font.PLAIN,14));
-	season.setBounds(260, 0, 60, 40);
+	season.setBounds(220, 0, 40, 40);
 	season.setHorizontalAlignment(SwingConstants.CENTER);
 	
-	String year[]=new String[3];
-	for(int i=0;i<year.length;i++){
+	String year[]=new String[4];
+	year[0]=" ";
+	for(int i=1;i<year.length;i++){
 		year[i]=i+2012+"-"+(i+2013);
 	}
 	seasonbox=new MyComboBox(year);
-	seasonbox.setBounds(330, 8, 100, 25);
-	
-	aver=new JLabel("平均");
-	aver.setForeground(MyColor.BLUE.getColor());
-	aver.setFont(new Font("黑体",Font.PLAIN,14));
-	aver.setOpaque(true);
-	aver.setBackground(MyColor.LIGHTBLUE.getColor());
-	aver.setHorizontalAlignment(SwingConstants.CENTER);
-	aver.setBounds(460, 5, 60, 30);
-	
-	all=new JLabel("总赛季");
-	all.setForeground(MyColor.BLUE.getColor());
-	all.setFont(new Font("黑体",Font.PLAIN,14));
-	all.setHorizontalAlignment(SwingConstants.CENTER);
-	all.setBounds(525, 5, 60, 30);
-	all.setOpaque(true);
-	all.setBackground(MyColor.WHITE.getColor());
-	
-	current=new JLabel("常规赛");
-	current.setForeground(MyColor.BLUE.getColor());
-	current.setFont(new Font("黑体",Font.PLAIN,14));
-	current.setOpaque(true);
-	current.setBackground(MyColor.LIGHTBLUE.getColor());
-	current.setHorizontalAlignment(SwingConstants.CENTER);
-	current.setBounds(625, 5, 60, 30);
-	current.setOpaque(true);
-	
-	after=new JLabel("季后赛");
-	after.setForeground(MyColor.BLUE.getColor());
-	after.setHorizontalAlignment(SwingConstants.CENTER);
-	after.setFont(new Font("黑体",Font.PLAIN,14));
-	after.setBounds(690, 5, 60, 30);
-	after.setOpaque(true);
-	after.setBackground(MyColor.WHITE.getColor());
-	
-	 isOn=new JLabel("现役");
-	 isOn.setForeground(MyColor.BLUE.getColor());
-	 isOn.setHorizontalAlignment(SwingConstants.CENTER);
-	 isOn.setFont(new Font("黑体",Font.PLAIN,14));
-	 isOn.setBounds(775, 5, 60, 30);
-	 isOn.setOpaque(true);
-	 isOn.setBackground(MyColor.LIGHTBLUE.getColor());
+	seasonbox.setBounds(260, 8, 100, 25);
 		
-	isNotOn=new JLabel("退役");
-	isNotOn.setForeground(MyColor.BLUE.getColor());
-	isNotOn.setHorizontalAlignment(SwingConstants.CENTER);
-	isNotOn.setFont(new Font("黑体",Font.PLAIN,14));
-	isNotOn.setBounds(840, 5, 58, 30);
-	isNotOn.setOpaque(true);
-	isNotOn.setBackground(MyColor.WHITE.getColor());
-			
 	choose=new JLabel("排序依据");
 	choose.setForeground(MyColor.BLUE.getColor());
 	choose.setFont(new Font("黑体",Font.PLAIN,14));
@@ -271,35 +249,37 @@ public void addComponent(){
 	this.add(rate);
 	this.add(num);
 	this.add(aver);
-	this.add(all);
-	this.add(current);
-	this.add(after);
+	this.add(isaver);
 	this.add(isOn);
-	this.add(isNotOn);
+	this.add(ison);
+	this.add(confirm);
+	this.add(after);
+	this.add(isafter);
 	this.add(season);
 	this.add(seasonbox);
 	this.add(rateOption);
 }
 public void setListener(){
-	isOn.addMouseListener(new MouseAdapter(){
-		 public void mouseClicked(MouseEvent e){
-			 isOn.setBackground(MyColor.LIGHTBLUE.getColor());
-			 isNotOn.setBackground(MyColor.WHITE.getColor());
-			 on=true;
-			}
-	});
-	isNotOn.addMouseListener(new MouseAdapter(){
-		 public void mouseClicked(MouseEvent e){
-			 isNotOn.setBackground(MyColor.LIGHTBLUE.getColor());
-			 isOn.setBackground(MyColor.WHITE.getColor());
-			 on=false;
-			}
-	});
-	seasonbox.addActionListener(new ActionListener(){
-		public void actionPerformed(ActionEvent e){
+	confirm.addMouseListener(new MouseAdapter(){
+		public void mouseClicked(MouseEvent e){
 			
 		}
+		public void mouseEntered(MouseEvent e){
+			confirm.setForeground(MyColor.BLUE.getColor());
+		}
+		public void mouseExited(MouseEvent e){
+			confirm.setForeground(MyColor.BLACK.getColor());
+		}
 	});
+//	if(getComponentAt(180,300).equals(numjsp)){
+//		numTable.addMouseListener(new MouseAdapter(){
+//			
+//		});
+//	}else if(getComponentAt(180,300).equals(ratejsp)){
+//	rateTable.addMouseListener(new MouseAdapter(){
+//			
+//		});
+//	}
 	num.addMouseListener(new MouseAdapter(){
         public void mouseClicked(MouseEvent e){
         	num.setBackground(MyColor.LIGHTBLUE.getColor());
@@ -325,35 +305,6 @@ public void setListener(){
             	repaint();
         	}
 		}
-	});
-	aver.addMouseListener(new MouseAdapter(){
-        public void mouseClicked(MouseEvent e){
-        	aver.setBackground(MyColor.LIGHTBLUE.getColor());
-        	all.setBackground(MyColor.WHITE.getColor());
-        	average=true;
-		}
-	});
-	all.addMouseListener(new MouseAdapter(){
-		  public void mouseClicked(MouseEvent e){
-			   aver.setBackground(MyColor.WHITE.getColor());
-	        	all.setBackground(MyColor.LIGHTBLUE.getColor());
-	        	average=false;
-	        	
-			}
-	});
-	current.addMouseListener(new MouseAdapter(){
-		  public void mouseClicked(MouseEvent e){
-			  current.setBackground(MyColor.LIGHTBLUE.getColor());
-			  after.setBackground(MyColor.WHITE.getColor());
-			  now=true;
-			}
-	});
-	after.addMouseListener(new MouseAdapter(){
-		  public void mouseClicked(MouseEvent e){
-			  current.setBackground(MyColor.WHITE.getColor());
-			  after.setBackground(MyColor.LIGHTBLUE.getColor());
-			  now=false;
-			}
 	});
 	for(int i=0;i<option.length;i++){
 		option[i].addMouseListener(new MouseAdapter(){

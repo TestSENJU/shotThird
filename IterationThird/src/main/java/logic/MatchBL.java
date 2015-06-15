@@ -4,23 +4,27 @@ import java.util.ArrayList;
 
 import VO.MatchShortVO;
 import VO.MatchVO;
+import VO.PlayerShortVO;
 
 public interface MatchBL {
     public MatchVO getMatchByID(String matchid);
     
     public ArrayList<MatchShortVO> getAllMatches(int num);
     
+    public ArrayList<MatchShortVO> getRecentMatches(int num);
     
-
-//	//-----------在比赛的总面板里获取所有比赛的简短信息，不过我有点疑问要显示多少条，多了要加载的时间很长------------//
-//	public ArrayList<MatchShortVO> getMatch();
-//	
-//	//----------------------根据比赛的id获取该比赛的详细信息，主要使用在根据比赛的简短信息获取详细信息时----------------------//
-//	public MatchVO getMatchByMatchId(String matchid);
-//	
-//	//---------------------查找比赛的界面里面用于根据输入的多个条件获取比赛的简短信息，其中任意一个条件可以为空-----------------------//
-//	public ArrayList<MatchShortVO> getMatchByConditions(String playername,String teamname,boolean isAfter,String time,String season);
-//
-//	//---------------------获取最近的比赛，用于显示在首页和搜索界面-----------------------//
-//	public ArrayList<MatchShortVO> getRecentMatch(int num);
+    public ArrayList<String> getScoreListByShortVO(MatchShortVO match);
+    
+    /**
+     * option
+     * 0得分
+     * 1篮板
+     * 2助攻
+     * @param matchid
+     * @param option
+     * @return
+     */
+    public ArrayList<PlayerShortVO> getMatchKing(String matchid,int option);
+    
+    public ArrayList<MatchShortVO> getMatchesByConditions(String teamname,String playername,String time,String season,int after);
 }
