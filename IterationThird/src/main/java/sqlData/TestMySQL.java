@@ -2,16 +2,14 @@ package sqlData;
 
 import java.sql.Connection;
 import java.sql.Statement;
-import java.util.ArrayList;
 
-import specialpo.tdata;
 
 public class TestMySQL {
 	Statement stmt;
 	Connection conn;
 
 	public static void main(String[] args) throws Exception {
-		TestMySQL mysqltest = new TestMySQL();
+		//TestMySQL mysqltest = new TestMySQL();
 		// String sqlCMD =
 		// "CREATE TABLE Match20122013Season(gameID VARCHAR(20),mTime VARCHAR(10),firstTeamID VARCHAR(20),firstTeamName VARCHAR(3),lastTeamID VARCHAR(20),lastTeamName VARCHAR(3),firstScore int,first1 int,first2 int,first3 int,first4 int,secondScore int,second1 int,second2 int,second3 int,second4 int);";
 		// String sqlCMD =

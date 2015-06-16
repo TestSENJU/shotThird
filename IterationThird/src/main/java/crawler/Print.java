@@ -3,9 +3,9 @@ package crawler;
 public class Print {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		/*// TODO Auto-generated method stub
 		String a = "Barea, Jose Juan  巴里亚, 何塞-胡安";
-		/*String name = a.replaceAll(" ", "");
+		String name = a.replaceAll(" ", "");
 		System.out.println(name);
 		int flag = -1;
 		int length = name.length();
@@ -21,11 +21,20 @@ public class Print {
 		if (flag != -1) {
 			EName = name.substring(0, flag);
 			CName = name.substring(flag);
-		}*/
+		}
 		String[] name = a.split("\\s+");
 		System.out.println(name.length);
 		//System.out.println("_"+EName+"_");
 		//System.out.println("_"+CName+"_");
-	}
+*/	
+
+			String s ="sdf\\a\\aa"; 
+			//把s中的反斜杠\ 替换为\\ 
+			System.out.println(s); 
+			System.out.println(s.replaceAll("\\\\", "/")); 
+			System.out.println(s.replace("\\", "/")); 
+			
+	
+}
 
 }
