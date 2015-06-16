@@ -6,6 +6,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 import specialpo.PlayerBaseInfoPO;
+import sqlData.TestMySQL;
 
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
@@ -54,15 +55,36 @@ public class PlayerBaseInfo {
 			String EName = "ename";
 			String CName = "cname";
 			if (flag != -1) {
-				EName = name.substring(0, flag).trim();
-				CName = name.substring(flag).trim();
+				EName = name.substring(0, flag).trim().replaceAll("'", "");
+				CName = name.substring(flag).trim().replaceAll("'", "");
 			}
 			playerBI.add(new PlayerBaseInfoPO(EName,CName,tds.get(1).text(),tds.get(2).text(),tds.get(3).text(),tds.get(4).text(),tds.get(5).text()));
 			//http://china.nba.com/media/img/players/head/132x132/203919.png
 		}
+		TestMySQL filldata = new TestMySQL();
 		for (int h=0;h < playerBI.size();h++) {
-			System.out.println(playerBI.get(h).getName());
+			String sql = "insert into playerbaseinfo values ("+"'"+playerBI.get(h).getEnglishName()
+					+"','"+playerBI.get(h).getName()+"','"+playerBI.get(h).getTeam()
+					+"','"+playerBI.get(h).getPosition()+"','"+playerBI.get(h).getHeight()
+					+"','"+playerBI.get(h).getWeight()+"','"+playerBI.get(h).getExperience()
+					+"');";
+			filldata.createTable(sql);
 		}
+
+		/*for (int i=0;i < md.size();i++) {
+			String sql = "insert into Match20142015Season values ("+"'"+md.get(i).getGameID()
+					+"','"+md.get(i).getmTime()+"','"+md.get(i).getFirstTeamID()
+					+"','"+md.get(i).getFirstTeamName()+"','"+md.get(i).getLastTeamID()
+					+"','"+md.get(i).getLastTeamName()+"',"+md.get(i).getFirstScore()
+					+","+md.get(i).getFirst1()+","+md.get(i).getFirst2()+","
+					+md.get(i).getFirst3()+","+md.get(i).getFirst4()
+					+","+md.get(i).getSecondScore()
+					+","+md.get(i).getSecond1()+","+md.get(i).getSecond2()+","
+					+md.get(i).getSecond3()+","+md.get(i).getSecond4()
+					+");";
+			filldata.createTable(sql);
+		}*/
+		System.out.println("ok");
 		//关闭客户端
 		webClient.close();
 	}
