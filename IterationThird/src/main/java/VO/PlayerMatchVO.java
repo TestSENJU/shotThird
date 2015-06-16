@@ -25,7 +25,7 @@ public PlayerMatchVO(String id,String matchid){
 	this.opponent="";
 	String strs[]=matchid.split("_");
 	this.season=strs[0];
-	this.team=strs[2];
+	this.time=strs[1];
 	for(int i=0;i<data.length;i++){
 		this.data[i]=0.0;
 	}
@@ -49,15 +49,6 @@ public String getLocation() {
 public void setLocation(String location) {
 	this.location = location;
 }
-
-public String getTime() {
-	return time;
-}
-
-public void setTime(String time) {
-	this.time = time;
-}
-
 public String getTeam() {
 	return team;
 }
@@ -76,10 +67,6 @@ public void setOpponent(String opponent) {
 
 public String getSeason() {
 	return season;
-}
-
-public void setSeason(String season) {
-	this.season = season;
 }
 
 public double[] getData() {

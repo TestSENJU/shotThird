@@ -32,10 +32,10 @@ public String getLocation() {
 public void setLocation(String location) {
 	this.location = location;
 }
-public boolean isAfter() {
+public boolean getIsOn() {
 	return isOn;
 }
-public void setAfter(boolean isAfter) {
+public void setIsOn(boolean isAfter) {
 	this.isOn = isAfter;
 }
 

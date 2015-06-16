@@ -20,6 +20,7 @@ import VO.PlayerInfoVO;
 import VO.PlayerMatchVO;
 import VO.PlayerNumberVO;
 import VO.PlayerRateVO;
+import VO.PlayerShortVO;
 import VO.TeamHotVO;
 import VO.TeamInfoVO;
 import VO.TeamNumberVO;
@@ -42,6 +43,12 @@ static Hashtable<String,TeamInfoVO> teaminfotable=new Hashtable<String,TeamInfoV
 private static String teaminfopath="Serialization/matchfolder/matchshortvoser";
 public void writeteaminfo(){
 	FileReadAndWriteBuffer.write_to_file(teaminfopath, teaminfotable);
+}
+
+static  Hashtable<String,PlayerShortVO> playerallnumbertable=new Hashtable<String,PlayerShortVO>();
+private static String playerallnumberpath="Serialization/matchfolder/matchshortvoser";
+public void writeplayerallnumber(){
+	FileReadAndWriteBuffer.write_to_file(playerallnumberpath, playerallnumbertable);
 }
 
 static  Hashtable<String,PlayerInfoVO> playerinfotable=new Hashtable<String,PlayerInfoVO>();
@@ -218,11 +225,15 @@ private void ReadMatch(){
 		String reg = "[\u4e00-\u9fa5]";
 
 	    Pattern pat = Pattern.compile(reg);  
+	    ArrayList<String[]>team1list=new ArrayList<String[]>();
+	    ArrayList<String[]>team2list=new ArrayList<String[]>();
+	    String team1="";
+	    String team2="";
 	    while(br.readLine()!=null){
+	    	
 			String str=br.readLine();
 			String strs[]=str.split(":");
-			String ss[]=new String[strs.length];
-			String data[]=new String[21];
+			String ss[]=new String[22];
 
 			int j=0;
 			for(int i=0;i<strs.length;i++){
@@ -230,16 +241,27 @@ private void ReadMatch(){
 			     String repickStr = mat.replaceAll("");
 			     if(i==3){
 			    	 Matcher mat1=pat.matcher(strs[i+1]); 
-				     String repickStr1 = mat.replaceAll("");
+				     String repickStr1 = mat1.replaceAll("");
 			    	   ss[j]=repickStr+":"+repickStr1; 
 			     }else{
 			    	   ss[j]=repickStr;
 			     }
 			     j++;
 			}
-			String matchid=ss[0]+"_"+ss[1]+"_"+ss[2]+"_"+isAfter(ss[0],ss[1]);
-		PlayerMatchVO playermatch=new PlayerMatchVO(ss[3],matchid);
-		playermatch
+			if(team1==""){team1=ss[2];team1list.add(ss);}
+			if(team1!=""&&team2==""&&!ss[2].equals(team1)){
+				team2=ss[2];
+				team2list.add(ss);
+			}else if(team1!=""&&ss[2].equals(team1)){
+				team1list.add(ss);
+			}else if(team1!=""&&team2!=""&&!ss[2].equals(team2)){
+				getMatchData(team1list,team2list,team1,team2,ss[0],ss[1]);
+				team1list.clear();team2list.clear();
+				team1=ss[2];
+				team2="";		
+			}else if(team1!=""&&team2!=""&&!ss[2].equals(team2)){
+				team2list.add(ss);
+			}
 			
 		}
 	} catch (UnsupportedEncodingException | FileNotFoundException e) {
@@ -250,6 +272,84 @@ private void ReadMatch(){
 		e.printStackTrace();
 	}
 	
+}
+private void getMatchData(ArrayList<String[]> teamlist1,ArrayList<String[]>teamlist2,String team1,String team2,String season,String time){
+	int after=isAfter(season,time);
+	String matchid=season+"_"+time+"_"+team1+"-"+team2+"_"+(after+"");
+	
+	for(int i=0;i<teamlist1.size();i++){
+		String[] playerdata=teamlist1.get(i);
+		PlayerMatchVO playermatch=new PlayerMatchVO(playerdata[3],matchid);
+		playermatch.setLocation(playerdata[5]);
+		playermatch.setPlayingtime(playerdata[4]);
+		double []data=new double[20];
+		for(int j=6;j<playerdata.length;j++){
+			data[j-6]=Double.parseDouble(playerdata[j]);
+		}
+		playermatch.setData(data);
+		String playerallnumberkey=playerdata[3]+"_"+season+"_"+(after+"");
+		double numberdata[]=new double[9];
+		numberdata[0]=Double.parseDouble(playerdata[15]);numberdata[1]=Double.parseDouble(playerdata[16]);
+		numberdata[2]=Double.parseDouble(playerdata[13]);numberdata[3]=Double.parseDouble(playerdata[14]);
+		numberdata[4]=Double.parseDouble(playerdata[17]);numberdata[5]=Double.parseDouble(playerdata[18]);
+		numberdata[6]=Double.parseDouble(playerdata[19]);numberdata[7]=Double.parseDouble(playerdata[20]);
+		numberdata[8]=Double.parseDouble(playerdata[21]);
+		if(playeravernumbertable.containsKey(playerallnumberkey)){
+			playeravernumbertable.get(playerallnumberkey).addAverTime(playerdata[4]);
+			playeravernumbertable.get(playerallnumberkey).addnumber(1);
+			playeravernumbertable.get(playerallnumberkey).addAverData(numberdata);
+			if(!(playerdata[5].equals("F"))||playerdata[5].equals("G")||playerdata[5].equals("C")){
+				playeravernumbertable.get(playerallnumberkey).addfirstnum(1);
+			}
+		}		
+			else{
+				PlayerNumberVO number=new PlayerNumberVO(playerallnumberkey);
+				number.setTeam(team1);
+				number.addAverTime(playerdata[4]);
+				number.addAverData(numberdata);
+				playeravernumbertable.put(playerallnumberkey, number);
+			}
+		if(playerallnumbertable.containsKey(playerallnumberkey)){
+			playerallnumbertable.get(playerallnumberkey).addTime(playerdata[4]);
+			playerallnumbertable.get(playerallnumberkey).addnumber(1);
+			playerallnumbertable.get(playerallnumberkey).adddata(numberdata);
+			if(!(playerdata[5].equals("F"))||playerdata[5].equals("G")||playerdata[5].equals("C")){
+				playerallnumbertable.get(playerallnumberkey).addfirstnum(1);
+			}
+		}		
+			else{
+				PlayerNumberVO number=new PlayerNumberVO(playerallnumberkey);
+				number.setTeam(team1);
+				number.addTime(playerdata[4]);
+				number.adddata(numberdata);
+				playerallnumbertable.put(playerallnumberkey, number);
+			}
+		if(playermatchtable.containsKey(playerdata[3]))
+		playermatchtable.get(playerdata[3]).add(playermatch);
+		else{
+			ArrayList<PlayerMatchVO>list=new ArrayList<PlayerMatchVO>();
+			list.add(playermatch);
+			playermatchtable.put(playerdata[3], list);
+		}
+	}
+	for(int i=0;i<teamlist2.size();i++){
+		String[] playerdata=teamlist2.get(i);
+		PlayerMatchVO playermatch=new PlayerMatchVO(playerdata[3],matchid);
+		playermatch.setLocation(playerdata[5]);
+		playermatch.setPlayingtime(playerdata[4]);
+		double []data=new double[20];
+		for(int j=6;j<playerdata.length;j++){
+			data[j-6]=Double.parseDouble(playerdata[j]);
+		}
+		playermatch.setData(data);
+		if(playermatchtable.containsKey(playerdata[3]))
+			playermatchtable.get(playerdata[3]).add(playermatch);
+			else{
+				ArrayList<PlayerMatchVO>list=new ArrayList<PlayerMatchVO>();
+				list.add(playermatch);
+				playermatchtable.put(playerdata[3], list);
+			}
+	}
 }
 private int isAfter(String season,String time){
 	if(season.equals("12-13")){
@@ -289,19 +389,6 @@ private int isAfter(String season,String time){
 	}
 	return 0;
 }
-private PlayerMatchVO getPlayerMatch(String data[]){
-	PlayerMatchVO playermatchvo=new PlayerMatchVO();
-	data[0]=ss[0];
-	data[1]=ss[1];
-	data[2]=ss[2];
-	data[3]=ss[3];
-	data[4]=ss[4];
-	data[5]=ss[5]+":"+ss[6];
-	for(int j=6;j<data.length;j++){
-		data[j]=ss[j+2];
-	}
-	return playermatchvo;
-}
 private void ReadPlayer(){
 	String filenames[]=new File("active/").list();
 	
@@ -311,13 +398,22 @@ private void ReadPlayer(){
 			BufferedReader br=new BufferedReader(
 					new InputStreamReader(new FileInputStream("active/Aaron Brooks.txt"),"UTF-8"));
 			String str=br.readLine();
+			
 			PlayerInfoVO info=new PlayerInfoVO(str.split(":")[1].trim());
 			String data[]=new String[8];
 			for(int j=0;j<8;j++){
 				data[j]=br.readLine().split(":")[1].trim();
 			}
 			info.setData(data);
+			String team=br.readLine().split(":")[1].trim();
+			info.setTeam(team);
 			playerinfotable.put(info.getPlayername(), info);
+			
+			PlayerShortVO shortvo=new PlayerShortVO(str.split(":")[1].trim());
+			shortvo.setIsOn(true);
+			shortvo.setTeam(team);
+			shortvo.setLocation(data[1]);
+			playershortvotable.
 		}
 	
 	} catch (UnsupportedEncodingException | FileNotFoundException e) {

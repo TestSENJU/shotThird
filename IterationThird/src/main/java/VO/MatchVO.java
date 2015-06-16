@@ -15,7 +15,6 @@ String loser;
 String winner;
 String score;
 int isAfter;
-ArrayList<String> scorelist=new ArrayList<String>();
 ArrayList<PlayerMatchVO> winnerlist=new ArrayList<PlayerMatchVO>();
 ArrayList<PlayerMatchVO> loserlist=new ArrayList<PlayerMatchVO>();
 
@@ -75,14 +74,6 @@ public int getIsAfter() {
 
 public void setIsAfter(int isAfter) {
 	this.isAfter = isAfter;
-}
-
-public ArrayList<String> getScorelist() {
-	return scorelist;
-}
-
-public void setScorelist(ArrayList<String> scorelist) {
-	this.scorelist = scorelist;
 }
 
 public ArrayList<PlayerMatchVO> getWinnerlist() {
