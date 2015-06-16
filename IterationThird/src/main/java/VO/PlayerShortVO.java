@@ -7,23 +7,18 @@ public class PlayerShortVO  implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	String playerid;
 	String playername;
 	String team;
 	String location;
 	boolean isOn;
 public PlayerShortVO(String s){
-	this.playerid=s;
-	this.playername=" ";
+	this.playername=s;
 	this.team=" ";
 	this.location=" ";
 	this.isOn=false;
 }
 public String getPlayername() {
 	return playername;
-}
-public void setPlayername(String playername) {
-	this.playername = playername;
 }
 public String getTeam() {
 	return team;
@@ -42,9 +37,6 @@ public boolean isAfter() {
 }
 public void setAfter(boolean isAfter) {
 	this.isOn = isAfter;
-}
-public String getPlayerid() {
-	return playerid;
 }
 
 }

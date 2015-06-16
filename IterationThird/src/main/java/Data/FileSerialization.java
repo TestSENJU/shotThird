@@ -4,11 +4,32 @@ import java.io.File;
 import java.io.IOException;
 
 public class FileSerialization {
-	private static String team_serialization_path = "serialization/team";
-	private static String teamAverage_serialization_path = "serialization/teamAverage";
-	private static String playerAll_serialization_path = "serialization/playerAllScore";
-	private static String playerAver_serialization_path = "serialization/playerAverageScore";
-	private static String playerBasic_serialization_path = "serialization/playerBasicInfo";
+	private static String matchshortpath="Serialization/matchfolder/matchvoser";
+	private static String matchpath="Serialization/matchfolder/matchshortvoser";
+	private static String teaminfopath="Serialization/matchfolder/matchshortvoser";
+	private static String playerinfopath="Serialization/matchfolder/matchshortvoser";
+	private static String teamavernumberpath="Serialization/matchfolder/matchshortvoser";
+	private static String teamallnumberpath="Serialization/matchfolder/matchshortvoser";
+	private static String teamratepath="Serialization/matchfolder/matchshortvoser";
+	private static String teamseasonpath="Serialization/matchfolder/matchshortvoser";
+	private static String teamaverseasonpath="Serialization/matchfolder/matchshortvoser";
+	private static String teamseasonmedianpath="Serialization/matchfolder/matchshortvoser";
+	private static String teammedianpath="Serialization/matchfolder/matchshortvoser";
+	private static String teamvariancepath="Serialization/matchfolder/matchshortvoser";
+	private static String teamseasonvaripath="Serialization/matchfolder/matchshortvoser";
+	private static String playerallnumberpath="Serialization/matchfolder/matchshortvoser";
+	private static String playeravernumberpath="Serialization/matchfolder/matchshortvoser";
+	private static String  playerratepath="Serialization/matchfolder/matchshortvoser";
+    private static String playeraverpath="Serialization/matchfolder/matchshortvoser";
+	private static String playeraverseasonpath="Serialization/matchfolder/matchshortvoser";
+	private static String playeraverteampath="Serialization/matchfolder/matchshortvoser";
+	private static String  playermedianpath="Serialization/matchfolder/matchshortvoser";
+	private static String playermedianteampath="Serialization/matchfolder/matchshortvoser";
+	private static String playermedianseasonpath="Serialization/matchfolder/matchshortvoser";
+	private static String playervariseasonpath="Serialization/matchfolder/matchshortvoser";
+	private static String playervaripath="Serialization/matchfolder/matchshortvoser";
+	private static String playervariteampath="Serialization/matchfolder/matchshortvoser";
+	private static String playermatchpath="Serialization/matchfolder/matchshortvoser";
 
 	private static FileSerialization fs;
 
@@ -19,34 +40,48 @@ public class FileSerialization {
 	}
 
 	public FileSerialization() {
-		File team_file = new File(team_serialization_path);
-		File teamAverage_file = new File(teamAverage_serialization_path);
-		if (!team_file.exists() && !teamAverage_file.exists()) {
-			try {
-				team_file.createNewFile();
-				teamAverage_file.createNewFile();
-				new TeamSerialization();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		} else {
+		File file[]=new File[27];
+		file[0]=new File(matchshortpath);
+		file[1]=new File(matchpath);
+		file[2]=new File(teaminfopath);
+		file[3]=new File(playerinfopath);
+		file[4]=new File(teamavernumberpath);
+		file[5]=new File(teamallnumberpath);
+		file[6]=new File(teamratepath);
+		file[7]=new File(teamseasonpath);
+		file[8]=new File(teamaverseasonpath);
+		file[9]=new File(teamseasonmedianpath);
+		file[10]=new File(teammedianpath);
+		file[11]=new File(teamvariancepath);
+		file[12]=new File(teamseasonvaripath);
+		file[13]=new File(playerallnumberpath);
+		file[14]=new File(playeravernumberpath);
+		file[15]=new File(playerratepath);
+		file[16]=new File(playeraverpath);
+		file[17]=new File(playeraverseasonpath);
+		file[18]=new File(playeraverteampath);
+		file[19]=new File(playermedianpath);
+		file[20]=new File(playermedianteampath);
+		file[21]=new File(playeraverseasonpath);
+		file[22]=new File(playermedianseasonpath);
+		file[23]=new File(playervariseasonpath);
+		file[24]=new File(playervaripath);
+		file[25]=new File(playervariteampath);
+		file[26]=new File(playermatchpath);
 
-		}
-		File playerAll_file = new File(playerAll_serialization_path);
-		File playerAver_file = new File(playerAver_serialization_path);
-		File playerBasic_file = new File(playerBasic_serialization_path);
-		if (!playerAll_file.exists() && (!playerAver_file.exists())
-				&& (!playerBasic_file.exists())) {
-			try {
-				playerAll_file.createNewFile();
-				playerAver_file.createNewFile();
-				playerBasic_file.createNewFile();
-				new PlayerSerialization();
-			} catch (IOException e) {
-				e.printStackTrace();
+		for(int i=0;i<file.length;i++){
+			if(file[i].exists()){
+				
+			}else{
+				try {
+					file[i].createNewFile();
+					new Serialization();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
 			}
-		} else {
-
 		}
 
 	}

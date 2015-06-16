@@ -7,7 +7,6 @@ public class PlayerMatchVO  implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-String playerid;
 String playername;
 String location;
 String time;
@@ -20,13 +19,13 @@ double[] data=new double[15];
 
 public PlayerMatchVO(String id,String matchid){
 	this.matchid=matchid;
-	this.playerid=id;
-	this.playername="";
+	this.playername=id;
 	this.location=" ";
-	this.team="";
 	this.playingtime="";
 	this.opponent="";
-	this.season="";
+	String strs[]=matchid.split("_");
+	this.season=strs[0];
+	this.team=strs[2];
 	for(int i=0;i<data.length;i++){
 		this.data[i]=0.0;
 	}
@@ -43,11 +42,6 @@ public void setPlayingtime(String playingtime) {
 public String getPlayername() {
 	return playername;
 }
-
-public void setPlayername(String playername) {
-	this.playername = playername;
-}
-
 public String getLocation() {
 	return location;
 }
@@ -94,10 +88,6 @@ public double[] getData() {
 
 public void setData(double[] data) {
 	this.data = data;
-}
-
-public String getPlayerid() {
-	return playerid;
 }
 
 public String getMatchid() {

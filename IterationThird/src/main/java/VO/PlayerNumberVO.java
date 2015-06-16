@@ -24,7 +24,6 @@ public class PlayerNumberVO  implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 String playername;
-String playerid;
 String time;//,"上场时间",
 int number;//"参赛场数"
 int firstnum;//"先发场数"
@@ -33,8 +32,7 @@ String season;
 
 double data[]=new double[9];
 public PlayerNumberVO(String id){
-	this.playerid=id;
-	this.playername=" ";
+	this.playername=id;
 	this.firstnum=0;
 	this.number=0;
 	this.time="0:0";
@@ -42,15 +40,8 @@ public PlayerNumberVO(String id){
 	this.season="2014-2015";
 }
 
-public String getPlayerid() {
-	return playerid;
-}
-
 public String getPlayername() {
 	return playername;
-}
-public void setPlayername(String playername) {
-	this.playername = playername;
 }
 public String getTime() {
 	return time;

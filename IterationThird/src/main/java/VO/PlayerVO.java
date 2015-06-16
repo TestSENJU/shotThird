@@ -25,7 +25,6 @@ public class PlayerVO  implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	String playerid;
 	String playername;
 	String season;
 	int isAfter;
@@ -33,8 +32,7 @@ public class PlayerVO  implements Serializable{
 	double[] data=new double[14];
 	String team;
 	public PlayerVO(String id){
-		this.playerid=id;
-		this.playername="";
+		this.playername=id;
 		this.season="";
 		this.team="";
 		this.isAfter=-1;
@@ -63,9 +61,6 @@ public class PlayerVO  implements Serializable{
 	public String getPlayername() {
 		return playername;
 	}
-	public void setPlayername(String playername) {
-		this.playername = playername;
-	}
 	public String getSeason() {
 		return season;
 	}
@@ -83,8 +78,5 @@ public class PlayerVO  implements Serializable{
 	}
 	public void setTeam(String team) {
 		this.team = team;
-	}
-	public String getPlayerid() {
-		return playerid;
 	}
 }

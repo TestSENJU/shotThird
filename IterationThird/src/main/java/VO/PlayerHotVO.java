@@ -7,23 +7,18 @@ public class PlayerHotVO  implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	String playerid;
 	String playername;
 	String team;
 	String location;
 	int isAfter;
 	double data;
 	public PlayerHotVO(String s){
-		this.playerid=s;
-		this.playername=" ";
+		this.playername=s;
 		this.team=" ";
 		this.location=" ";
 	}
 	public String getPlayername() {
 		return playername;
-	}
-	public void setPlayername(String playername) {
-		this.playername = playername;
 	}
 	public String getTeam() {
 		return team;
@@ -48,9 +43,6 @@ public class PlayerHotVO  implements Serializable{
 	}
 	public void setData(double data) {
 		this.data = data;
-	}
-	public String getPlayerid() {
-		return playerid;
 	}
 	
 }

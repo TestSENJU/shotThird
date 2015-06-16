@@ -19,13 +19,13 @@ public class PlayerInfoVO  implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-String playerid;
 String playername;
+String team;
 String data[]=new String[8];
 
 public PlayerInfoVO(String id){
-	this.playerid=id;
-	this.playername=" ";
+	this.playername=id;
+	this.team="";
 	for(int i=0;i<data.length;i++){
 		this.data[i]=" ";
 	}
@@ -34,21 +34,20 @@ public PlayerInfoVO(String id){
 public String getPlayername() {
 	return playername;
 }
-
-public void setPlayername(String playername) {
-	this.playername = playername;
-}
-
 public String[] getData() {
 	return data;
 }
 
-public void setData(String[] data) {
-	this.data = data;
+public String getTeam() {
+	return team;
 }
 
-public String getPlayerid() {
-	return playerid;
+public void setTeam(String team) {
+	this.team = team;
+}
+
+public void setData(String[] data) {
+	this.data = data;
 }
 
 }

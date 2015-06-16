@@ -27,14 +27,12 @@ public class PlayerRateVO implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-String playerid;
 String playername;
 String season;
 int isAfter;
 double rate[]=new double[15];
 public PlayerRateVO(String id){
-	this.playerid=id;
-	this.playername=" ";
+	this.playername=id;
 	this.season=" ";
 	for(int i=0;i<rate.length;i++){
 		this.rate[i]=0.0;
@@ -54,9 +52,6 @@ public void setIsAfter(int isAfter) {
 public String getPlayername() {
 	return playername;
 }
-public void setPlayername(String playername) {
-	this.playername = playername;
-}
 public String getSeason() {
 	return season;
 }
@@ -68,9 +63,6 @@ public double[] getRate() {
 }
 public void setRate(double[] rate) {
 	this.rate = rate;
-}
-public String getPlayerid() {
-	return playerid;
 }
 
 }
