@@ -33,10 +33,13 @@ public class PlayerGet {
 	private final static Logger log = Logger.getRootLogger();
 	final String INDEX_URL = "http://china.nba.com";
 	final String DATA_PATH = "./res";
-	
+	public static void main(String[] args){
+		PlayerGet pg = new PlayerGet();
+		pg.getPlayer();
+	}
 	public void getPlayer() {
 		log.info("开始采集球员信息");
-
+		System.out.println("begin");
 		final String URL_PREFIX = "http://china.nba.com/wap/static/data/player/stats_";
 		final String URL_POSTFIX = ".json";
 		
@@ -53,6 +56,8 @@ public class PlayerGet {
 			HtmlPage playerPage = playerBtn.click();
 			Document document = Jsoup.parse(playerPage.asXml(), "UTF-8");
 			Elements playerList = document.select("tr");
+			//TODO
+			System.out.println(playerList.size());
 			for (int i = 1; i < playerList.size()-1; i++) {
 			//for (int i = 1; i < 2; i++) {
 				Element player = playerList.get(i);
@@ -78,7 +83,7 @@ public class PlayerGet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
+		System.out.println("basic");
 		for (PlayerBasicInfo playerBasicInfo : playerBasicInfoList) {
 			WebRequest request;
 			try {
@@ -113,6 +118,7 @@ public class PlayerGet {
 				jsonObject = new JSONObject(jsonObject.getString("regularSeasonStat"));
 				JSONArray jsonArray = new JSONArray(jsonObject.getString("playerTeams"));
 				for (int i = 0; i < jsonArray.length(); i++) {
+					
 					JSONObject seasonJson = new JSONObject(jsonArray.get(i).toString());
 					if (i != jsonArray.length()-1) {
 						JSONObject nextJson = new JSONObject(jsonArray.get(i+1).toString());
@@ -158,13 +164,14 @@ public class PlayerGet {
 				e.printStackTrace();
 			}
 		}
-		
+		System.out.println("ok");
 		//DataJdbcImp dataJdbcImp = new DataJdbcImp();
 		//dataJdbcImp.storePlayerBasicInfo(playerBasicInfoList);
 		//dataJdbcImp.close();
 		
 		for (PlayerBasicInfo playerBasicInfo : playerBasicInfoList) {
-			getPlayerHeadPicture(playerBasicInfo, DATA_PATH + "/player/head/");
+			System.out.println(playerBasicInfo.getBirthday());
+			//getPlayerHeadPicture(playerBasicInfo, DATA_PATH + "/playerHead/");
 		}
 		
 		webClient.close();
