@@ -1,0 +1,10 @@
+Name:David Stockton
+Number:9
+Position:G
+Height:5-11
+Weight:165
+Birth:1991-06-24
+Age:23
+Exp:0
+School:Gonzaga
+OwingTeam:SAC

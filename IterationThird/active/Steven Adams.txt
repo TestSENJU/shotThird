@@ -1,0 +1,10 @@
+Name:Steven Adams
+Number:12
+Position:C
+Height:7-0
+Weight:255
+Birth:1993-07-20
+Age:21
+Exp:1
+School:Pittsburgh
+OwingTeam:OKC

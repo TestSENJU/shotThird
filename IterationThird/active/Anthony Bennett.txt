@@ -1,0 +1,10 @@
+Name:Anthony Bennett
+Number:24
+Position:F
+Height:6-8
+Weight:245
+Birth:1993-03-14
+Age:22
+Exp:1
+School:Nevada-Las Vegas
+OwingTeam:MIN

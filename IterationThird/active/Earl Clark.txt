@@ -1,0 +1,10 @@
+Name:Earl Clark
+Number:55
+Position:F
+Height:6-10
+Weight:234
+Birth:1988-01-17
+Age:27
+Exp:5
+School:Louisville
+OwingTeam:BKN

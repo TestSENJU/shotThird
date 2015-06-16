@@ -1,0 +1,10 @@
+Name:CJ McCollum
+Number:3
+Position:G
+Height:6-4
+Weight:200
+Birth:1991-09-19
+Age:23
+Exp:1
+School:Lehigh
+OwingTeam:POR

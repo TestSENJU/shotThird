@@ -1,0 +1,10 @@
+Name:Furkan Aldemir
+Number:19
+Position:F-C
+Height:6-10
+Weight:240
+Birth:1991-08-09
+Age:23
+Exp:0
+School:Galatasaray
+OwingTeam:PHI

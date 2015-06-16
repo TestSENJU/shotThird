@@ -11,6 +11,8 @@ import VO.PlayerShortVO;
 
 public interface PlayerBL {
 	
+	public PlayerShortVO getPlayerShortByID(String id);
+	
 	public ArrayList<PlayerShortVO> getPlayerList();
 	
 	public PlayerInfoVO getPlayerInfoVO(String playerid);

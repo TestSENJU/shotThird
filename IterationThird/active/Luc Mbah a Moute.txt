@@ -1,0 +1,10 @@
+Name:Luc Mbah a Moute
+Number:12
+Position:F
+Height:6-8
+Weight:230
+Birth:1986-09-09
+Age:28
+Exp:6
+School:California-Los Angeles
+OwingTeam:PHI

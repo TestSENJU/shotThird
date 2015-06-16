@@ -1,0 +1,10 @@
+Name:Carlos Boozer
+Number:5
+Position:F
+Height:6-9
+Weight:258
+Birth:1981-11-20
+Age:33
+Exp:12
+School:Duke
+OwingTeam:LAL

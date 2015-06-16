@@ -1,0 +1,10 @@
+Name:James Young
+Number:13
+Position:G-F
+Height:6-6
+Weight:215
+Birth:1995-08-16
+Age:19
+Exp:0
+School:Kentucky
+OwingTeam:BOS

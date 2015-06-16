@@ -1,0 +1,10 @@
+Name:Andrea Bargnani
+Number:77
+Position:C-F
+Height:7-0
+Weight:245
+Birth:1985-10-26
+Age:29
+Exp:8
+School:Rome
+OwingTeam:NYK

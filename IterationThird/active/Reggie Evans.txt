@@ -1,0 +1,10 @@
+Name:Reggie Evans
+Number:30
+Position:C-F
+Height:6-8
+Weight:245
+Birth:1980-05-18
+Age:35
+Exp:12
+School:Iowa
+OwingTeam:SAC

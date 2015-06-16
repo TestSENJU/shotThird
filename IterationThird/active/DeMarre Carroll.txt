@@ -1,0 +1,10 @@
+Name:DeMarre Carroll
+Number:5
+Position:F
+Height:6-8
+Weight:212
+Birth:1986-07-27
+Age:28
+Exp:5
+School:Missouri
+OwingTeam:ATL

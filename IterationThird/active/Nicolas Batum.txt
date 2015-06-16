@@ -1,0 +1,10 @@
+Name:Nicolas Batum
+Number:88
+Position:F
+Height:6-8
+Weight:200
+Birth:1988-12-14
+Age:26
+Exp:6
+School:Lisieux
+OwingTeam:POR

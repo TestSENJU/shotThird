@@ -1,0 +1,10 @@
+Name:LaMarcus Aldridge
+Number:12
+Position:F
+Height:6-11
+Weight:240
+Birth:1985-07-19
+Age:29
+Exp:8
+School:Texas
+OwingTeam:POR

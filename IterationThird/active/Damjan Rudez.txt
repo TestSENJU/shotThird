@@ -1,0 +1,10 @@
+Name:Damjan Rudez
+Number:9
+Position:F
+Height:6-10
+Weight:200
+Birth:1986-06-17
+Age:28
+Exp:0
+School:
+OwingTeam:IND

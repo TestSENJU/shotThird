@@ -1,0 +1,10 @@
+Name:Carmelo Anthony
+Number:7
+Position:F
+Height:6-8
+Weight:240
+Birth:1984-05-29
+Age:31
+Exp:11
+School:Syracuse
+OwingTeam:NYK

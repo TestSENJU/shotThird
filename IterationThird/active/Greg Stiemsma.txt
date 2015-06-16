@@ -1,0 +1,10 @@
+Name:Greg Stiemsma
+Number:34
+Position:C
+Height:6-11
+Weight:260
+Birth:1985-09-26
+Age:29
+Exp:3
+School:Wisconsin
+OwingTeam:TOR

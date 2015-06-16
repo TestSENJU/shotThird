@@ -1,0 +1,10 @@
+Name:Damien Inglis
+Number:17
+Position:F
+Height:6-8
+Weight:225
+Birth:1995-05-20
+Age:20
+Exp:0
+School:
+OwingTeam:MIL

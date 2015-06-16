@@ -1,0 +1,10 @@
+Name:Andrew Wiggins
+Number:22
+Position:F-G
+Height:6-8
+Weight:199
+Birth:1995-02-23
+Age:20
+Exp:0
+School:Kansas
+OwingTeam:MIN

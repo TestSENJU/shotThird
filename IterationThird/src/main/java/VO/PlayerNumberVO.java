@@ -1,4 +1,7 @@
 package VO;
+
+import java.io.Serializable;
+
 /**
  * 
  * @author wyt
@@ -15,7 +18,11 @@ int firstnum;//"先发场数"
 	7"犯规数"
 	8"得分"
  */
-public class PlayerNumberVO {
+public class PlayerNumberVO  implements Serializable{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 String playername;
 String playerid;
 String time;//,"上场时间",

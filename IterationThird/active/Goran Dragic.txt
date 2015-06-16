@@ -1,0 +1,10 @@
+Name:Goran Dragic
+Number:7
+Position:G
+Height:6-3
+Weight:190
+Birth:1986-05-06
+Age:29
+Exp:6
+School:Ljubljana
+OwingTeam:MIA

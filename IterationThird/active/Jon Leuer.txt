@@ -1,0 +1,10 @@
+Name:Jon Leuer
+Number:30
+Position:F
+Height:6-10
+Weight:228
+Birth:1989-05-14
+Age:26
+Exp:3
+School:Wisconsin
+OwingTeam:MEM

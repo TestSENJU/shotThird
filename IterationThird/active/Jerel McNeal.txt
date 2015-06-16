@@ -1,0 +1,10 @@
+Name:Jerel McNeal
+Number:8
+Position:G
+Height:6-3
+Weight:200
+Birth:1987-06-01
+Age:27
+Exp:2
+School:Marquette
+OwingTeam:PHX

@@ -1,0 +1,10 @@
+Name:Zach LaVine
+Number:8
+Position:G
+Height:6-5
+Weight:183
+Birth:1995-03-10
+Age:20
+Exp:0
+School:California-Los Angeles
+OwingTeam:MIN

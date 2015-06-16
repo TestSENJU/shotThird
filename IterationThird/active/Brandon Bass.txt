@@ -1,0 +1,10 @@
+Name:Brandon Bass
+Number:30
+Position:F-C
+Height:6-8
+Weight:250
+Birth:1985-04-30
+Age:30
+Exp:9
+School:Louisiana State
+OwingTeam:BOS

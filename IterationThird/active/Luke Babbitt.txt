@@ -1,0 +1,10 @@
+Name:Luke Babbitt
+Number:8
+Position:F
+Height:6-9
+Weight:225
+Birth:1989-06-20
+Age:25
+Exp:4
+School:Nevada
+OwingTeam:NOP

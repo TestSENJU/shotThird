@@ -1,0 +1,10 @@
+Name:Alexis Ajinca
+Number:42
+Position:C
+Height:7-2
+Weight:248
+Birth:1988-05-06
+Age:27
+Exp:4
+School:Saint Etienne
+OwingTeam:NOP

@@ -1,0 +1,10 @@
+Name:Elton Brand
+Number:7
+Position:F-C
+Height:6-9
+Weight:254
+Birth:1979-03-11
+Age:36
+Exp:15
+School:Duke
+OwingTeam:ATL

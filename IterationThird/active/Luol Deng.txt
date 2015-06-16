@@ -1,0 +1,10 @@
+Name:Luol Deng
+Number:9
+Position:F
+Height:6-9
+Weight:220
+Birth:1985-04-16
+Age:30
+Exp:10
+School:Duke
+OwingTeam:MIA

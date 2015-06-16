@@ -1,0 +1,10 @@
+Name:Victor Oladipo
+Number:5
+Position:G
+Height:6-4
+Weight:210
+Birth:1992-05-04
+Age:23
+Exp:1
+School:Indiana
+OwingTeam:ORL

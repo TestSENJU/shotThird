@@ -1,0 +1,10 @@
+Name:Jeff Teague
+Number:0
+Position:G
+Height:6-2
+Weight:181
+Birth:1988-06-10
+Age:26
+Exp:5
+School:Wake Forest
+OwingTeam:ATL

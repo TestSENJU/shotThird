@@ -1,0 +1,10 @@
+Name:Tim Frazier
+Number:10
+Position:G
+Height:6-1
+Weight:170
+Birth:1990-11-01
+Age:24
+Exp:0
+School:
+OwingTeam:POR

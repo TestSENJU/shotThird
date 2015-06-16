@@ -1,0 +1,10 @@
+Name:Rajon Rondo
+Number:9
+Position:G
+Height:6-1
+Weight:186
+Birth:1986-02-22
+Age:29
+Exp:8
+School:Kentucky
+OwingTeam:DAL

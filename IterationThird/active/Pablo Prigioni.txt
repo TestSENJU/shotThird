@@ -1,0 +1,10 @@
+Name:Pablo Prigioni
+Number:9
+Position:G
+Height:6-3
+Weight:185
+Birth:1977-05-17
+Age:38
+Exp:2
+School:Argentina
+OwingTeam:HOU

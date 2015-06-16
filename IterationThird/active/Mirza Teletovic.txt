@@ -1,0 +1,10 @@
+Name:Mirza Teletovic
+Number:33
+Position:F
+Height:6-9
+Weight:242
+Birth:1985-09-17
+Age:29
+Exp:2
+School:Bosnia
+OwingTeam:BKN

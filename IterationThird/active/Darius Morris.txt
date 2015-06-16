@@ -1,0 +1,10 @@
+Name:Darius Morris
+Number:14
+Position:G
+Height:6-4
+Weight:195
+Birth:1991-01-03
+Age:24
+Exp:3
+School:Michigan
+OwingTeam:BKN

@@ -1,0 +1,10 @@
+Name:Kobe Bryant
+Number:24
+Position:G
+Height:6-6
+Weight:212
+Birth:1978-08-23
+Age:36
+Exp:18
+School:Lower Merion HS 
+OwingTeam:LAL

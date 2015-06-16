@@ -1,0 +1,10 @@
+Name:Ekpe Udoh
+Number:13
+Position:F
+Height:6-10
+Weight:245
+Birth:1987-05-20
+Age:28
+Exp:4
+School:Baylor
+OwingTeam:LAC

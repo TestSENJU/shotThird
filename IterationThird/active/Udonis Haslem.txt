@@ -1,0 +1,10 @@
+Name:Udonis Haslem
+Number:40
+Position:F
+Height:6-8
+Weight:235
+Birth:1980-06-09
+Age:34
+Exp:11
+School:Florida
+OwingTeam:MIA

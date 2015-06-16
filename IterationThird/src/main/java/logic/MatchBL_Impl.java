@@ -2,8 +2,6 @@ package logic;
 
 import java.util.ArrayList;
 
-import sqlData.MatchData;
-import sqlData.MatchDataService;
 import VO.MatchShortVO;
 import VO.MatchVO;
 import VO.PlayerShortVO;
@@ -13,7 +11,6 @@ import VO.PlayerShortVO;
  *
  */
 public class MatchBL_Impl implements MatchBL{
-	MatchDataService data=new MatchData();
 
 	  private static MatchBL_Impl instance ;
 	    private MatchBL_Impl() {
@@ -43,8 +40,8 @@ public class MatchBL_Impl implements MatchBL{
 		@Override
 		public ArrayList<String> getScoreListByShortVO(MatchShortVO match) {
 			// TODO Auto-generated method stub
-			ArrayList<String>list=data.getMatchDetail(match.getMatchid()).getScorelist();
-			return list;
+//			ArrayList<String>list=data.getMatchDetail(match.getMatchid()).getScorelist();
+			return null;
 		}
 		@Override
 		public ArrayList<PlayerShortVO> getMatchKing(String matchid, int option) {

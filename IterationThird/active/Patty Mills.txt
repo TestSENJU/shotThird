@@ -1,0 +1,10 @@
+Name:Patty Mills
+Number:8
+Position:G
+Height:6-0
+Weight:185
+Birth:1988-08-11
+Age:26
+Exp:5
+School:Saint Mary
+OwingTeam:SAS

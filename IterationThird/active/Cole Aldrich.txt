@@ -1,0 +1,10 @@
+Name:Cole Aldrich
+Number:45
+Position:C
+Height:6-11
+Weight:250
+Birth:1988-10-31
+Age:26
+Exp:4
+School:Kansas
+OwingTeam:NYK

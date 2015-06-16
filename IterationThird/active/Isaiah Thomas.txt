@@ -1,0 +1,10 @@
+Name:Isaiah Thomas
+Number:4
+Position:G
+Height:5-9
+Weight:185
+Birth:1989-02-07
+Age:26
+Exp:3
+School:Washington
+OwingTeam:BOS

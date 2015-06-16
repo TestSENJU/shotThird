@@ -1,0 +1,10 @@
+Name:Jason Smith
+Number:14
+Position:F-C
+Height:7-0
+Weight:245
+Birth:1986-03-02
+Age:29
+Exp:6
+School:Colorado State
+OwingTeam:NYK

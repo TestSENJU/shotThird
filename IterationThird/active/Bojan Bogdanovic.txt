@@ -1,0 +1,10 @@
+Name:Bojan Bogdanovic
+Number:44
+Position:G-F
+Height:6-8
+Weight:216
+Birth:1989-04-18
+Age:26
+Exp:0
+School:
+OwingTeam:BKN

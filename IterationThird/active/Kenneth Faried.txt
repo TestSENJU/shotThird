@@ -1,0 +1,10 @@
+Name:Kenneth Faried
+Number:35
+Position:F
+Height:6-8
+Weight:228
+Birth:1989-11-19
+Age:25
+Exp:3
+School:Morehead State
+OwingTeam:DEN

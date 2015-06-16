@@ -1,0 +1,10 @@
+Name:Jimmer Fredette
+Number:32
+Position:G
+Height:6-2
+Weight:195
+Birth:1989-02-25
+Age:26
+Exp:3
+School:Brigham Young
+OwingTeam:NOP

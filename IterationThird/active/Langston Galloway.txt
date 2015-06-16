@@ -1,0 +1,10 @@
+Name:Langston Galloway
+Number:2
+Position:G
+Height:6-2
+Weight:200
+Birth:1991-12-09
+Age:23
+Exp:0
+School:Saint Joseph
+OwingTeam:NYK

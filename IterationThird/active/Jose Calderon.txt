@@ -1,0 +1,10 @@
+Name:Jose Calderon
+Number:3
+Position:G
+Height:6-3
+Weight:200
+Birth:1981-09-28
+Age:33
+Exp:9
+School:Villanueva de la Serena
+OwingTeam:NYK

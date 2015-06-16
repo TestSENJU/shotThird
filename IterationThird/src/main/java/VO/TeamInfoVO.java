@@ -1,8 +1,12 @@
 package VO;
 
-import po.TeamInfoPO;
+import java.io.Serializable;
 
-public class TeamInfoVO {
+public class TeamInfoVO implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String shortname;
 	String name;
 	String league;
@@ -14,13 +18,6 @@ public TeamInfoVO(String str){
 	this.league="";
 	this.gym="";
 	this.year="";
-}
-public TeamInfoVO(TeamInfoPO po){
-	this.shortname=po.getShortname();
-	this.name=po.getName();
-	this.league=po.getLeague();
-	this.gym=po.getGym();
-	this.year=po.getYear();
 }
 public String getName() {
 	return name;

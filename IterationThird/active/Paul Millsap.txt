@@ -1,0 +1,10 @@
+Name:Paul Millsap
+Number:4
+Position:F
+Height:6-8
+Weight:253
+Birth:1985-02-10
+Age:30
+Exp:8
+School:Louisiana Tech
+OwingTeam:ATL

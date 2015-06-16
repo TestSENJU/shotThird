@@ -1,0 +1,10 @@
+Name:Dante Cunningham
+Number:44
+Position:F
+Height:6-8
+Weight:230
+Birth:1987-04-22
+Age:28
+Exp:5
+School:Villanova
+OwingTeam:NOP

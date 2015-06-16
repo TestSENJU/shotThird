@@ -1,0 +1,10 @@
+Name:Austin Rivers
+Number:25
+Position:G
+Height:6-4
+Weight:200
+Birth:1992-08-01
+Age:22
+Exp:2
+School:Duke
+OwingTeam:LAC

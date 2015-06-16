@@ -1,0 +1,10 @@
+Name:Kevin Garnett
+Number:21
+Position:F-C
+Height:6-11
+Weight:253
+Birth:1976-05-19
+Age:39
+Exp:19
+School:Farragut Academy HS 
+OwingTeam:MIN

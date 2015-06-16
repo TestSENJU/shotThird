@@ -1,0 +1,10 @@
+Name:Spencer Dinwiddie
+Number:8
+Position:G
+Height:6-6
+Weight:200
+Birth:1993-04-06
+Age:22
+Exp:0
+School:Colorado
+OwingTeam:DET

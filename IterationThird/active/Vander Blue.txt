@@ -1,0 +1,10 @@
+Name:Vander Blue
+Number:12
+Position:G
+Height:6-4
+Weight:200
+Birth:1992-07-22
+Age:22
+Exp:1
+School:Marquette
+OwingTeam:LAL

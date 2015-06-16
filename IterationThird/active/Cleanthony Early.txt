@@ -1,0 +1,10 @@
+Name:Cleanthony Early
+Number:17
+Position:F
+Height:6-8
+Weight:220
+Birth:1991-04-17
+Age:24
+Exp:0
+School:Wichita State
+OwingTeam:NYK

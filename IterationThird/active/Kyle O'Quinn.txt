@@ -1,0 +1,10 @@
+Name:Kyle O'Quinn
+Number:2
+Position:F-C
+Height:6-10
+Weight:250
+Birth:1990-03-26
+Age:25
+Exp:2
+School:Norfolk State
+OwingTeam:ORL

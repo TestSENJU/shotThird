@@ -1,0 +1,10 @@
+Name:Matthew Dellavedova
+Number:8
+Position:G
+Height:6-4
+Weight:200
+Birth:1990-09-08
+Age:24
+Exp:1
+School:Saint Mary
+OwingTeam:CLE

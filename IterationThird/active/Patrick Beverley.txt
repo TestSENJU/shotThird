@@ -1,0 +1,10 @@
+Name:Patrick Beverley
+Number:2
+Position:G
+Height:6-1
+Weight:210
+Birth:1988-07-12
+Age:26
+Exp:2
+School:Arkansas
+OwingTeam:HOU

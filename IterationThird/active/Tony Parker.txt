@@ -1,0 +1,10 @@
+Name:Tony Parker
+Number:9
+Position:G
+Height:6-2
+Weight:185
+Birth:1982-05-17
+Age:33
+Exp:13
+School:Paris
+OwingTeam:SAS

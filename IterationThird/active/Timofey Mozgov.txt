@@ -1,0 +1,10 @@
+Name:Timofey Mozgov
+Number:20
+Position:C
+Height:7-1
+Weight:250
+Birth:1986-07-16
+Age:28
+Exp:4
+School:St. Petersburg
+OwingTeam:CLE

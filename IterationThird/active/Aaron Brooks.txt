@@ -1,0 +1,10 @@
+Name:Aaron Brooks
+Number:0
+Position:G
+Height:6-0
+Weight:161
+Birth:1985-01-14
+Age:30
+Exp:6
+School:Oregon
+OwingTeam:CHI

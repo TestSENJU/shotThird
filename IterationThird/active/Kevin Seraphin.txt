@@ -1,0 +1,10 @@
+Name:Kevin Seraphin
+Number:13
+Position:C
+Height:6-10
+Weight:278
+Birth:1989-12-07
+Age:25
+Exp:4
+School:Le Moyne
+OwingTeam:WAS

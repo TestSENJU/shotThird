@@ -1,0 +1,10 @@
+Name:Leandro Barbosa
+Number:19
+Position:G
+Height:6-3
+Weight:194
+Birth:1982-11-28
+Age:32
+Exp:11
+School:Sau Paulo
+OwingTeam:GSW

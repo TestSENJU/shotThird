@@ -1,0 +1,10 @@
+Name:Mike Miller
+Number:18
+Position:G-F
+Height:6-8
+Weight:218
+Birth:1980-02-19
+Age:35
+Exp:14
+School:Florida
+OwingTeam:CLE

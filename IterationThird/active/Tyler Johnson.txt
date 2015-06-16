@@ -1,0 +1,10 @@
+Name:Tyler Johnson
+Number:8
+Position:G
+Height:6-3
+Weight:190
+Birth:1992-05-07
+Age:23
+Exp:0
+School:Fresno State
+OwingTeam:MIA

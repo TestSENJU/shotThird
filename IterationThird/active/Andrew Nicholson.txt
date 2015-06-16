@@ -1,0 +1,10 @@
+Name:Andrew Nicholson
+Number:44
+Position:F
+Height:6-9
+Weight:250
+Birth:1989-12-08
+Age:25
+Exp:2
+School:St. Bonaventure
+OwingTeam:ORL

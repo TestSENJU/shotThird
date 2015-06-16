@@ -1,0 +1,10 @@
+Name:Brandon Knight
+Number:3
+Position:G
+Height:6-3
+Weight:189
+Birth:1991-12-02
+Age:23
+Exp:3
+School:Kentucky
+OwingTeam:PHX

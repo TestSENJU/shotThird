@@ -1,0 +1,10 @@
+Name:Nick Johnson
+Number:3
+Position:G
+Height:6-3
+Weight:202
+Birth:1992-12-22
+Age:22
+Exp:0
+School:Arizona
+OwingTeam:HOU

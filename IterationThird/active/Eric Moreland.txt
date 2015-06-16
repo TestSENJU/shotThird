@@ -1,0 +1,10 @@
+Name:Eric Moreland
+Number:25
+Position:F
+Height:6-10
+Weight:218
+Birth:1991-12-24
+Age:23
+Exp:0
+School:Oregon State
+OwingTeam:SAC

@@ -1,0 +1,10 @@
+Name:Amar'e Stoudemire
+Number:1
+Position:C-F
+Height:6-10
+Weight:245
+Birth:1982-11-16
+Age:32
+Exp:12
+School:Cypress Creek 
+OwingTeam:DAL

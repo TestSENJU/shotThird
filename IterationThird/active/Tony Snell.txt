@@ -1,0 +1,10 @@
+Name:Tony Snell
+Number:20
+Position:F
+Height:6-7
+Weight:200
+Birth:1991-11-10
+Age:23
+Exp:1
+School:New Mexico
+OwingTeam:CHI

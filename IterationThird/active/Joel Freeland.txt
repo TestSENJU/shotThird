@@ -1,0 +1,10 @@
+Name:Joel Freeland
+Number:19
+Position:C-F
+Height:6-10
+Weight:225
+Birth:1987-02-07
+Age:28
+Exp:2
+School:England
+OwingTeam:POR

@@ -1,0 +1,10 @@
+Name:Kent Bazemore
+Number:24
+Position:G
+Height:6-5
+Weight:201
+Birth:1989-07-01
+Age:25
+Exp:2
+School:Old Dominion
+OwingTeam:ATL

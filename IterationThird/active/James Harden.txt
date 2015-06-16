@@ -1,0 +1,10 @@
+Name:James Harden
+Number:13
+Position:G
+Height:6-5
+Weight:225
+Birth:1989-08-26
+Age:25
+Exp:5
+School:Arizona State
+OwingTeam:HOU

@@ -1,0 +1,10 @@
+Name:Zaza Pachulia
+Number:27
+Position:C
+Height:6-11
+Weight:270
+Birth:1984-02-10
+Age:31
+Exp:11
+School:Tbilisi
+OwingTeam:MIL

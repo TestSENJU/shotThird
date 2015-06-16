@@ -1,8 +1,13 @@
 package VO;
 
-import po.MatchShortPO;
+import java.io.Serializable;
 
-public class MatchShortVO {
+
+public class MatchShortVO  implements Serializable{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 String matchid;
 String winner;
 String loser;
@@ -19,15 +24,15 @@ public MatchShortVO(String id){
 	this.season="";
 	this.isAfter=-1;
 }
-public MatchShortVO(MatchShortPO po){
-	this.matchid=po.getMatchid();
-	this.winner=po.getWinner();
-	this.loser=po.getLoser();
-	this.score=po.getScore();
-	this.time=po.getTime();
-	this.season=po.getSeason();
-	this.score=po.getScore();
-}
+//public MatchShortVO(MatchShortPO po){
+//	this.matchid=po.getMatchid();
+//	this.winner=po.getWinner();
+//	this.loser=po.getLoser();
+//	this.score=po.getScore();
+//	this.time=po.getTime();
+//	this.season=po.getSeason();
+//	this.score=po.getScore();
+//}
 public String getWinner() {
 	return winner;
 }

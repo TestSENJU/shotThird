@@ -1,0 +1,10 @@
+Name:Paul George
+Number:13
+Position:F-G
+Height:6-9
+Weight:220
+Birth:1990-05-02
+Age:25
+Exp:4
+School:Fresno State
+OwingTeam:IND

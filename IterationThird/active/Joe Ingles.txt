@@ -1,0 +1,10 @@
+Name:Joe Ingles
+Number:2
+Position:G-F
+Height:6-8
+Weight:216
+Birth:1987-10-02
+Age:27
+Exp:0
+School:
+OwingTeam:UTA

@@ -1,0 +1,10 @@
+Name:Michael Carter-Williams
+Number:5
+Position:G
+Height:6-6
+Weight:190
+Birth:1991-10-10
+Age:23
+Exp:1
+School:Syracuse
+OwingTeam:MIL

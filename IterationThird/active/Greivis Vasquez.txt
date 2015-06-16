@@ -1,0 +1,10 @@
+Name:Greivis Vasquez
+Number:21
+Position:G
+Height:6-6
+Weight:200
+Birth:1987-01-16
+Age:28
+Exp:4
+School:Maryland
+OwingTeam:TOR

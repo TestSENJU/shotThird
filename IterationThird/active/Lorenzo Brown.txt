@@ -1,0 +1,10 @@
+Name:Lorenzo Brown
+Number:7
+Position:G
+Height:6-5
+Weight:189
+Birth:1990-08-26
+Age:24
+Exp:1
+School:North Carolina State
+OwingTeam:MIN

@@ -1,0 +1,10 @@
+Name:Will Bynum
+Number:1
+Position:G
+Height:6-0
+Weight:185
+Birth:1983-01-04
+Age:32
+Exp:7
+School:Georgia Tech
+OwingTeam:WAS

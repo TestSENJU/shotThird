@@ -1,4 +1,7 @@
 package VO;
+
+import java.io.Serializable;
+
 /**
  * 
  * @author wyt
@@ -19,7 +22,11 @@ package VO;
  * 14使用率
  *   只用于统计的那个面板
  */
-public class PlayerRateVO {
+public class PlayerRateVO implements Serializable {
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 String playerid;
 String playername;
 String season;

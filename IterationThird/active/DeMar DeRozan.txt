@@ -1,0 +1,10 @@
+Name:DeMar DeRozan
+Number:10
+Position:G
+Height:6-7
+Weight:220
+Birth:1989-08-07
+Age:25
+Exp:5
+School:Southern California
+OwingTeam:TOR

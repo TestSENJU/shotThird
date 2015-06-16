@@ -1,0 +1,10 @@
+Name:Jeremy Lamb
+Number:11
+Position:G
+Height:6-5
+Weight:185
+Birth:1992-05-30
+Age:23
+Exp:2
+School:Connecticut
+OwingTeam:OKC

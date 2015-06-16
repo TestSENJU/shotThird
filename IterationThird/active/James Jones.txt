@@ -1,0 +1,10 @@
+Name:James Jones
+Number:1
+Position:F
+Height:6-8
+Weight:215
+Birth:1980-10-04
+Age:34
+Exp:11
+School:Miami 
+OwingTeam:CLE

@@ -1,0 +1,10 @@
+Name:Joffrey Lauvergne
+Number:77
+Position:F-C
+Height:6-11
+Weight:220
+Birth:1991-09-30
+Age:23
+Exp:0
+School:
+OwingTeam:DEN

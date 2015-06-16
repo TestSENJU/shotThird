@@ -1,0 +1,10 @@
+Name:Ryan Hollins
+Number:5
+Position:C
+Height:7-0
+Weight:240
+Birth:1984-10-10
+Age:30
+Exp:8
+School:California-Los Angeles
+OwingTeam:SAC

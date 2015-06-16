@@ -1,0 +1,10 @@
+Name:Michael Beasley
+Number:30
+Position:F
+Height:6-10
+Weight:235
+Birth:1989-01-09
+Age:26
+Exp:6
+School:Kansas State
+OwingTeam:MIA

@@ -1,0 +1,10 @@
+Name:Perry Jones
+Number:3
+Position:F
+Height:6-11
+Weight:235
+Birth:1991-09-24
+Age:23
+Exp:2
+School:Baylor
+OwingTeam:OKC

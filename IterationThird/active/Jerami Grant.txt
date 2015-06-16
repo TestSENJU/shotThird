@@ -1,0 +1,10 @@
+Name:Jerami Grant
+Number:39
+Position:F
+Height:6-8
+Weight:210
+Birth:1994-03-12
+Age:21
+Exp:0
+School:Syracuse
+OwingTeam:PHI

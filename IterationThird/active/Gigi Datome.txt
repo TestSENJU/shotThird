@@ -1,0 +1,10 @@
+Name:Gigi Datome
+Number:70
+Position:F
+Height:6-8
+Weight:215
+Birth:1987-11-27
+Age:27
+Exp:1
+School:Italy
+OwingTeam:BOS

@@ -1,0 +1,10 @@
+Name:Khris Middleton
+Number:22
+Position:G-F
+Height:6-7
+Weight:225
+Birth:1991-08-12
+Age:23
+Exp:2
+School:Texas A
+OwingTeam:MIL

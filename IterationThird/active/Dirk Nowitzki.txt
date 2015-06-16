@@ -1,0 +1,10 @@
+Name:Dirk Nowitzki
+Number:41
+Position:F
+Height:7-0
+Weight:245
+Birth:1978-06-19
+Age:36
+Exp:16
+School:Wurzburg
+OwingTeam:DAL

@@ -1,0 +1,10 @@
+Name:Roy Hibbert
+Number:55
+Position:C
+Height:7-2
+Weight:290
+Birth:1986-12-11
+Age:28
+Exp:6
+School:Georgetown
+OwingTeam:IND

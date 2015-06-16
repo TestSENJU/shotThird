@@ -1,0 +1,10 @@
+Name:Shabazz Muhammad
+Number:15
+Position:F
+Height:6-6
+Weight:227
+Birth:1992-11-13
+Age:22
+Exp:1
+School:California-Los Angeles
+OwingTeam:MIN

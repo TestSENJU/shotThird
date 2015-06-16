@@ -1,0 +1,10 @@
+Name:Giannis Antetokounmpo
+Number:34
+Position:F
+Height:6-11
+Weight:217
+Birth:1994-12-06
+Age:20
+Exp:1
+School:Greece
+OwingTeam:MIL

@@ -1,0 +1,10 @@
+Name:Rodney Stuckey
+Number:2
+Position:G
+Height:6-5
+Weight:205
+Birth:1986-04-21
+Age:29
+Exp:7
+School:Eastern Washington
+OwingTeam:IND

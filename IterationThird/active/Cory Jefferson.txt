@@ -1,0 +1,10 @@
+Name:Cory Jefferson
+Number:21
+Position:F
+Height:6-9
+Weight:218
+Birth:1990-12-26
+Age:24
+Exp:0
+School:Baylor
+OwingTeam:BKN

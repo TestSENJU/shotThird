@@ -1,0 +1,10 @@
+Name:Shane Larkin
+Number:0
+Position:G
+Height:5-11
+Weight:175
+Birth:1992-10-02
+Age:22
+Exp:1
+School:Miami 
+OwingTeam:NYK

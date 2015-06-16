@@ -1,0 +1,10 @@
+Name:Kawhi Leonard
+Number:2
+Position:F
+Height:6-7
+Weight:230
+Birth:1991-06-29
+Age:23
+Exp:3
+School:San Diego State
+OwingTeam:SAS

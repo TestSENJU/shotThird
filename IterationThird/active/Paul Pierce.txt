@@ -1,0 +1,10 @@
+Name:Paul Pierce
+Number:34
+Position:F
+Height:6-7
+Weight:235
+Birth:1977-10-13
+Age:37
+Exp:16
+School:Kansas
+OwingTeam:WAS

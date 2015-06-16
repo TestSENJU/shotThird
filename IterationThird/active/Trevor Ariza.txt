@@ -1,0 +1,10 @@
+Name:Trevor Ariza
+Number:1
+Position:F
+Height:6-8
+Weight:215
+Birth:1985-06-30
+Age:29
+Exp:10
+School:California-Los Angeles
+OwingTeam:HOU

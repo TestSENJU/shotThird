@@ -12,9 +12,12 @@ import javax.swing.border.MatteBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 
+import logic.MatchBL;
+import logic.MatchBL_Impl;
 import UIComponent.MyColor;
 import UIComponent.MyScrollPane;
 import UIComponent.MyTable;
+import VO.MatchShortVO;
 
 public class MatchExplorerPanel extends JPanel{
 	/**
@@ -25,12 +28,11 @@ JLabel title;
 JScrollPane jsp;
 MyTable table;
 DefaultTableModel model;
-
-//JLabel search,showall;
+ArrayList<MatchShortVO> list;
 JPanel left;
 JLabel tip;
-
-private ArrayList<String>list=new ArrayList<String>();
+private MatchBL matchbl=MatchBL_Impl.getInstance();
+private ArrayList<String>idlist=new ArrayList<String>();
 private String titlename[]=new String[]{"时间","胜方","负方","比分"};
 public MatchExplorerPanel(){
 	init();
@@ -84,22 +86,15 @@ public void init(){
 	this.setLayout(null);
 }
 public void initTable(){
-	for(int i=0;i<200;i++){
-		Object[] ob=new Object[4];
-		ob[0]="13-12";
-		ob[1]="CHA";
-		ob[2]="NOP";
-		ob[3]="110-101";
-		model.addRow(ob);
-		list.add((String) ob[1]);
+	list=matchbl.getAllMatches(200);
+	for(int i=0;i<list.size();i++){
+		String strs[]=new String[4];
+		strs[0]=list.get(i).getTime();
+		strs[1]=list.get(i).getWinner();
+		strs[2]=list.get(i).getLoser();
+		strs[3]=list.get(i).getScore();
+		model.addRow(strs);
 	}
-	Object[] ob=new Object[4];
-	ob[0]="12-12-11";
-	ob[1]="Aaron Brooks";
-	ob[2]="NOP";
-	ob[3]="A";
-	model.addRow(ob);
-	list.add((String) ob[1]);
 }
 public void addComponent(){
 	left.add(title);
@@ -114,15 +109,15 @@ public void setListener(){
 			int row=table.getSelectedRow();
 			
 			if(getComponentAt(550,275)instanceof JLabel){
-				MatchDetailPanel match=new MatchDetailPanel(list.get(row));
+				MatchDetailPanel match=new MatchDetailPanel(idlist.get(row));
 				match.setBounds(400,20,500, 580);
 				remove(tip);
 				add(match);
 				repaint();
 			}else if(getComponentAt(550,275)instanceof MatchDetailPanel){
 				MatchDetailPanel matchold=(MatchDetailPanel)getComponentAt(550,275);
-				if(list.get(row).equals(matchold.getID())){
-					MatchDetailPanel match=new MatchDetailPanel(list.get(row));
+				if(idlist.get(row).equals(matchold.getID())){
+					MatchDetailPanel match=new MatchDetailPanel(idlist.get(row));
 					match.setBounds(400,20,500, 580);
 					remove(getComponentAt(550,275));
 					add(match);

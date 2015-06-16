@@ -1,0 +1,10 @@
+Name:Raymond Felton
+Number:2
+Position:G
+Height:6-1
+Weight:205
+Birth:1984-06-26
+Age:30
+Exp:9
+School:North Carolina
+OwingTeam:DAL

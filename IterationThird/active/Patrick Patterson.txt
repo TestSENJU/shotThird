@@ -1,0 +1,10 @@
+Name:Patrick Patterson
+Number:54
+Position:F
+Height:6-9
+Weight:235
+Birth:1989-03-14
+Age:26
+Exp:4
+School:Kentucky
+OwingTeam:TOR

@@ -1,0 +1,10 @@
+Name:JJ Redick
+Number:4
+Position:G
+Height:6-4
+Weight:190
+Birth:1984-06-24
+Age:30
+Exp:8
+School:Duke
+OwingTeam:LAC

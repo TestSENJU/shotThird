@@ -1,0 +1,10 @@
+Name:Isaiah Canaan
+Number:0
+Position:G
+Height:6-0
+Weight:201
+Birth:1991-05-02
+Age:24
+Exp:1
+School:Murray State
+OwingTeam:PHI

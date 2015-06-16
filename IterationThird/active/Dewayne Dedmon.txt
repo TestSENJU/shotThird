@@ -1,0 +1,10 @@
+Name:Dewayne Dedmon
+Number:3
+Position:C
+Height:7-0
+Weight:245
+Birth:1989-08-12
+Age:25
+Exp:1
+School:Southern California
+OwingTeam:ORL

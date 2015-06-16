@@ -1,0 +1,10 @@
+Name:Rudy Gobert
+Number:27
+Position:C
+Height:7-1
+Weight:245
+Birth:1992-06-26
+Age:22
+Exp:1
+School:France
+OwingTeam:UTA

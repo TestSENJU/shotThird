@@ -1,0 +1,10 @@
+Name:Shayne Whittington
+Number:42
+Position:F-C
+Height:6-11
+Weight:250
+Birth:1991-03-27
+Age:24
+Exp:0
+School:Western Michigan
+OwingTeam:IND

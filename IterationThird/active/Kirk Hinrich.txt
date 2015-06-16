@@ -1,0 +1,10 @@
+Name:Kirk Hinrich
+Number:12
+Position:G
+Height:6-4
+Weight:190
+Birth:1981-01-02
+Age:34
+Exp:11
+School:Kansas
+OwingTeam:CHI

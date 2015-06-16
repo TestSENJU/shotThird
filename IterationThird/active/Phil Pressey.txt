@@ -1,0 +1,10 @@
+Name:Phil Pressey
+Number:26
+Position:G
+Height:5-11
+Weight:175
+Birth:1991-02-17
+Age:24
+Exp:1
+School:Missouri
+OwingTeam:BOS

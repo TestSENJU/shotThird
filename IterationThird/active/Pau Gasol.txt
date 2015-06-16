@@ -1,0 +1,10 @@
+Name:Pau Gasol
+Number:16
+Position:F-C
+Height:7-0
+Weight:250
+Birth:1980-07-06
+Age:34
+Exp:13
+School:Barcelona
+OwingTeam:CHI

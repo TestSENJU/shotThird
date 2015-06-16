@@ -1,0 +1,10 @@
+Name:Brook Lopez
+Number:11
+Position:C
+Height:7-0
+Weight:275
+Birth:1988-04-01
+Age:27
+Exp:6
+School:Stanford
+OwingTeam:BKN

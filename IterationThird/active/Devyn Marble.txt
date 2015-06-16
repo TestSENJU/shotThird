@@ -1,0 +1,10 @@
+Name:Devyn Marble
+Number:11
+Position:F
+Height:6-6
+Weight:200
+Birth:1992-09-21
+Age:22
+Exp:0
+School:Iowa
+OwingTeam:ORL

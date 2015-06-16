@@ -1,0 +1,10 @@
+Name:Tyler Ennis
+Number:11
+Position:G
+Height:6-3
+Weight:175
+Birth:1994-08-24
+Age:20
+Exp:0
+School:Syracuse
+OwingTeam:MIL

@@ -1,0 +1,10 @@
+Name:Joe Harris
+Number:12
+Position:G
+Height:6-6
+Weight:225
+Birth:1991-09-07
+Age:23
+Exp:0
+School:Virginia
+OwingTeam:CLE

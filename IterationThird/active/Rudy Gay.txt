@@ -1,0 +1,10 @@
+Name:Rudy Gay
+Number:8
+Position:F
+Height:6-8
+Weight:230
+Birth:1986-08-17
+Age:28
+Exp:8
+School:Connecticut
+OwingTeam:SAC

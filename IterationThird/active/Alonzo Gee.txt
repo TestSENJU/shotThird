@@ -1,0 +1,10 @@
+Name:Alonzo Gee
+Number:33
+Position:F
+Height:6-6
+Weight:225
+Birth:1987-05-29
+Age:28
+Exp:5
+School:Alabama
+OwingTeam:POR

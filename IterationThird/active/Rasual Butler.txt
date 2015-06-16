@@ -1,0 +1,10 @@
+Name:Rasual Butler
+Number:8
+Position:F
+Height:6-7
+Weight:215
+Birth:1979-05-23
+Age:36
+Exp:11
+School:La Salle
+OwingTeam:WAS

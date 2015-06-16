@@ -1,0 +1,10 @@
+Name:Rodney Hood
+Number:5
+Position:G-F
+Height:6-8
+Weight:215
+Birth:1992-10-20
+Age:22
+Exp:0
+School:Duke
+OwingTeam:UTA

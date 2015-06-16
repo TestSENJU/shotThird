@@ -1,0 +1,10 @@
+Name:Thaddeus Young
+Number:30
+Position:F
+Height:6-8
+Weight:221
+Birth:1988-06-21
+Age:26
+Exp:7
+School:Georgia Tech
+OwingTeam:BKN

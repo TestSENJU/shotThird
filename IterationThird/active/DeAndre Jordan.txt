@@ -1,0 +1,10 @@
+Name:DeAndre Jordan
+Number:6
+Position:C
+Height:6-11
+Weight:265
+Birth:1988-07-21
+Age:26
+Exp:6
+School:Texas A
+OwingTeam:LAC

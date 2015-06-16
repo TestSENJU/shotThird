@@ -1,0 +1,10 @@
+Name:Jared Sullinger
+Number:7
+Position:F
+Height:6-9
+Weight:260
+Birth:1992-03-04
+Age:23
+Exp:2
+School:Ohio State
+OwingTeam:BOS

@@ -1,0 +1,10 @@
+Name:Dion Waiters
+Number:23
+Position:G
+Height:6-4
+Weight:225
+Birth:1991-12-10
+Age:23
+Exp:2
+School:Syracuse
+OwingTeam:OKC

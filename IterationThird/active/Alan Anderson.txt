@@ -1,0 +1,10 @@
+Name:Alan Anderson
+Number:6
+Position:G-F
+Height:6-6
+Weight:220
+Birth:1982-10-16
+Age:32
+Exp:5
+School:Michigan State
+OwingTeam:BKN

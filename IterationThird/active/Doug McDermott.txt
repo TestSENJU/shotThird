@@ -1,0 +1,10 @@
+Name:Doug McDermott
+Number:3
+Position:F
+Height:6-8
+Weight:225
+Birth:1992-01-03
+Age:23
+Exp:0
+School:Creighton
+OwingTeam:CHI

@@ -1,0 +1,10 @@
+Name:Russ Smith
+Number:2
+Position:G
+Height:6-0
+Weight:165
+Birth:1991-04-19
+Age:24
+Exp:0
+School:Louisville
+OwingTeam:MEM

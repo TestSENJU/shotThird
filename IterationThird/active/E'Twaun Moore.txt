@@ -1,0 +1,10 @@
+Name:E'Twaun Moore
+Number:55
+Position:G
+Height:6-4
+Weight:191
+Birth:1989-02-25
+Age:26
+Exp:3
+School:Purdue
+OwingTeam:CHI

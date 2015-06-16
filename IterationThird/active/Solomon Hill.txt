@@ -1,0 +1,10 @@
+Name:Solomon Hill
+Number:44
+Position:F
+Height:6-7
+Weight:225
+Birth:1991-03-18
+Age:24
+Exp:1
+School:Arizona
+OwingTeam:IND

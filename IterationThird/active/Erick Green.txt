@@ -1,0 +1,10 @@
+Name:Erick Green
+Number:11
+Position:G
+Height:6-4
+Weight:185
+Birth:1991-05-09
+Age:24
+Exp:0
+School:Virginia Tech
+OwingTeam:DEN

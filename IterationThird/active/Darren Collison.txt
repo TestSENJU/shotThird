@@ -1,0 +1,10 @@
+Name:Darren Collison
+Number:7
+Position:G
+Height:6-0
+Weight:175
+Birth:1987-08-23
+Age:27
+Exp:5
+School:California-Los Angeles
+OwingTeam:SAC

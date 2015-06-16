@@ -1,0 +1,10 @@
+Name:David West
+Number:21
+Position:F
+Height:6-9
+Weight:250
+Birth:1980-08-29
+Age:34
+Exp:11
+School:Xavier
+OwingTeam:IND

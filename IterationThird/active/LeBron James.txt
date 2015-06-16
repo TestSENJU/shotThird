@@ -1,0 +1,10 @@
+Name:LeBron James
+Number:23
+Position:F
+Height:6-8
+Weight:250
+Birth:1984-12-30
+Age:30
+Exp:11
+School:St. Vincent-St. Mary HS 
+OwingTeam:CLE

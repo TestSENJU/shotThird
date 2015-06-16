@@ -1,0 +1,10 @@
+Name:CJ Watson
+Number:32
+Position:G
+Height:6-2
+Weight:175
+Birth:1984-04-17
+Age:31
+Exp:7
+School:Tennessee
+OwingTeam:IND

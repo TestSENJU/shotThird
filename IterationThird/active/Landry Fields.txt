@@ -1,0 +1,10 @@
+Name:Landry Fields
+Number:2
+Position:G-F
+Height:6-7
+Weight:215
+Birth:1988-06-27
+Age:26
+Exp:4
+School:Stanford
+OwingTeam:TOR

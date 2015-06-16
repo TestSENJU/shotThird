@@ -1,8 +1,13 @@
 package VO;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class MatchVO {
+public class MatchVO  implements Serializable{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 String season;
 String time;
 String matchid;

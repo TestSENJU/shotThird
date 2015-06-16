@@ -1,0 +1,10 @@
+Name:Ramon Sessions
+Number:7
+Position:G
+Height:6-3
+Weight:190
+Birth:1986-04-11
+Age:29
+Exp:7
+School:Nevada
+OwingTeam:WAS

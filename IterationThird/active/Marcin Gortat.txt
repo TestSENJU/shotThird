@@ -1,0 +1,10 @@
+Name:Marcin Gortat
+Number:4
+Position:C
+Height:6-11
+Weight:240
+Birth:1984-02-17
+Age:31
+Exp:7
+School:Lodz
+OwingTeam:WAS

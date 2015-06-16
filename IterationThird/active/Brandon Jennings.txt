@@ -1,0 +1,10 @@
+Name:Brandon Jennings
+Number:7
+Position:G
+Height:6-1
+Weight:169
+Birth:1989-09-23
+Age:25
+Exp:5
+School:Oak Hill Academy 
+OwingTeam:DET

@@ -1,0 +1,10 @@
+Name:Jonas Jerebko
+Number:8
+Position:F
+Height:6-10
+Weight:231
+Birth:1987-03-02
+Age:28
+Exp:4
+School:Kinna
+OwingTeam:BOS

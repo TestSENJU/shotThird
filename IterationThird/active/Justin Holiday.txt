@@ -1,0 +1,10 @@
+Name:Justin Holiday
+Number:7
+Position:G
+Height:6-6
+Weight:185
+Birth:1989-04-05
+Age:26
+Exp:1
+School:Washington
+OwingTeam:GSW

@@ -1,0 +1,10 @@
+Name:Lance Thomas
+Number:42
+Position:F
+Height:6-8
+Weight:225
+Birth:1988-04-24
+Age:27
+Exp:3
+School:Duke
+OwingTeam:NYK

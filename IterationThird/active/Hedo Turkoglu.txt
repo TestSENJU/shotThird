@@ -1,0 +1,10 @@
+Name:Hedo Turkoglu
+Number:15
+Position:F
+Height:6-10
+Weight:220
+Birth:1979-03-19
+Age:36
+Exp:14
+School:Istanbul
+OwingTeam:LAC

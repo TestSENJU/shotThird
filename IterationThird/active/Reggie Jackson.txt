@@ -1,0 +1,10 @@
+Name:Reggie Jackson
+Number:1
+Position:G
+Height:6-3
+Weight:208
+Birth:1990-04-16
+Age:25
+Exp:3
+School:Boston College
+OwingTeam:DET

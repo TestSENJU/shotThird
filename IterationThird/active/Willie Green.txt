@@ -1,0 +1,10 @@
+Name:Willie Green
+Number:34
+Position:G
+Height:6-3
+Weight:205
+Birth:1981-07-28
+Age:33
+Exp:11
+School:Detroit Mercy
+OwingTeam:ORL

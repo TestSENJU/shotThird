@@ -1,0 +1,10 @@
+Name:Mason Plumlee
+Number:1
+Position:C-F
+Height:6-11
+Weight:235
+Birth:1990-03-05
+Age:25
+Exp:1
+School:Duke
+OwingTeam:BKN

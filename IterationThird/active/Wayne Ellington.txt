@@ -1,0 +1,10 @@
+Name:Wayne Ellington
+Number:2
+Position:G
+Height:6-4
+Weight:200
+Birth:1987-11-29
+Age:27
+Exp:5
+School:North Carolina
+OwingTeam:LAL

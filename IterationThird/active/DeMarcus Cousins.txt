@@ -1,0 +1,10 @@
+Name:DeMarcus Cousins
+Number:15
+Position:C
+Height:6-11
+Weight:270
+Birth:1990-08-13
+Age:24
+Exp:4
+School:Kentucky
+OwingTeam:SAC

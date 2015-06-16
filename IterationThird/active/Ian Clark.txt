@@ -1,0 +1,10 @@
+Name:Ian Clark
+Number:20
+Position:G
+Height:6-3
+Weight:180
+Birth:1991-03-07
+Age:24
+Exp:1
+School:Belmont
+OwingTeam:DEN

@@ -1,0 +1,10 @@
+Name:Al Jefferson
+Number:25
+Position:C
+Height:6-10
+Weight:289
+Birth:1985-01-04
+Age:30
+Exp:10
+School:Prentiss HS 
+OwingTeam:CHA

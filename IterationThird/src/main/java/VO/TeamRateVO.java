@@ -1,6 +1,7 @@
 package VO;
 
-import po.TeamRatePO;
+import java.io.Serializable;
+
 
 /**
  * 
@@ -20,7 +21,11 @@ import po.TeamRatePO;
  * 9助攻率
  *
  */
-public class TeamRateVO {
+public class TeamRateVO  implements Serializable{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 String teamname;
 String season;
 int isAfter;
@@ -33,12 +38,6 @@ public TeamRateVO(String name){
 	for(int i=0;i<rate.length;i++){
 		this.rate[i]=0.0;
 	}
-}
-public TeamRateVO(TeamRatePO po){
-	this.teamname=po.getTeamname();
-	this.season=po.getSeason();
-	this.isAfter=po.getIsAfter();
-	this.rate=po.getRate();
 }
 public String getTeamname() {
 	return teamname;

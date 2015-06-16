@@ -1,0 +1,10 @@
+Name:Ish Smith
+Number:5
+Position:G
+Height:6-0
+Weight:175
+Birth:1988-07-05
+Age:26
+Exp:4
+School:Wake Forest
+OwingTeam:PHI

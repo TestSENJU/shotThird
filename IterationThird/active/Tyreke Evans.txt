@@ -1,0 +1,10 @@
+Name:Tyreke Evans
+Number:1
+Position:G-F
+Height:6-6
+Weight:220
+Birth:1989-09-19
+Age:25
+Exp:5
+School:Memphis
+OwingTeam:NOP

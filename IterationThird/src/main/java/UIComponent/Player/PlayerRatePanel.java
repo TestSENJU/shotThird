@@ -22,7 +22,7 @@ public class PlayerRatePanel extends JPanel{
 	 */
 	private static final long serialVersionUID = 1L;
 	private PlayerRateVO num;
-	PlayerBL bl=PlayerBL_Impl.getInstance();
+	private PlayerBL bl=PlayerBL_Impl.getInstance();
 	MyComboBox season;
 	MyComboBox after;
 	JLabel choose;
@@ -35,7 +35,7 @@ public class PlayerRatePanel extends JPanel{
 	public PlayerRatePanel(PlayerRateVO number){
 	
 		this.num=number;
-		after=new MyComboBox(new String[]{"季前赛","常规赛","季后赛"});
+		after=new MyComboBox(new String[]{"常规赛","季前赛","季后赛"});
 		after.setBounds(120,10,80,20);
 		this.add(after);
 		season=new MyComboBox(new String[]{"2012-2013","2013-2014","2014-2015"});

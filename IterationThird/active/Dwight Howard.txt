@@ -1,0 +1,10 @@
+Name:Dwight Howard
+Number:12
+Position:C
+Height:6-11
+Weight:275
+Birth:1985-12-08
+Age:29
+Exp:10
+School:SW Atlanta Christian Academy 
+OwingTeam:HOU

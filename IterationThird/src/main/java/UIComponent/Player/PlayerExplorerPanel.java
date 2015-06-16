@@ -14,16 +14,17 @@ import javax.swing.border.MatteBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 
-import po.PlayerShortPO;
-import sqlData.PlayerData;
-import sqlData.PlayerDataService;
+import logic.PlayerBL;
+import logic.PlayerBL_Impl;
 import UIComponent.MyColor;
 import UIComponent.MyScrollPane;
 import UIComponent.MyTable;
+import VO.PlayerShortVO;
 
 public class PlayerExplorerPanel extends JPanel{
 	private static final long serialVersionUID = 1L;
-	private PlayerDataService playerdata=new PlayerData();
+	private ArrayList<PlayerShortVO>list;
+	private PlayerBL playerdata=PlayerBL_Impl.getInstance();
 	JLabel title;
 	JScrollPane jsp;
 	MyTable table;
@@ -113,7 +114,7 @@ public class PlayerExplorerPanel extends JPanel{
 		this.add(tip);
 	}
 	public void initTable(){
-		ArrayList<PlayerShortPO>list=playerdata.getAllPlayer();
+		list=playerdata.getPlayerList();
 		for(int i=0;i<list.size();i++){
 			Object[] ob=new Object[4];
 			ob[0]=new ImageIcon("playerHead/"+list.get(i).getPlayername()+".png");
@@ -123,24 +124,6 @@ public class PlayerExplorerPanel extends JPanel{
 			model.addRow(ob);
 			idlist.add(list.get(i).getPlayerid());
 		}
-	
-//		Object[] ob=new Object[4];
-//		ob[0]=new ImageIcon("img/search.png");
-//		ob[1]="Aaron Brooks";
-//		ob[2]="NOP";
-//		ob[3]="A";
-//		model.addRow(ob);
-//		list.add((String) ob[1]);
-//		for(int i=0;i<200;i++){
-//			ob=new Object[4];
-//			ob[0]=new ImageIcon("img/search.png");
-//			ob[1]="Lebron James";
-//			ob[2]="NOP";
-//			ob[3]="A";
-//			model.addRow(ob);
-//			list.add((String) ob[1]);
-//		}
-//		
 	}
 	public void setListener(){
 		table.addMouseListener(new MouseAdapter(){
@@ -148,7 +131,7 @@ public class PlayerExplorerPanel extends JPanel{
 				int row=table.getSelectedRow();
 				String playerName=(String)table.getValueAt(row, 1);
 				if(getComponentAt(550,275)instanceof JLabel){
-					PlayerDetailPanel panel=new PlayerDetailPanel(playerName);
+					PlayerDetailPanel panel=new PlayerDetailPanel(list.get(row));
 					panel.setBounds(400,0,500, 580);
 					remove(tip);
 					add(panel);
@@ -156,7 +139,7 @@ public class PlayerExplorerPanel extends JPanel{
 				}else if(getComponentAt(550,275)instanceof PlayerDetailPanel){
 					PlayerDetailPanel player=(PlayerDetailPanel)getComponentAt(550,275);
 					if(!playerName.equals(player.getName())){
-						PlayerDetailPanel panel=new PlayerDetailPanel(playerName);
+						PlayerDetailPanel panel=new PlayerDetailPanel(list.get(row));
 						panel.setBounds(400,0,500, 580);
 						remove(getComponentAt(550,275));
 						add(panel);

@@ -1,0 +1,10 @@
+Name:Lester Hudson
+Number:14
+Position:G
+Height:6-3
+Weight:190
+Birth:1984-08-07
+Age:30
+Exp:3
+School:Tennessee-Martin
+OwingTeam:LAC

@@ -1,0 +1,10 @@
+Name:Nik Stauskas
+Number:10
+Position:G
+Height:6-6
+Weight:205
+Birth:1993-10-07
+Age:21
+Exp:0
+School:Michigan
+OwingTeam:SAC

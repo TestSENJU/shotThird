@@ -1,0 +1,10 @@
+Name:Ed Davis
+Number:21
+Position:F
+Height:6-10
+Weight:240
+Birth:1989-06-05
+Age:25
+Exp:4
+School:North Carolina
+OwingTeam:LAL

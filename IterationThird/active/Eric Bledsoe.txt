@@ -1,0 +1,10 @@
+Name:Eric Bledsoe
+Number:2
+Position:G
+Height:6-1
+Weight:195
+Birth:1989-12-09
+Age:25
+Exp:4
+School:Kentucky
+OwingTeam:PHX

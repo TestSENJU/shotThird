@@ -1,0 +1,10 @@
+Name:Gorgui Dieng
+Number:5
+Position:C
+Height:6-11
+Weight:233
+Birth:1990-01-18
+Age:25
+Exp:1
+School:Louisville
+OwingTeam:MIN

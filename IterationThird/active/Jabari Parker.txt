@@ -1,0 +1,10 @@
+Name:Jabari Parker
+Number:12
+Position:F
+Height:6-8
+Weight:240
+Birth:1995-03-15
+Age:20
+Exp:0
+School:Duke
+OwingTeam:MIL

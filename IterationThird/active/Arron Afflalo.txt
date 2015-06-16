@@ -1,0 +1,10 @@
+Name:Arron Afflalo
+Number:4
+Position:G
+Height:6-5
+Weight:215
+Birth:1985-10-15
+Age:29
+Exp:7
+School:California-Los Angeles
+OwingTeam:POR

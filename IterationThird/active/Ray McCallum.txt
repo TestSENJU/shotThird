@@ -1,0 +1,10 @@
+Name:Ray McCallum
+Number:3
+Position:G
+Height:6-3
+Weight:190
+Birth:1991-06-12
+Age:23
+Exp:1
+School:Detroit Mercy
+OwingTeam:SAC

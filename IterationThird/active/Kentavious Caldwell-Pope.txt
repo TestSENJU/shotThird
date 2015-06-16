@@ -1,0 +1,10 @@
+Name:Kentavious Caldwell-Pope
+Number:5
+Position:G
+Height:6-5
+Weight:205
+Birth:1993-02-18
+Age:22
+Exp:1
+School:Georgia
+OwingTeam:DET

@@ -1,0 +1,10 @@
+Name:Aaron Gordon
+Number:00
+Position:F
+Height:6-9
+Weight:220
+Birth:1995-09-16
+Age:19
+Exp:0
+School:Arizona
+OwingTeam:ORL

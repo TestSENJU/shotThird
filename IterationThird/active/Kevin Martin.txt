@@ -1,0 +1,10 @@
+Name:Kevin Martin
+Number:23
+Position:G
+Height:6-7
+Weight:204
+Birth:1983-02-01
+Age:32
+Exp:10
+School:Western Carolina
+OwingTeam:MIN

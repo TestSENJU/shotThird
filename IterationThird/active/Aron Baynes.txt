@@ -1,0 +1,10 @@
+Name:Aron Baynes
+Number:16
+Position:C-F
+Height:6-10
+Weight:260
+Birth:1986-12-09
+Age:28
+Exp:2
+School:Washington State
+OwingTeam:SAS

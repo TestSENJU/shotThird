@@ -1,0 +1,10 @@
+Name:Markel Brown
+Number:22
+Position:G
+Height:6-3
+Weight:190
+Birth:1992-01-29
+Age:23
+Exp:0
+School:Oklahoma State
+OwingTeam:BKN

@@ -1,0 +1,10 @@
+Name:Garrett Temple
+Number:17
+Position:G
+Height:6-6
+Weight:195
+Birth:1986-05-08
+Age:29
+Exp:4
+School:Louisiana State
+OwingTeam:WAS

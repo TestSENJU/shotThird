@@ -1,0 +1,10 @@
+Name:Chris Kaman
+Number:35
+Position:C
+Height:7-0
+Weight:265
+Birth:1982-04-28
+Age:33
+Exp:11
+School:Central Michigan
+OwingTeam:POR

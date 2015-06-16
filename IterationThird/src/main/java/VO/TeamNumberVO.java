@@ -1,6 +1,6 @@
 package VO;
 
-import po.TeamNumberPO;
+import java.io.Serializable;
 
 /**
  * 
@@ -22,7 +22,11 @@ import po.TeamNumberPO;
  * 14得分
  *
  */
-public class TeamNumberVO {
+public class TeamNumberVO implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String teamname;
 	int number;
 	String season;
@@ -36,13 +40,6 @@ public class TeamNumberVO {
 		for(int i=0;i<data.length;i++){
 			this.data[i]=0.0;
 		}
-	}
-	public TeamNumberVO(TeamNumberPO po){
-		this.teamname=po.getTeamname();
-		this.number=po.getNumber();
-		this.season=po.getSeason();
-		this.isAfter=po.getIsAfter();
-		this.data=po.getData();
 	}
 	public int getNumber() {
 		return number;

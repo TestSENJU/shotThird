@@ -1,0 +1,10 @@
+Name:Evan Turner
+Number:11
+Position:G-F
+Height:6-7
+Weight:220
+Birth:1988-10-27
+Age:26
+Exp:4
+School:Ohio State
+OwingTeam:BOS

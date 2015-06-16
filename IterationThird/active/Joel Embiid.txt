@@ -1,0 +1,10 @@
+Name:Joel Embiid
+Number:21
+Position:C
+Height:7-0
+Weight:250
+Birth:1994-03-16
+Age:21
+Exp:0
+School:Kansas
+OwingTeam:PHI

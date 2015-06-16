@@ -1,0 +1,10 @@
+Name:Mike Scott
+Number:32
+Position:F
+Height:6-8
+Weight:237
+Birth:1988-07-16
+Age:26
+Exp:2
+School:Virginia
+OwingTeam:ATL

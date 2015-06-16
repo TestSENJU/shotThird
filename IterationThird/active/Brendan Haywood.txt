@@ -1,0 +1,10 @@
+Name:Brendan Haywood
+Number:33
+Position:C
+Height:7-0
+Weight:263
+Birth:1979-11-27
+Age:35
+Exp:12
+School:North Carolina
+OwingTeam:CLE

@@ -1,0 +1,10 @@
+Name:Marc Gasol
+Number:33
+Position:C
+Height:7-1
+Weight:265
+Birth:1985-01-29
+Age:30
+Exp:6
+School:Barcelona
+OwingTeam:MEM

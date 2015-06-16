@@ -1,0 +1,10 @@
+Name:Ben McLemore
+Number:23
+Position:G
+Height:6-5
+Weight:195
+Birth:1993-02-11
+Age:22
+Exp:1
+School:Kansas
+OwingTeam:SAC

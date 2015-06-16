@@ -1,0 +1,10 @@
+Name:Jabari Brown
+Number:15
+Position:G
+Height:6-5
+Weight:214
+Birth:1992-12-18
+Age:22
+Exp:0
+School:Missouri
+OwingTeam:LAL

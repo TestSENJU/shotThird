@@ -1,0 +1,10 @@
+Name:Jason Richardson
+Number:23
+Position:G
+Height:6-6
+Weight:225
+Birth:1981-01-20
+Age:34
+Exp:13
+School:Michigan State
+OwingTeam:PHI

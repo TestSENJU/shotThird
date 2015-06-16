@@ -1,0 +1,10 @@
+Name:David Lee
+Number:10
+Position:F-C
+Height:6-9
+Weight:245
+Birth:1983-04-29
+Age:32
+Exp:9
+School:Florida
+OwingTeam:GSW

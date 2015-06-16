@@ -1,0 +1,10 @@
+Name:CJ Wilcox
+Number:30
+Position:G
+Height:6-5
+Weight:195
+Birth:1990-12-30
+Age:24
+Exp:0
+School:Washington
+OwingTeam:LAC

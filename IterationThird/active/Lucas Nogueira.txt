@@ -1,0 +1,10 @@
+Name:Lucas Nogueira
+Number:92
+Position:C
+Height:7-0
+Weight:220
+Birth:1992-07-26
+Age:22
+Exp:0
+School:
+OwingTeam:TOR

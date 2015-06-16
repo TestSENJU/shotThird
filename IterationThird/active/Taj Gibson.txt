@@ -1,0 +1,10 @@
+Name:Taj Gibson
+Number:22
+Position:F
+Height:6-9
+Weight:225
+Birth:1985-06-24
+Age:29
+Exp:5
+School:Southern California
+OwingTeam:CHI

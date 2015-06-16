@@ -1,0 +1,10 @@
+Name:Tyson Chandler
+Number:6
+Position:C
+Height:7-1
+Weight:240
+Birth:1982-10-02
+Age:32
+Exp:13
+School:Dominquez H.S
+OwingTeam:DAL

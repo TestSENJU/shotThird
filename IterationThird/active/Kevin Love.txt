@@ -1,0 +1,10 @@
+Name:Kevin Love
+Number:0
+Position:F
+Height:6-10
+Weight:243
+Birth:1988-09-07
+Age:26
+Exp:6
+School:California-Los Angeles
+OwingTeam:CLE

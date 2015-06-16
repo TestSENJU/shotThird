@@ -1,0 +1,10 @@
+Name:Derrick Favors
+Number:15
+Position:F
+Height:6-10
+Weight:262
+Birth:1991-07-15
+Age:23
+Exp:4
+School:Georgia Tech
+OwingTeam:UTA

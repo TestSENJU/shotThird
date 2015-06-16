@@ -1,0 +1,10 @@
+Name:Matt Barnes
+Number:22
+Position:F
+Height:6-7
+Weight:226
+Birth:1980-03-09
+Age:35
+Exp:11
+School:California-Los Angeles
+OwingTeam:LAC

@@ -1,0 +1,10 @@
+Name:Eric Gordon
+Number:10
+Position:G
+Height:6-4
+Weight:215
+Birth:1988-12-25
+Age:26
+Exp:6
+School:Indiana
+OwingTeam:NOP

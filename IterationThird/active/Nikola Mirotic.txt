@@ -1,0 +1,10 @@
+Name:Nikola Mirotic
+Number:44
+Position:F
+Height:6-10
+Weight:220
+Birth:1991-02-11
+Age:24
+Exp:0
+School:
+OwingTeam:CHI

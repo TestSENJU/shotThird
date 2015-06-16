@@ -1,0 +1,10 @@
+Name:Hollis Thompson
+Number:31
+Position:G-F
+Height:6-8
+Weight:206
+Birth:1991-04-03
+Age:24
+Exp:1
+School:Georgetown
+OwingTeam:PHI

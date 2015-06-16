@@ -1,0 +1,10 @@
+Name:J.R. Smith
+Number:5
+Position:G-F
+Height:6-6
+Weight:225
+Birth:1985-09-09
+Age:29
+Exp:10
+School:St. Benedict
+OwingTeam:CLE

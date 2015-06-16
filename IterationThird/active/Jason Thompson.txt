@@ -1,0 +1,10 @@
+Name:Jason Thompson
+Number:34
+Position:F
+Height:6-11
+Weight:250
+Birth:1986-07-21
+Age:28
+Exp:6
+School:Rider
+OwingTeam:SAC

@@ -1,0 +1,10 @@
+Name:Boris Diaw
+Number:33
+Position:C-F
+Height:6-8
+Weight:250
+Birth:1982-04-16
+Age:33
+Exp:11
+School:Cormeille-en-Parisis
+OwingTeam:SAS

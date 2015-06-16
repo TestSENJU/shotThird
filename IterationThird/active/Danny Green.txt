@@ -1,0 +1,10 @@
+Name:Danny Green
+Number:14
+Position:G-F
+Height:6-6
+Weight:215
+Birth:1987-06-22
+Age:27
+Exp:5
+School:North Carolina
+OwingTeam:SAS

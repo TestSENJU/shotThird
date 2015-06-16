@@ -1,0 +1,10 @@
+Name:Thabo Sefolosha
+Number:25
+Position:F-G
+Height:6-7
+Weight:222
+Birth:1984-05-02
+Age:31
+Exp:8
+School:Vevey
+OwingTeam:ATL

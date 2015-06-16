@@ -1,0 +1,10 @@
+Name:Devin Harris
+Number:20
+Position:G
+Height:6-3
+Weight:192
+Birth:1983-02-27
+Age:32
+Exp:10
+School:Wisconsin
+OwingTeam:DAL

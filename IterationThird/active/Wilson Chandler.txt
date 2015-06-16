@@ -1,0 +1,10 @@
+Name:Wilson Chandler
+Number:21
+Position:F
+Height:6-8
+Weight:225
+Birth:1987-05-10
+Age:28
+Exp:7
+School:DePaul
+OwingTeam:DEN

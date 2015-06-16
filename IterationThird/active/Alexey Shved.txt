@@ -1,0 +1,10 @@
+Name:Alexey Shved
+Number:1
+Position:G
+Height:6-6
+Weight:187
+Birth:1988-12-16
+Age:26
+Exp:2
+School:Russia
+OwingTeam:NYK

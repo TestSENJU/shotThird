@@ -1,0 +1,10 @@
+Name:Joakim Noah
+Number:13
+Position:C
+Height:6-11
+Weight:232
+Birth:1985-02-25
+Age:30
+Exp:7
+School:Florida
+OwingTeam:CHI

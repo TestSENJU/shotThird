@@ -1,0 +1,10 @@
+Name:Shelvin Mack
+Number:8
+Position:G
+Height:6-3
+Weight:207
+Birth:1990-04-22
+Age:25
+Exp:3
+School:Butler
+OwingTeam:ATL

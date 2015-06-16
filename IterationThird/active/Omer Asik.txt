@@ -1,0 +1,10 @@
+Name:Omer Asik
+Number:3
+Position:C
+Height:7-0
+Weight:255
+Birth:1986-07-04
+Age:28
+Exp:4
+School:Turkey
+OwingTeam:NOP

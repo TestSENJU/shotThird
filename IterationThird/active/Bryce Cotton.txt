@@ -1,0 +1,10 @@
+Name:Bryce Cotton
+Number:8
+Position:G
+Height:6-1
+Weight:165
+Birth:1992-08-11
+Age:22
+Exp:0
+School:Providence
+OwingTeam:UTA

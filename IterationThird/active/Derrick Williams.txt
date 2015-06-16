@@ -1,0 +1,10 @@
+Name:Derrick Williams
+Number:13
+Position:F
+Height:6-8
+Weight:240
+Birth:1991-05-25
+Age:24
+Exp:3
+School:Arizona
+OwingTeam:SAC

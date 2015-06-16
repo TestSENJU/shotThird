@@ -1,0 +1,10 @@
+Name:Ben Gordon
+Number:7
+Position:G
+Height:6-3
+Weight:205
+Birth:1983-04-04
+Age:32
+Exp:10
+School:Connecticut
+OwingTeam:ORL

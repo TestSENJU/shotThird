@@ -1,0 +1,10 @@
+Name:Chris Babb
+Number:52
+Position:G
+Height:6-5
+Weight:225
+Birth:1990-02-14
+Age:25
+Exp:1
+School:Iowa State
+OwingTeam:BOS

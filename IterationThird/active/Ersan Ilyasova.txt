@@ -1,0 +1,10 @@
+Name:Ersan Ilyasova
+Number:7
+Position:F
+Height:6-10
+Weight:235
+Birth:1987-05-15
+Age:28
+Exp:6
+School:Eskisehir
+OwingTeam:MIL

@@ -1,4 +1,7 @@
 package VO;
+
+import java.io.Serializable;
+
 /**
  * 
  * @author wyt
@@ -11,7 +14,11 @@ package VO;
  *6球龄
  *7毕业学校
  */
-public class PlayerInfoVO {
+public class PlayerInfoVO  implements Serializable{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 String playerid;
 String playername;
 String data[]=new String[8];

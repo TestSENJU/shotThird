@@ -1,0 +1,10 @@
+Name:PJ Hairston
+Number:19
+Position:G-F
+Height:6-6
+Weight:230
+Birth:1992-12-24
+Age:22
+Exp:0
+School:North Carolina
+OwingTeam:CHA

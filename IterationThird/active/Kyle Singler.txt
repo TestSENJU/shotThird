@@ -1,0 +1,10 @@
+Name:Kyle Singler
+Number:5
+Position:F
+Height:6-8
+Weight:228
+Birth:1988-05-04
+Age:27
+Exp:2
+School:Duke
+OwingTeam:OKC

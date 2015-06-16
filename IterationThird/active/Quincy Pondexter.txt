@@ -1,0 +1,10 @@
+Name:Quincy Pondexter
+Number:20
+Position:F-G
+Height:6-7
+Weight:220
+Birth:1988-03-10
+Age:27
+Exp:4
+School:Washington
+OwingTeam:NOP

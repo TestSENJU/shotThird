@@ -1,0 +1,10 @@
+Name:KJ McDaniels
+Number:32
+Position:G-F
+Height:6-6
+Weight:205
+Birth:1993-02-09
+Age:22
+Exp:0
+School:Clemson
+OwingTeam:HOU

@@ -1,0 +1,10 @@
+Name:Cartier Martin
+Number:35
+Position:F
+Height:6-7
+Weight:220
+Birth:1984-11-20
+Age:30
+Exp:6
+School:Kansas State
+OwingTeam:DET

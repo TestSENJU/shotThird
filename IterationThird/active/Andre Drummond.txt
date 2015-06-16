@@ -1,0 +1,10 @@
+Name:Andre Drummond
+Number:0
+Position:C
+Height:6-11
+Weight:279
+Birth:1993-08-10
+Age:21
+Exp:2
+School:Connecticut
+OwingTeam:DET

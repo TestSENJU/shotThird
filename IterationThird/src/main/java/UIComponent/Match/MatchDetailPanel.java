@@ -13,10 +13,14 @@ import javax.swing.border.MatteBorder;
 
 import logic.MatchBL;
 import logic.MatchBL_Impl;
+import logic.PlayerBL;
+import logic.PlayerBL_Impl;
 import UIComponent.JumpFrame;
 import UIComponent.MyColor;
 import UIComponent.MyScrollPane;
 import UIComponent.MyTable;
+import UIComponent.TeamNameSwitcher;
+import UIComponent.Player.PlayerDetailPanel;
 import UIComponent.Team.TeamDetailPanel;
 import VO.MatchVO;
 import VO.PlayerMatchVO;
@@ -31,15 +35,17 @@ private String id;
 JLabel winnerIcon,loserIcon;
 JLabel winnerName,loserName;
 MyTable scoreTable;
-MyTable playerTable;
-JLabel winner,loser,king;
+JLabel winner,loser;
+//JLabel king;
 MyScrollPane winnerjsp;
 MyScrollPane loserjsp;
 MyTable winnertable;
 MyTable losertable;
 MatchKingPanel kingpanel;
+JLabel name1,name2;
 private MatchVO match;
 private MatchBL bl=MatchBL_Impl.getInstance();
+private PlayerBL playerbl=PlayerBL_Impl.getInstance();
 
 public MatchDetailPanel(String matchid){
 	this.id=matchid;
@@ -78,7 +84,7 @@ public void initComponent(){
 	loserjsp=new MyScrollPane(losertable);
 	loserjsp.setBounds(0,290,500,290);
 		
-	winner=new JLabel("胜方");
+	winner=new JLabel("胜方队员");
 	winner.setForeground(MyColor.BLUE.getColor());
 	winner.setOpaque(true);
 	winner.setBackground(MyColor.LIGHTBLUE.getColor());
@@ -86,7 +92,7 @@ public void initComponent(){
 	winner.setFont(new Font("黑体",Font.PLAIN,16));
 	winner.setBounds(10,240,50,30);
 	
-	loser=new JLabel("负方");
+	loser=new JLabel("负方队员");
 	loser.setForeground(MyColor.BLUE.getColor());
 	loser.setOpaque(true);
 	loser.setBackground(MyColor.WHITE.getColor());
@@ -94,32 +100,56 @@ public void initComponent(){
 	loser.setFont(new Font("黑体",Font.PLAIN,16));
 	loser.setBounds(65,240,50,30);
 	
-	king=new JLabel("数据王");
-	king.setForeground(MyColor.BLUE.getColor());
-	king.setOpaque(true);
-	king.setBackground(MyColor.WHITE.getColor());
-	king.setHorizontalAlignment(SwingConstants.CENTER);
-	king.setFont(new Font("黑体",Font.PLAIN,16));
-	king.setBounds(120,240,50,30);
+//	king=new JLabel("数据王");
+//	king.setForeground(MyColor.BLUE.getColor());
+//	king.setOpaque(true);
+//	king.setBackground(MyColor.WHITE.getColor());
+//	king.setHorizontalAlignment(SwingConstants.CENTER);
+//	king.setFont(new Font("黑体",Font.PLAIN,16));
+//	king.setBounds(120,240,50,30);
 	
-	winnerIcon=new JLabel(new ImageIcon("team/ATL.png"));
+	winnerIcon=new JLabel(new ImageIcon("team/"+this.match.getWinner()+".png"));
 	winnerIcon.setBounds(80,20,100,100);
-	loserIcon=new JLabel(new ImageIcon("team/HOU.png"));
+	loserIcon=new JLabel(new ImageIcon("team/"+this.match.getLoser()+".png"));
 	loserIcon.setBounds(320, 20,100,100);
 	
-	winnerName=new JLabel("<HTML><U>" +"胜方: ATL"+"<HTML><U>");
+	winnerName=new JLabel("胜方: ");
 	winnerName.setForeground(MyColor.RED.getColor());
 	winnerName.setFont(new Font("黑体",Font.PLAIN,16));
-	winnerName.setBounds(80,130,100,30);
+	winnerName.setBounds(40,130,40,30);
 	winnerName.setHorizontalAlignment(SwingConstants.CENTER);
 	
-	loserName=new JLabel("<HTML><U>"+" 负方: HOU"+"<HTML><U>");
+	loserName=new JLabel(" 负方: ");
 	loserName.setForeground(MyColor.BLACK.getColor());
 	loserName.setFont(new Font("黑体",Font.PLAIN,16));
-	loserName.setBounds(320,130,100,30);
+	loserName.setBounds(280,130,40,30);
 	loserName.setHorizontalAlignment(SwingConstants.CENTER);
 	
-	scoreTable=new MyTable(new String[][]{{"85-112","27-25","29-31","13-25","16-31"}},new String[]{"总比分","第一节","第二节","第三节","第四节"},-1,-1){
+	TeamNameSwitcher switcher=new TeamNameSwitcher();
+	name1=new JLabel("<HTML><U>" +switcher.getTeamName(this.match.getWinner())+"<HTML><U>");
+	name1.setForeground(MyColor.BLACK.getColor());
+	name1.setFont(new Font("黑体",Font.PLAIN,16));
+	name1.setBounds(80,130,120,30);
+	name1.setHorizontalAlignment(SwingConstants.CENTER);
+	
+	name2=new JLabel("<HTML><U>"+switcher.getTeamName(this.match.getLoser())+"<HTML><U>");
+	name2.setForeground(MyColor.BLACK.getColor());
+	name2.setFont(new Font("黑体",Font.PLAIN,16));
+	name2.setBounds(320,130,120,30);
+	name2.setHorizontalAlignment(SwingConstants.CENTER);
+	
+	ArrayList<String> scorelist=this.match.getScorelist();
+	String[][]data=new String[scorelist.size()][1];
+	String []head=new String[scorelist.size()+1];
+	if(scorelist.size()==4){
+		head=new String[]{"总比分","第一节","第二节","第三节","第四节"};
+	}else if(scorelist.size()==5){
+		head=new String[]{"总比分","第一节","第二节","第三节","第四节","第五节"};
+	}
+	for(int i=0;i<scorelist.size();i++){
+		data[i][0]=scorelist.get(i);
+	}
+	scoreTable=new MyTable(data,head,-1,-1){
 		/**
 		 * 
 		 */
@@ -132,7 +162,6 @@ public void initComponent(){
 	scoreTable.getTableHeader().setBounds(70, 180, 375, 20);
 	scoreTable.setBounds(70, 200, 400, 50);
 	
-	playerTable=new MyTable(new String[][]{},new String[]{"","",""},0,0);
 }
 public void initPanel(){
 	this.setBackground(MyColor.WHITE.getColor());
@@ -142,7 +171,7 @@ public void initPanel(){
 public void addComponent(){
 	this.add(winner);
 	this.add(loser);
-	this.add(king);
+//	this.add(king);
 	this.add(winnerIcon);
 	this.add(loserIcon);
 	this.add(winnerName);
@@ -151,12 +180,34 @@ public void addComponent(){
 	this.add(scoreTable);
 }
 public void setListener(){
+	losertable.addMouseListener(new MouseAdapter(){
+		public void mouseClicked(MouseEvent e){
+			int row=winnertable.getSelectedRowCount();
+			int column=winnertable.getSelectedColumnCount();
+			if(column==0){
+				PlayerDetailPanel panel=new PlayerDetailPanel(playerbl.getPlayerShortByID(match.getLoserlist().get(row).getPlayerid()));
+				JumpFrame frame=new JumpFrame(panel);
+				frame.open();
+			}
+		}
+	});
+	winnertable.addMouseListener(new MouseAdapter(){
+		public void mouseClicked(MouseEvent e){
+			int row=winnertable.getSelectedRowCount();
+			int column=winnertable.getSelectedColumnCount();
+			if(column==0){
+				PlayerDetailPanel panel=new PlayerDetailPanel(playerbl.getPlayerShortByID(match.getWinnerlist().get(row).getPlayerid()));
+				JumpFrame frame=new JumpFrame(panel);
+				frame.open();
+			}
+		}
+	});
 
 	winner.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
 			winner.setBackground(MyColor.WHITE.getColor());
 			loser.setBackground(MyColor.WHITE.getColor());
-			king.setBackground(MyColor.WHITE.getColor());
+//			king.setBackground(MyColor.WHITE.getColor());
 			
 			winner.setBackground(MyColor.LIGHTBLUE.getColor());
 			remove(getComponentAt(0,290));
@@ -169,7 +220,7 @@ public void setListener(){
 		public void mouseClicked(MouseEvent e){
 			winner.setBackground(MyColor.WHITE.getColor());
 			loser.setBackground(MyColor.WHITE.getColor());
-			king.setBackground(MyColor.WHITE.getColor());
+//			king.setBackground(MyColor.WHITE.getColor());
 			
 			loser.setBackground(MyColor.LIGHTBLUE.getColor());
 			remove(getComponentAt(0,290));
@@ -177,40 +228,42 @@ public void setListener(){
 			repaint();
 		}
 	});
-	king.addMouseListener(new MouseAdapter(){
-		public void mouseClicked(MouseEvent e){
-			winner.setBackground(MyColor.WHITE.getColor());
-			loser.setBackground(MyColor.WHITE.getColor());
-			king.setBackground(MyColor.WHITE.getColor());
-			
-			king.setBackground(MyColor.LIGHTBLUE.getColor());
-			remove(getComponentAt(0,290));
-			add(kingpanel);
-			repaint();
-		}
-	});
-	winnerName.addMouseListener(new MouseAdapter(){
+//	king.addMouseListener(new MouseAdapter(){
+//		public void mouseClicked(MouseEvent e){
+//			winner.setBackground(MyColor.WHITE.getColor());
+//			loser.setBackground(MyColor.WHITE.getColor());
+//			king.setBackground(MyColor.WHITE.getColor());
+//			
+//			king.setBackground(MyColor.LIGHTBLUE.getColor());
+//			remove(getComponentAt(0,290));
+//			add(kingpanel);
+//			repaint();
+//		}
+//	});
+	name1.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
 			TeamDetailPanel jp=new TeamDetailPanel(match.getWinner());
 			JumpFrame frame=new JumpFrame(jp);
 			frame.open();
 		}
 		public void mouseEntered(MouseEvent e){
-			winnerName.setForeground(MyColor.BLUE.getColor());
+			name1.setForeground(MyColor.BLUE.getColor());
 		}
 		public void mouseExited(MouseEvent e){
-			winnerName.setForeground(MyColor.RED.getColor());
+			name1.setForeground(MyColor.RED.getColor());
 		}
 	});
-	loserName.addMouseListener(new MouseAdapter(){
+	name2.addMouseListener(new MouseAdapter(){
 	public void mouseClicked(MouseEvent e){
-			
+		TeamDetailPanel jp=new TeamDetailPanel(match.getLoser());
+		JumpFrame frame=new JumpFrame(jp);
+		frame.open();
 		}
 		public void mouseEntered(MouseEvent e){
-			loserName.setForeground(MyColor.BLUE.getColor());
+			name2.setForeground(MyColor.BLUE.getColor());
 		}
 		public void mouseExited(MouseEvent e){
-			loserName.setForeground(MyColor.BLACK.getColor());
+			name2.setForeground(MyColor.BLACK.getColor());
 		}
 	});
 }

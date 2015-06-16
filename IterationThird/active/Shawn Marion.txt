@@ -1,0 +1,10 @@
+Name:Shawn Marion
+Number:31
+Position:G-F
+Height:6-7
+Weight:228
+Birth:1978-05-07
+Age:37
+Exp:15
+School:Nevada-Las Vegas
+OwingTeam:CLE

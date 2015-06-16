@@ -1,0 +1,10 @@
+Name:Jason Terry
+Number:31
+Position:G
+Height:6-2
+Weight:185
+Birth:1977-09-15
+Age:37
+Exp:15
+School:Arizona
+OwingTeam:HOU

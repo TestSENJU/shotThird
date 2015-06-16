@@ -1,0 +1,10 @@
+Name:Josh Smith
+Number:5
+Position:F
+Height:6-9
+Weight:225
+Birth:1985-12-05
+Age:29
+Exp:10
+School:Oak Hill Academy 
+OwingTeam:HOU

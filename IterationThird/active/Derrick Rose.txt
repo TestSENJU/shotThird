@@ -1,0 +1,10 @@
+Name:Derrick Rose
+Number:1
+Position:G
+Height:6-3
+Weight:190
+Birth:1988-10-04
+Age:26
+Exp:5
+School:Memphis
+OwingTeam:CHI

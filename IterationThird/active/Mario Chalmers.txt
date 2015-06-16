@@ -1,0 +1,10 @@
+Name:Mario Chalmers
+Number:15
+Position:G
+Height:6-2
+Weight:190
+Birth:1986-05-19
+Age:29
+Exp:6
+School:Kansas
+OwingTeam:MIA

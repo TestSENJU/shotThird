@@ -1,0 +1,10 @@
+Name:DeJuan Blair
+Number:45
+Position:C-F
+Height:6-7
+Weight:270
+Birth:1989-04-22
+Age:26
+Exp:5
+School:Pittsburgh
+OwingTeam:WAS

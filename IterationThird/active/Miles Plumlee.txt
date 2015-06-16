@@ -1,0 +1,10 @@
+Name:Miles Plumlee
+Number:21
+Position:C-F
+Height:6-11
+Weight:255
+Birth:1988-09-01
+Age:26
+Exp:2
+School:Duke
+OwingTeam:MIL

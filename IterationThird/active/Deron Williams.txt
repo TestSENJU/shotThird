@@ -1,0 +1,10 @@
+Name:Deron Williams
+Number:8
+Position:G
+Height:6-3
+Weight:200
+Birth:1984-06-26
+Age:30
+Exp:9
+School:Illinois
+OwingTeam:BKN

@@ -156,6 +156,11 @@ public class PlayerBL_Impl implements PlayerBL{
 				int after, String playerid) {
 			// TODO Auto-generated method stub
 			return null;
+		}
+		@Override
+		public PlayerShortVO getPlayerShortByID(String id) {
+			// TODO Auto-generated method stub
+			return null;
 		}  
 	    
 }

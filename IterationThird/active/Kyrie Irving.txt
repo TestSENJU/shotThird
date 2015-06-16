@@ -1,0 +1,10 @@
+Name:Kyrie Irving
+Number:2
+Position:G
+Height:6-3
+Weight:193
+Birth:1992-03-23
+Age:23
+Exp:3
+School:Duke
+OwingTeam:CLE

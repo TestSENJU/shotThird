@@ -1,0 +1,10 @@
+Name:Steve Novak
+Number:6
+Position:F
+Height:6-10
+Weight:225
+Birth:1983-06-13
+Age:31
+Exp:8
+School:Marquette
+OwingTeam:OKC

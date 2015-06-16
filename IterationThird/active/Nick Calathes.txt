@@ -1,0 +1,10 @@
+Name:Nick Calathes
+Number:12
+Position:G
+Height:6-6
+Weight:213
+Birth:1989-02-07
+Age:26
+Exp:1
+School:Florida
+OwingTeam:MEM

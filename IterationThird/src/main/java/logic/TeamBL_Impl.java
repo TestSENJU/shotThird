@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import VO.MatchShortVO;
 import VO.PlayerShortVO;
 import VO.TeamHotVO;
+import VO.TeamInfoVO;
 import VO.TeamNumberVO;
 import VO.TeamRateVO;
 
@@ -119,6 +120,11 @@ public class TeamBL_Impl implements TeamBL{
 		@Override
 		public ArrayList<TeamHotVO> getSeasonTeamM(String team, String season,
 				int after) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		@Override
+		public TeamInfoVO getTeamInfo(String teamname) {
 			// TODO Auto-generated method stub
 			return null;
 		}

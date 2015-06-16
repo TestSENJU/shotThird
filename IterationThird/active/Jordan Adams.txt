@@ -1,0 +1,10 @@
+Name:Jordan Adams
+Number:3
+Position:G
+Height:6-5
+Weight:209
+Birth:1994-07-08
+Age:20
+Exp:0
+School:California-Los Angeles
+OwingTeam:MEM

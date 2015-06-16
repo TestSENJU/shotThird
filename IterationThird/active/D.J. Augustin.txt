@@ -1,0 +1,10 @@
+Name:D.J. Augustin
+Number:14
+Position:G
+Height:6-0
+Weight:183
+Birth:1987-11-10
+Age:27
+Exp:6
+School:Texas
+OwingTeam:OKC

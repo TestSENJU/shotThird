@@ -1,0 +1,10 @@
+Name:Gordon Hayward
+Number:20
+Position:F
+Height:6-8
+Weight:225
+Birth:1990-03-23
+Age:25
+Exp:4
+School:Butler
+OwingTeam:UTA

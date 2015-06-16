@@ -1,0 +1,10 @@
+Name:Charlie Villanueva
+Number:3
+Position:F
+Height:6-11
+Weight:232
+Birth:1984-08-24
+Age:30
+Exp:9
+School:Connecticut
+OwingTeam:DAL

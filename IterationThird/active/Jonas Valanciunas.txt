@@ -1,0 +1,10 @@
+Name:Jonas Valanciunas
+Number:17
+Position:C
+Height:7-0
+Weight:255
+Birth:1992-05-06
+Age:23
+Exp:2
+School:Utena
+OwingTeam:TOR

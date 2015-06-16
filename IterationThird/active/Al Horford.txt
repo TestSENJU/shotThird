@@ -1,0 +1,10 @@
+Name:Al Horford
+Number:15
+Position:C-F
+Height:6-10
+Weight:250
+Birth:1986-06-03
+Age:28
+Exp:7
+School:Florida
+OwingTeam:ATL

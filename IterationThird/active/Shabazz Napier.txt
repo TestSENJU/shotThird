@@ -1,0 +1,10 @@
+Name:Shabazz Napier
+Number:13
+Position:G
+Height:6-1
+Weight:175
+Birth:1991-07-14
+Age:23
+Exp:0
+School:Connecticut
+OwingTeam:MIA

@@ -1,0 +1,10 @@
+Name:John Jenkins
+Number:12
+Position:G
+Height:6-4
+Weight:215
+Birth:1991-03-06
+Age:24
+Exp:2
+School:Vanderbilt
+OwingTeam:ATL

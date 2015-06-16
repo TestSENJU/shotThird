@@ -1,0 +1,10 @@
+Name:Austin Daye
+Number:3
+Position:F
+Height:6-11
+Weight:220
+Birth:1988-06-05
+Age:26
+Exp:5
+School:Gonzaga
+OwingTeam:ATL

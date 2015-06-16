@@ -1,0 +1,10 @@
+Name:Dwyane Wade
+Number:3
+Position:G
+Height:6-4
+Weight:220
+Birth:1982-01-17
+Age:33
+Exp:11
+School:Marquette
+OwingTeam:MIA

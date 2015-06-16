@@ -1,0 +1,10 @@
+Name:Alec Burks
+Number:10
+Position:G
+Height:6-6
+Weight:211
+Birth:1991-07-20
+Age:23
+Exp:3
+School:Colorado
+OwingTeam:UTA

@@ -1,0 +1,10 @@
+Name:Ty Lawson
+Number:3
+Position:G
+Height:5-11
+Weight:195
+Birth:1987-11-03
+Age:27
+Exp:5
+School:North Carolina
+OwingTeam:DEN

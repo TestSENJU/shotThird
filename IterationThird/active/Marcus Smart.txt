@@ -1,0 +1,10 @@
+Name:Marcus Smart
+Number:36
+Position:G
+Height:6-4
+Weight:220
+Birth:1994-03-06
+Age:21
+Exp:0
+School:Oklahoma State
+OwingTeam:BOS

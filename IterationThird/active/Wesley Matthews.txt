@@ -1,0 +1,10 @@
+Name:Wesley Matthews
+Number:2
+Position:G
+Height:6-5
+Weight:220
+Birth:1986-10-14
+Age:28
+Exp:5
+School:Marquette
+OwingTeam:POR

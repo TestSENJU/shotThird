@@ -1,0 +1,10 @@
+Name:Justin Hamilton
+Number:41
+Position:C
+Height:7-0
+Weight:255
+Birth:1990-04-01
+Age:25
+Exp:1
+School:Louisiana State
+OwingTeam:MIN

@@ -1,0 +1,10 @@
+Name:Greg Smith
+Number:4
+Position:C
+Height:6-10
+Weight:250
+Birth:1991-01-08
+Age:24
+Exp:3
+School:Fresno State
+OwingTeam:DAL

@@ -1,0 +1,10 @@
+Name:Stephen Curry
+Number:30
+Position:G
+Height:6-3
+Weight:190
+Birth:1988-03-14
+Age:27
+Exp:5
+School:Davidson
+OwingTeam:GSW

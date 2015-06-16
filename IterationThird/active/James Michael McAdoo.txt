@@ -1,0 +1,10 @@
+Name:James Michael McAdoo
+Number:20
+Position:F
+Height:6-9
+Weight:230
+Birth:1993-01-04
+Age:22
+Exp:0
+School:North Carolina
+OwingTeam:GSW

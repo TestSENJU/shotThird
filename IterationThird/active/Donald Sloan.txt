@@ -1,0 +1,10 @@
+Name:Donald Sloan
+Number:15
+Position:G
+Height:6-3
+Weight:205
+Birth:1988-01-15
+Age:27
+Exp:3
+School:Texas A
+OwingTeam:IND

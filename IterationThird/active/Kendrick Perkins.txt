@@ -1,0 +1,10 @@
+Name:Kendrick Perkins
+Number:3
+Position:C
+Height:6-10
+Weight:270
+Birth:1984-11-10
+Age:30
+Exp:11
+School:Clifton J. Ozen HS 
+OwingTeam:CLE

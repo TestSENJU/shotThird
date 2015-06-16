@@ -1,0 +1,10 @@
+Name:CJ Miles
+Number:0
+Position:G
+Height:6-6
+Weight:231
+Birth:1987-03-18
+Age:28
+Exp:9
+School:Skyline HS 
+OwingTeam:IND

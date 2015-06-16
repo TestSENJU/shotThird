@@ -1,0 +1,10 @@
+Name:Courtney Lee
+Number:5
+Position:G
+Height:6-5
+Weight:200
+Birth:1985-10-03
+Age:29
+Exp:6
+School:Western Kentucky
+OwingTeam:MEM

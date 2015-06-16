@@ -1,0 +1,10 @@
+Name:Grant Jerrett
+Number:17
+Position:F
+Height:6-10
+Weight:232
+Birth:1993-07-08
+Age:21
+Exp:0
+School:Arizona
+OwingTeam:UTA

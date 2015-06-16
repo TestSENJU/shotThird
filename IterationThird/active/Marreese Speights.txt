@@ -1,0 +1,10 @@
+Name:Marreese Speights
+Number:5
+Position:C-F
+Height:6-10
+Weight:255
+Birth:1987-08-04
+Age:27
+Exp:6
+School:Florida
+OwingTeam:GSW

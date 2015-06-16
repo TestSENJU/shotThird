@@ -1,0 +1,10 @@
+Name:Russell Westbrook
+Number:0
+Position:G
+Height:6-3
+Weight:200
+Birth:1988-11-12
+Age:26
+Exp:6
+School:California-Los Angeles
+OwingTeam:OKC

@@ -1,0 +1,10 @@
+Name:Bruno Caboclo
+Number:5
+Position:F
+Height:6-9
+Weight:205
+Birth:1995-09-21
+Age:19
+Exp:0
+School:
+OwingTeam:TOR

@@ -1,0 +1,10 @@
+Name:Reggie Bullock
+Number:25
+Position:G
+Height:6-7
+Weight:205
+Birth:1991-03-16
+Age:24
+Exp:1
+School:North Carolina
+OwingTeam:PHX

@@ -1,0 +1,10 @@
+Name:Archie Goodwin
+Number:20
+Position:G
+Height:6-5
+Weight:198
+Birth:1994-08-17
+Age:20
+Exp:1
+School:Kentucky
+OwingTeam:PHX

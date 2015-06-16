@@ -1,0 +1,10 @@
+Name:Jimmy Butler
+Number:21
+Position:G-F
+Height:6-7
+Weight:220
+Birth:1989-09-14
+Age:25
+Exp:3
+School:Marquette
+OwingTeam:CHI

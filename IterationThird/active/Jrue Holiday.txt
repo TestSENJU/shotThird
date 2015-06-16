@@ -1,0 +1,10 @@
+Name:Jrue Holiday
+Number:11
+Position:G
+Height:6-4
+Weight:205
+Birth:1990-06-12
+Age:24
+Exp:5
+School:California-Los Angeles
+OwingTeam:NOP

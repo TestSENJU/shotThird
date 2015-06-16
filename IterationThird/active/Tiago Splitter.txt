@@ -1,0 +1,10 @@
+Name:Tiago Splitter
+Number:22
+Position:C
+Height:6-11
+Weight:245
+Birth:1985-01-01
+Age:30
+Exp:4
+School:Blumenau
+OwingTeam:SAS

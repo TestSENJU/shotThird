@@ -1,7 +1,13 @@
 package VO;
 
-public class TeamHotVO {
+import java.io.Serializable;
 
+public class TeamHotVO  implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String teamname;
 	double data;
 	

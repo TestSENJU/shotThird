@@ -1,0 +1,10 @@
+Name:Shaun Livingston
+Number:34
+Position:G
+Height:6-7
+Weight:192
+Birth:1985-09-11
+Age:29
+Exp:9
+School:Peoria Central HS 
+OwingTeam:GSW

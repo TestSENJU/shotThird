@@ -1,0 +1,10 @@
+Name:Kyle Korver
+Number:26
+Position:G
+Height:6-7
+Weight:212
+Birth:1981-03-17
+Age:34
+Exp:11
+School:Creighton
+OwingTeam:ATL

@@ -1,0 +1,10 @@
+Name:James Ennis
+Number:32
+Position:F
+Height:6-7
+Weight:208
+Birth:1990-07-01
+Age:24
+Exp:0
+School:Long Beach State
+OwingTeam:MIA

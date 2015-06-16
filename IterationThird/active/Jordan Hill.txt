@@ -1,0 +1,10 @@
+Name:Jordan Hill
+Number:27
+Position:C
+Height:6-10
+Weight:235
+Birth:1987-07-27
+Age:27
+Exp:5
+School:Arizona
+OwingTeam:LAL

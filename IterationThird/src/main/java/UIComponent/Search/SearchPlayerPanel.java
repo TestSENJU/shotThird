@@ -5,6 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -12,10 +14,13 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
 
+import logic.PlayerBL;
+import logic.PlayerBL_Impl;
 import UIComponent.MyColor;
 import UIComponent.MyComboBox;
 import UIComponent.MyScrollPane;
 import UIComponent.MyTable;
+import VO.PlayerShortVO;
 
 public class SearchPlayerPanel extends JPanel{
 
@@ -32,6 +37,7 @@ public class SearchPlayerPanel extends JPanel{
 	DefaultTableModel model;
 	MyScrollPane jsp;
 	JLabel confirm;
+	private PlayerBL playerbl=PlayerBL_Impl.getInstance();
 	public SearchPlayerPanel(){
 		initComponent();
 		initPanel();
@@ -124,17 +130,24 @@ public class SearchPlayerPanel extends JPanel{
 		this.setBackground(MyColor.WHITE.getColor());
 
 	}
-	 private void addComponent() {
-		 Object[] ob=new Object[5];
-			for(int i=0;i<20;i++){
-				ob=new Object[5];
-				ob[0]=new ImageIcon("img/search.png");
-				ob[1]="<HTML><U>Lebron James<U><HTML>";
-				ob[2]="<HTML><U>NOP<U><HTML>";
-				ob[3]="A";
-				ob[4]="a";
-				model.addRow(ob);
+	private ArrayList<String[]> getStrs(ArrayList<PlayerShortVO>list){
+		ArrayList<String[]> strs=new ArrayList<String[]>();
+		
+		for(int i=0;i<list.size();i++){
+			File f=new File("img/"+list.get(i).getPlayername()+".png");
+			Object[] ob=new Object[4];
+			if(f.exists()){
+//				String ss[]=list.get(i).getPlayername();
+				
+			}else{
+				//TODO
 			}
+	
+		}
+		return strs;
+	}
+	 private void addComponent() {
+		ArrayList<PlayerShortVO>playerlist=playerbl.getPlayersSearch("", null, "", true);
 			
 		 this.add(beginner);
 		 this.add(location);

@@ -1,0 +1,10 @@
+Name:Markieff Morris
+Number:11
+Position:F
+Height:6-10
+Weight:245
+Birth:1989-09-02
+Age:25
+Exp:3
+School:Kansas
+OwingTeam:PHX

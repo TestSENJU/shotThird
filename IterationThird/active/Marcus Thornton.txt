@@ -1,0 +1,10 @@
+Name:Marcus Thornton
+Number:23
+Position:G
+Height:6-4
+Weight:205
+Birth:1987-06-05
+Age:27
+Exp:5
+School:Louisiana State
+OwingTeam:PHX

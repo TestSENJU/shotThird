@@ -1,0 +1,10 @@
+Name:Dante Exum
+Number:11
+Position:G
+Height:6-6
+Weight:190
+Birth:1995-07-13
+Age:19
+Exp:0
+School:
+OwingTeam:UTA

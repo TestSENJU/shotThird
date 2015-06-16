@@ -1,0 +1,10 @@
+Name:Channing Frye
+Number:8
+Position:F
+Height:6-11
+Weight:255
+Birth:1983-05-17
+Age:32
+Exp:8
+School:Arizona
+OwingTeam:ORL

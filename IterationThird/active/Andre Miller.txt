@@ -1,0 +1,10 @@
+Name:Andre Miller
+Number:22
+Position:G
+Height:6-2
+Weight:200
+Birth:1976-03-19
+Age:39
+Exp:15
+School:Utah
+OwingTeam:SAC

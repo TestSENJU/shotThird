@@ -1,0 +1,10 @@
+Name:Bismack Biyombo
+Number:8
+Position:C-F
+Height:6-9
+Weight:245
+Birth:1992-08-28
+Age:22
+Exp:3
+School:Lubumbashi
+OwingTeam:CHA

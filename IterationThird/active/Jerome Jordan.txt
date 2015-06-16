@@ -1,0 +1,10 @@
+Name:Jerome Jordan
+Number:9
+Position:C
+Height:7-0
+Weight:253
+Birth:1986-09-29
+Age:28
+Exp:1
+School:Tulsa
+OwingTeam:BKN

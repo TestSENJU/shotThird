@@ -1,0 +1,10 @@
+Name:Pero Antic
+Number:6
+Position:F-C
+Height:6-11
+Weight:260
+Birth:1982-07-29
+Age:32
+Exp:1
+School:Macedonia
+OwingTeam:ATL

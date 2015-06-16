@@ -1,0 +1,10 @@
+Name:Jodie Meeks
+Number:20
+Position:G
+Height:6-4
+Weight:210
+Birth:1987-08-21
+Age:27
+Exp:5
+School:Kentucky
+OwingTeam:DET

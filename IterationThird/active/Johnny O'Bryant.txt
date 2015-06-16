@@ -1,0 +1,10 @@
+Name:Johnny O'Bryant
+Number:3
+Position:F
+Height:6-9
+Weight:265
+Birth:1993-06-01
+Age:22
+Exp:0
+School:Louisiana State
+OwingTeam:MIL

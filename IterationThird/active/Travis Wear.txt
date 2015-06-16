@@ -1,0 +1,10 @@
+Name:Travis Wear
+Number:6
+Position:F
+Height:6-10
+Weight:225
+Birth:1990-09-21
+Age:24
+Exp:0
+School:California-Los Angeles
+OwingTeam:NYK

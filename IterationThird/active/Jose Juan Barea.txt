@@ -1,0 +1,10 @@
+Name:Jose Juan Barea
+Number:5
+Position:G
+Height:6-0
+Weight:185
+Birth:1984-06-26
+Age:30
+Exp:8
+School:Northeastern
+OwingTeam:DAL

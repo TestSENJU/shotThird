@@ -1,0 +1,10 @@
+Name:Quincy Miller
+Number:34
+Position:F
+Height:6-9
+Weight:210
+Birth:1992-11-18
+Age:22
+Exp:2
+School:Baylor
+OwingTeam:DET

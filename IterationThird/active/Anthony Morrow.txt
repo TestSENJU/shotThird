@@ -1,0 +1,10 @@
+Name:Anthony Morrow
+Number:2
+Position:G
+Height:6-5
+Weight:210
+Birth:1985-09-27
+Age:29
+Exp:6
+School:Georgia Tech
+OwingTeam:OKC

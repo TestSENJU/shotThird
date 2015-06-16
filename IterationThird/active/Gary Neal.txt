@@ -1,0 +1,10 @@
+Name:Gary Neal
+Number:12
+Position:G
+Height:6-4
+Weight:210
+Birth:1984-10-03
+Age:30
+Exp:4
+School:Towson
+OwingTeam:MIN

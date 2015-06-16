@@ -1,0 +1,10 @@
+Name:Kevin Durant
+Number:35
+Position:F
+Height:6-9
+Weight:240
+Birth:1988-09-29
+Age:26
+Exp:7
+School:Texas
+OwingTeam:OKC

@@ -1,0 +1,10 @@
+Name:Harrison Barnes
+Number:40
+Position:F
+Height:6-8
+Weight:225
+Birth:1992-05-30
+Age:23
+Exp:2
+School:North Carolina
+OwingTeam:GSW

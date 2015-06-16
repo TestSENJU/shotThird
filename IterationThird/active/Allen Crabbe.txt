@@ -1,0 +1,10 @@
+Name:Allen Crabbe
+Number:23
+Position:F
+Height:6-6
+Weight:210
+Birth:1992-04-09
+Age:23
+Exp:1
+School:California
+OwingTeam:POR

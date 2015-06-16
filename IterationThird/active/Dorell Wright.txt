@@ -1,0 +1,10 @@
+Name:Dorell Wright
+Number:1
+Position:F
+Height:6-9
+Weight:205
+Birth:1985-12-02
+Age:29
+Exp:10
+School:South Kent Prep 
+OwingTeam:POR

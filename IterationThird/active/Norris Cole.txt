@@ -1,0 +1,10 @@
+Name:Norris Cole
+Number:30
+Position:G
+Height:6-2
+Weight:175
+Birth:1988-10-13
+Age:26
+Exp:3
+School:Cleveland State
+OwingTeam:NOP

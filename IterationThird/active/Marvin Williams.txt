@@ -1,0 +1,10 @@
+Name:Marvin Williams
+Number:2
+Position:F
+Height:6-9
+Weight:237
+Birth:1986-06-19
+Age:28
+Exp:9
+School:North Carolina
+OwingTeam:CHA

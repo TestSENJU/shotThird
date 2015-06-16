@@ -1,0 +1,10 @@
+Name:Jamal Crawford
+Number:11
+Position:G
+Height:6-5
+Weight:200
+Birth:1980-03-20
+Age:35
+Exp:14
+School:Michigan
+OwingTeam:LAC

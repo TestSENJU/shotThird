@@ -1,0 +1,10 @@
+Name:Danilo Gallinari
+Number:8
+Position:F
+Height:6-10
+Weight:225
+Birth:1988-08-08
+Age:26
+Exp:6
+School:Sant
+OwingTeam:DEN

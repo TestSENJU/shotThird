@@ -1,0 +1,10 @@
+Name:Luke Ridnour
+Number:13
+Position:G
+Height:6-2
+Weight:175
+Birth:1981-02-13
+Age:34
+Exp:11
+School:Oregon
+OwingTeam:ORL

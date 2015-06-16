@@ -1,0 +1,10 @@
+Name:Ronnie Price
+Number:9
+Position:G
+Height:6-2
+Weight:190
+Birth:1983-06-21
+Age:31
+Exp:9
+School:Utah Valley
+OwingTeam:LAL

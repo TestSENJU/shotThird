@@ -1,0 +1,10 @@
+Name:Manu Ginobili
+Number:20
+Position:G
+Height:6-6
+Weight:205
+Birth:1977-07-28
+Age:37
+Exp:12
+School:Bahia Blanca
+OwingTeam:SAS

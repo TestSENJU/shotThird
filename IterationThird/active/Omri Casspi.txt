@@ -1,0 +1,10 @@
+Name:Omri Casspi
+Number:18
+Position:F
+Height:6-9
+Weight:225
+Birth:1988-06-22
+Age:26
+Exp:5
+School:Yavne
+OwingTeam:SAC

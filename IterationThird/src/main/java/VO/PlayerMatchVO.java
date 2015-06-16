@@ -1,6 +1,12 @@
 package VO;
 
-public class PlayerMatchVO {
+import java.io.Serializable;
+
+public class PlayerMatchVO  implements Serializable{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 String playerid;
 String playername;
 String location;

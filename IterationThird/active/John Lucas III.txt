@@ -1,0 +1,10 @@
+Name:John Lucas III
+Number:9
+Position:G
+Height:5-11
+Weight:166
+Birth:1982-11-21
+Age:32
+Exp:6
+School:Oklahoma State
+OwingTeam:DET

@@ -1,0 +1,10 @@
+Name:Dwight Powell
+Number:8
+Position:F
+Height:6-11
+Weight:240
+Birth:1991-07-20
+Age:23
+Exp:0
+School:Stanford
+OwingTeam:DAL

@@ -1,0 +1,10 @@
+Name:Jordan Hamilton
+Number:1
+Position:G-F
+Height:6-7
+Weight:220
+Birth:1990-10-06
+Age:24
+Exp:3
+School:Texas
+OwingTeam:LAC

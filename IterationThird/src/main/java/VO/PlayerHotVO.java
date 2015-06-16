@@ -1,6 +1,12 @@
 package VO;
 
-public class PlayerHotVO {
+import java.io.Serializable;
+
+public class PlayerHotVO  implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String playerid;
 	String playername;
 	String team;

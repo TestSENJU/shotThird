@@ -1,0 +1,10 @@
+Name:Ryan Kelly
+Number:4
+Position:F
+Height:6-11
+Weight:230
+Birth:1991-04-09
+Age:24
+Exp:1
+School:Duke
+OwingTeam:LAL

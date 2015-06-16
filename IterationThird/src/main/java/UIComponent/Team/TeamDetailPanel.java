@@ -15,10 +15,14 @@ import javax.swing.table.TableColumnModel;
 
 import logic.TeamBL;
 import logic.TeamBL_Impl;
+import UIComponent.JumpFrame;
 import UIComponent.MyColor;
 import UIComponent.MyScrollPane;
 import UIComponent.MyTable;
+import UIComponent.TeamNameSwitcher;
+import UIComponent.Player.PlayerDetailPanel;
 import VO.PlayerShortVO;
+import VO.TeamInfoVO;
 
 public class TeamDetailPanel extends JPanel{
 /**
@@ -37,7 +41,7 @@ MyTable playertable;
 TeamNumberAllPanel numberall;
 TeamNumberAveragePanel numberaver;
 TeamRatePanel ratepanel;
-
+private 	ArrayList<PlayerShortVO> playerlist;
 public TeamDetailPanel(String teamName){
 	this.team=teamName;
 	initComponent();
@@ -47,18 +51,12 @@ public TeamDetailPanel(String teamName){
 	setListener();
 }
 public String[][] getTeamPlayers(String teamname){
-//	ArrayList<PlayerShortVO> playerlist=bl.getTeamPlayers(this.team);
-//	String[][] data=new String[3][playerlist.size()];
-//	for(int i=0;i<playerlist.size();i++){
-//		data[0][i]="playerHead/"+playerlist.get(i).getPlayername()+".png";
-//		data[1][i]=playerlist.get(i).getPlayername();
-//		data[2][i]=playerlist.get(i).getLocation();
-//	}
-	String[][] data=new String[3][11];
-	for(int i=0;i<11;i++){
-		data[0][i]="playerHead/"+"Aaron Brooks.png";
-		data[1][i]="Aaron Brooks";
-		data[2][i]="F";
+    playerlist=bl.getTeamPlayers(this.team);
+	String[][] data=new String[3][playerlist.size()];
+	for(int i=0;i<playerlist.size();i++){
+		data[0][i]="playerHead/"+playerlist.get(i).getPlayername()+".png";
+		data[1][i]=playerlist.get(i).getPlayername();
+		data[2][i]=playerlist.get(i).getLocation();
 	}
 	return data;
 }
@@ -125,36 +123,38 @@ public void initComponent(){
 	avernumber.setFont(new Font("黑体",Font.PLAIN,16));
 	avernumber.setBounds(10,160,40,30);
 	
-	teamIcon=new JLabel(new ImageIcon("team/CHA.png"));
+	teamIcon=new JLabel(new ImageIcon("team/"+this.team+".png"));
 	teamIcon.setBounds(20, 30, 100, 100);
 	teamIcon.setBorder(new LineBorder(MyColor.GREY.getColor()));
 	
-	name=new JLabel("名字: Los Angeles Clippers");
+	TeamInfoVO info=bl.getTeamInfo(this.team);
+	
+	name=new JLabel("名字: "+info.getName());
 	name.setForeground(MyColor.BLACK.getColor());
 	name.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	name.setBounds(140, 30, 200, 20);
 	
-	shortName=new JLabel("缩写名: LAC");
+	shortName=new JLabel("缩写名: "+this.team);
 	shortName.setForeground(MyColor.BLACK.getColor());
 	shortName.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	shortName.setBounds(360, 30, 100, 20);
 	
-	chineseName=new JLabel("中文名: 俄克拉荷马雷霆队");
+	chineseName=new JLabel("中文名: "+new TeamNameSwitcher().getTeamName(this.team));
 	chineseName.setForeground(MyColor.BLACK.getColor());
 	chineseName.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	chineseName.setBounds(140, 60, 200, 20);
 	
-	league=new JLabel("联盟: 中部联盟");
+	league=new JLabel("联盟: "+info.getLeague());
 	league.setForeground(MyColor.BLACK.getColor());
 	league.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	league.setBounds(360, 60, 100, 20);
 	
-	gym=new JLabel("主场: Bankers Life Fieldhouse");
+	gym=new JLabel("主场: "+info.getGym());
 	gym.setForeground(MyColor.BLACK.getColor());
 	gym.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	gym.setBounds(140, 90, 200, 20);
 	
-	date=new JLabel("创建年份: 1999");
+	date=new JLabel("创建年份: "+info.getYear());
 	date.setForeground(MyColor.BLACK.getColor());
 	date.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	date.setBounds(360, 90, 100, 20);
@@ -230,6 +230,18 @@ public void setListener(){
 			remove(getComponentAt(0,290));
 			add(playerjsp);
 			repaint();
+		}
+	});
+	playertable.addMouseListener(new MouseAdapter(){
+		public void mouseClicked(MouseEvent e){
+			int row=playertable.getSelectedRowCount();
+			int column=playertable.getSelectedColumnCount();
+			if(row==1){
+				PlayerDetailPanel panel=new PlayerDetailPanel(playerlist.get(column));
+				JumpFrame frame=new JumpFrame(panel);
+				frame.open();
+				
+			}
 		}
 	});
 }

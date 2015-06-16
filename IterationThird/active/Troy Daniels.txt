@@ -1,0 +1,10 @@
+Name:Troy Daniels
+Number:30
+Position:G
+Height:6-4
+Weight:205
+Birth:1991-07-15
+Age:23
+Exp:1
+School:Virginia Commonwealth
+OwingTeam:CHA

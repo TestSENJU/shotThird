@@ -11,24 +11,28 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.MatteBorder;
 
-import sqlData.PlayerData;
-import sqlData.PlayerDataService;
+import logic.PlayerBL;
+import logic.PlayerBL_Impl;
 import UIComponent.AnalysisFrame;
+import UIComponent.JumpFrame;
 import UIComponent.MyColor;
+import UIComponent.TeamNameSwitcher;
+import UIComponent.Team.TeamDetailPanel;
+import VO.PlayerInfoVO;
 import VO.PlayerNumberVO;
 import VO.PlayerRateVO;
+import VO.PlayerShortVO;
 
 public class PlayerDetailPanel extends JPanel{
 /**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private PlayerDataService playerdata=PlayerData.getInstance();
-	
-private String player;
+private PlayerBL playerbl=PlayerBL_Impl.getInstance();	
+private PlayerShortVO player;
 JLabel name;
 JLabel number;
-JLabel position,height,weight,birth,age,exp,school,team;
+JLabel position,height,weight,birth,age,exp,school,team,teamname;
 JLabel photo;
 JPanel photoPanel;
 ImageIcon icon1,icon2;
@@ -39,8 +43,8 @@ PlayerAllNumberPanel playerallPanel;
 PlayerAverageNumberPanel playeraverPanel;
 PlayerRatePanel playerratepanel;
 //TODO
-public PlayerDetailPanel(String playerid){
-	this.player=playerid;
+public PlayerDetailPanel(PlayerShortVO theplayer){
+	this.player=theplayer;
 
 	initJLabel();
 	initJPanel();
@@ -49,7 +53,7 @@ public PlayerDetailPanel(String playerid){
 	setListener();
 }
 public void initJLabel(){
-	playerallPanel=new PlayerAllNumberPanel(playerdata.get);
+	playerallPanel=new PlayerAllNumberPanel(playerbl.getPlayerAllNumber(this.player.getPlayerid(), "2014-2015", 1));
 	playerallPanel.setBounds(0,290,500,290);
 	playeraverPanel=new PlayerAverageNumberPanel(new PlayerNumberVO("0"));
 	playeraverPanel.setBounds(0,290,500,290);
@@ -95,9 +99,9 @@ public void initJLabel(){
 	photo=new JLabel();
 	
 	photo.setBounds(0,0,150,180);
-	icon1=new ImageIcon("playerHead/"+player+".png");
+	icon1=new ImageIcon("playerHead/"+this.player+".png");
 	 icon1=new ImageIcon(icon1.getImage().getScaledInstance(photo.getWidth(), photo.getHeight()-60, Image.SCALE_DEFAULT));    
-	 icon2=new ImageIcon("playerBody/"+player+".png");
+	 icon2=new ImageIcon("playerBody/"+this.player+".png");
 	 icon2=new ImageIcon(icon2.getImage().getScaledInstance(photo.getWidth()-40, photo.getHeight()-25, Image.SCALE_DEFAULT));    
 	 photo.setIcon(icon1);  
 	 photo.setHorizontalAlignment(SwingConstants.CENTER);  
@@ -107,7 +111,8 @@ public void initJLabel(){
 	change1.setBounds(63, 190, 10, 10);
 	change2.setBounds(77, 190,10,10);
 	
-	String ss="名字: "+player;
+	String ss="名字: "+this.player;
+	PlayerInfoVO info=playerbl.getPlayerInfoVO(this.player.getPlayerid());
 
 	if(ss.length()<=16){
 		name=new JLabel(ss);
@@ -119,42 +124,42 @@ public void initJLabel(){
 	name.setForeground(MyColor.BLACK.getColor());
 	name.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	
-	number=new JLabel("号码: "+"A");
+	number=new JLabel("号码: "+info.getData()[0]);
 	number.setForeground(MyColor.BLACK.getColor());
 	number.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	number.setBounds(350, 60, 150, 20);
 	
-	position=new JLabel("位置: A");
+	position=new JLabel("位置: "+info.getData()[1]);
 	position.setForeground(MyColor.BLACK.getColor());
 	position.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	position.setBounds(200, 100, 150, 20);
 	
-	height=new JLabel("体重: 75kg");
+	height=new JLabel("体重: "+info.getData()[3]);
 	height.setForeground(MyColor.BLACK.getColor());
 	height.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	height.setBounds(350,100,150,20);
 	
-	weight=new JLabel("身高: 179cm");
+	weight=new JLabel("身高: "+info.getData()[2]);
 	weight.setForeground(MyColor.BLACK.getColor());
 	weight.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	weight.setBounds(200,140,150,20);
 	
-	birth=new JLabel("出生日期: 1993-12-11");
+	birth=new JLabel("出生日期: "+info.getData()[4]);
 	birth.setForeground(MyColor.BLACK.getColor());
 	birth.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	birth.setBounds(350,140,150,20);
 	
-	age=new JLabel("年龄: 21");
+	age=new JLabel("年龄: "+info.getData()[5]);
 	age.setForeground(MyColor.BLACK.getColor());
 	age.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	age.setBounds(200, 180, 150, 20);
 	
-	exp=new JLabel("球龄: 3");
+	exp=new JLabel("球龄: "+info.getData()[6]);
 	exp.setForeground(MyColor.BLACK.getColor());
 	exp.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	exp.setBounds(200, 220, 150, 20);
 	
-	String s="学校: nannauersi";
+	String s="学校: "+info.getData()[7];
 	if(s.length()<=15){
 		school=new JLabel(s);	
 				school.setBounds(350, 180, 150, 20);
@@ -165,10 +170,16 @@ public void initJLabel(){
 	school.setForeground(MyColor.BLACK.getColor());
 	school.setFont(new Font("微软雅黑",Font.PLAIN,14));
 	
-	team=new JLabel("所属球队: NOP");
+	TeamNameSwitcher switcher=new TeamNameSwitcher();
+	
+	team=new JLabel("所属球队: ");
 	team.setForeground(MyColor.BLACK.getColor());
 	team.setFont(new Font("微软雅黑",Font.PLAIN,14));
-	team.setBounds(350, 220, 150, 20);
+	team.setBounds(350, 220, 50, 20);
+	teamname=new JLabel("<HTML><U>"+switcher.getTeamName(this.player.getPlayername())+"<HTML><U>");
+	teamname.setForeground(MyColor.BLACK.getColor());
+	teamname.setFont(new Font("微软雅黑",Font.PLAIN,14));
+	teamname.setBounds(350, 220, 100, 20);
 }
 public void initJPanel(){
 
@@ -200,7 +211,7 @@ public void addComponent(){
 public void setListener(){
 	showmore.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
-			AnalysisFrame frame=new AnalysisFrame(0,player);
+			AnalysisFrame frame=new AnalysisFrame(0,player.getPlayerid());
 			frame.open();
 		}
 		public void mouseEntered(MouseEvent e){
@@ -247,36 +258,38 @@ public void setListener(){
 		}
 	});
     change1.addMouseListener(new MouseAdapter(){
-    	public void mouseEntered(MouseEvent e){
-    		
-    	}
     	public void mouseClicked(MouseEvent e){
     		photoPanel.remove(photo);
     		photo.setIcon(icon1);
     		photoPanel.add(photo);
     		photoPanel.repaint();
     	}
-    	public void mouseExited(MouseEvent e){
-    		
-    	}
     });
+    
     change2.addMouseListener(new MouseAdapter(){
-    	public void mouseEntered(MouseEvent e){
-    		
-    	}
     	public void mouseClicked(MouseEvent e){
     		photoPanel.remove(photo);
     		photo.setIcon(icon2);
     		photoPanel.add(photo);
     		photoPanel.repaint();
     	}
-    	public void mouseExited(MouseEvent e){
-    		
-    	}
     });
-	
+	teamname.addMouseListener(new MouseAdapter(){
+		public void mouseClicked(MouseEvent e){
+			TeamDetailPanel panel=new TeamDetailPanel(teamname.getText().split(">")[2].split("<")[0]);
+			JumpFrame frame=new JumpFrame(panel);
+			frame.open();
+		}
+		public void mouseEntered(MouseEvent e){
+			teamname.setForeground(MyColor.BLUE.getColor());
+
+		}
+		public void mouseExited(MouseEvent e){
+			teamname.setForeground(MyColor.BLACK.getColor());
+		}
+	});
 }
 public String getName(){
-	return this.player;
+	return this.player.getPlayerid();
 }
 }

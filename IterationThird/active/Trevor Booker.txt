@@ -1,0 +1,10 @@
+Name:Trevor Booker
+Number:33
+Position:F
+Height:6-8
+Weight:230
+Birth:1987-11-25
+Age:27
+Exp:4
+School:Clemson
+OwingTeam:UTA

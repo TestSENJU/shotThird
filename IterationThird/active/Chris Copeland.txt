@@ -1,0 +1,10 @@
+Name:Chris Copeland
+Number:22
+Position:F
+Height:6-8
+Weight:235
+Birth:1984-03-17
+Age:31
+Exp:2
+School:Colorado
+OwingTeam:IND

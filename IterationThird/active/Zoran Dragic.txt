@@ -1,0 +1,10 @@
+Name:Zoran Dragic
+Number:12
+Position:G-F
+Height:6-5
+Weight:200
+Birth:1989-06-22
+Age:25
+Exp:0
+School:
+OwingTeam:MIA

@@ -1,0 +1,10 @@
+Name:Julius Randle
+Number:30
+Position:F
+Height:6-9
+Weight:250
+Birth:1994-11-29
+Age:20
+Exp:0
+School:Kentucky
+OwingTeam:LAL

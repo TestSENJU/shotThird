@@ -1,0 +1,10 @@
+Name:Jamaal Franklin
+Number:22
+Position:G
+Height:6-5
+Weight:191
+Birth:1991-07-21
+Age:23
+Exp:1
+School:San Diego State
+OwingTeam:DEN

@@ -1,6 +1,12 @@
 package VO;
 
-public class TeamVO {
+import java.io.Serializable;
+
+public class TeamVO  implements Serializable{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 String teamname;
 String season;
 int isAfter;

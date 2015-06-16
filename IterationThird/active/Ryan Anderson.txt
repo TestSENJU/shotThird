@@ -1,0 +1,10 @@
+Name:Ryan Anderson
+Number:33
+Position:F
+Height:6-10
+Weight:240
+Birth:1988-05-06
+Age:27
+Exp:6
+School:California
+OwingTeam:NOP

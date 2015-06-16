@@ -1,0 +1,10 @@
+Name:Ian Mahinmi
+Number:28
+Position:C
+Height:6-11
+Weight:250
+Birth:1986-11-05
+Age:28
+Exp:6
+School:Rouen
+OwingTeam:IND

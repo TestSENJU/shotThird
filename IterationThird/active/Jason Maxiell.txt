@@ -1,0 +1,10 @@
+Name:Jason Maxiell
+Number:54
+Position:F
+Height:6-7
+Weight:260
+Birth:1983-02-18
+Age:32
+Exp:9
+School:Cincinnati
+OwingTeam:CHA

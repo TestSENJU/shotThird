@@ -1,0 +1,10 @@
+Name:Gary Harris
+Number:14
+Position:G
+Height:6-4
+Weight:210
+Birth:1994-09-14
+Age:20
+Exp:0
+School:Michigan State
+OwingTeam:DEN

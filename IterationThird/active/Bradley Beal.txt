@@ -1,0 +1,10 @@
+Name:Bradley Beal
+Number:3
+Position:G
+Height:6-5
+Weight:207
+Birth:1993-06-28
+Age:21
+Exp:2
+School:Florida
+OwingTeam:WAS

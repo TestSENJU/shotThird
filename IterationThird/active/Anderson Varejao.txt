@@ -1,0 +1,10 @@
+Name:Anderson Varejao
+Number:17
+Position:C
+Height:6-11
+Weight:267
+Birth:1982-09-28
+Age:32
+Exp:10
+School:Santa Teresa
+OwingTeam:CLE

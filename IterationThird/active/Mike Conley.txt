@@ -1,0 +1,10 @@
+Name:Mike Conley
+Number:11
+Position:G
+Height:6-1
+Weight:175
+Birth:1987-10-11
+Age:27
+Exp:7
+School:Ohio State
+OwingTeam:MEM

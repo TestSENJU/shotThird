@@ -1,0 +1,10 @@
+Name:Festus Ezeli
+Number:31
+Position:C
+Height:6-11
+Weight:265
+Birth:1989-10-21
+Age:25
+Exp:2
+School:Vanderbilt
+OwingTeam:GSW

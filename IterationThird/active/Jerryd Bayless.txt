@@ -1,0 +1,10 @@
+Name:Jerryd Bayless
+Number:19
+Position:G
+Height:6-3
+Weight:200
+Birth:1988-08-20
+Age:26
+Exp:6
+School:Arizona
+OwingTeam:MIL

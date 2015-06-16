@@ -1,0 +1,10 @@
+Name:Tim Hardaway Jr.
+Number:5
+Position:G
+Height:6-6
+Weight:210
+Birth:1992-03-16
+Age:23
+Exp:1
+School:Michigan
+OwingTeam:NYK

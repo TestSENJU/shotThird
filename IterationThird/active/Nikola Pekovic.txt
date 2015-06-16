@@ -1,0 +1,10 @@
+Name:Nikola Pekovic
+Number:14
+Position:C
+Height:6-11
+Weight:295
+Birth:1986-01-03
+Age:29
+Exp:4
+School:Montenegro
+OwingTeam:MIN

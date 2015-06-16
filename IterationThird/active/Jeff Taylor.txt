@@ -1,0 +1,10 @@
+Name:Jeff Taylor
+Number:44
+Position:F
+Height:6-7
+Weight:225
+Birth:1989-05-23
+Age:26
+Exp:2
+School:Vanderbilt
+OwingTeam:CHA

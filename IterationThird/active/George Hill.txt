@@ -1,0 +1,10 @@
+Name:George Hill
+Number:3
+Position:G
+Height:6-3
+Weight:188
+Birth:1986-05-04
+Age:29
+Exp:6
+School:Indiana Purdue-Indianapolis
+OwingTeam:IND

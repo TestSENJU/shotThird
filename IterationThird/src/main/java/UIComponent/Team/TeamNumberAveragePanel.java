@@ -21,7 +21,7 @@ public class TeamNumberAveragePanel extends JPanel{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	TeamBL bl=TeamBL_Impl.getInstance();
+	private TeamBL bl=TeamBL_Impl.getInstance();
 	MyComboBox season;
 	MyComboBox after;
 	JLabel choose;
@@ -36,10 +36,10 @@ public class TeamNumberAveragePanel extends JPanel{
 		this.name=teamname;
 		num=bl.getTeamAverageNumber(this.name, "2014-2015", 1);
 		
-		after=new MyComboBox(new String[]{"季前赛","常规赛","季后赛"});
+		after=new MyComboBox(new String[]{"季后赛","常规赛","季前赛"});
 		after.setBounds(120,10,80,20);
 		this.add(after);
-		season=new MyComboBox(new String[]{"2012-2013","2013-2014","2014-2015"});
+		season=new MyComboBox(new String[]{"2014-2015","2013-2014","2012-2013"});
 		season.setBounds(30,10,80,20);
 		choose=new JLabel("筛选");
 		choose.setForeground(MyColor.BLACK.getColor());

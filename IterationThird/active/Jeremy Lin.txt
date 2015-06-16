@@ -1,0 +1,10 @@
+Name:Jeremy Lin
+Number:17
+Position:G
+Height:6-3
+Weight:200
+Birth:1988-08-23
+Age:26
+Exp:4
+School:Harvard
+OwingTeam:LAL

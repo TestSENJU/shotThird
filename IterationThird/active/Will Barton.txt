@@ -1,0 +1,10 @@
+Name:Will Barton
+Number:5
+Position:G
+Height:6-6
+Weight:175
+Birth:1991-01-06
+Age:24
+Exp:2
+School:Memphis
+OwingTeam:DEN

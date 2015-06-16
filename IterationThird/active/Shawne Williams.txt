@@ -1,0 +1,10 @@
+Name:Shawne Williams
+Number:3
+Position:F
+Height:6-10
+Weight:230
+Birth:1986-02-16
+Age:29
+Exp:7
+School:Memphis
+OwingTeam:DET

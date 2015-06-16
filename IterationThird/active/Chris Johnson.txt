@@ -1,0 +1,10 @@
+Name:Chris Johnson
+Number:23
+Position:F
+Height:6-6
+Weight:201
+Birth:1990-04-29
+Age:25
+Exp:2
+School:Dayton
+OwingTeam:UTA

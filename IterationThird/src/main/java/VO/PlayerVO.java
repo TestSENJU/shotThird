@@ -1,4 +1,7 @@
 package VO;
+
+import java.io.Serializable;
+
 /**
  *  *0投篮命中数
  *1三分命中数
@@ -17,7 +20,11 @@ package VO;
  * @author Administrator
  *
  */
-public class PlayerVO {
+public class PlayerVO  implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String playerid;
 	String playername;
 	String season;

@@ -1,0 +1,10 @@
+Name:TJ Warren
+Number:12
+Position:F
+Height:6-8
+Weight:215
+Birth:1993-09-05
+Age:21
+Exp:0
+School:North Carolina State
+OwingTeam:PHX

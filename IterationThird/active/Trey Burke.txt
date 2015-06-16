@@ -1,0 +1,10 @@
+Name:Trey Burke
+Number:3
+Position:G
+Height:6-1
+Weight:185
+Birth:1992-11-12
+Age:22
+Exp:1
+School:Michigan
+OwingTeam:UTA

@@ -1,0 +1,10 @@
+Name:Tim Duncan
+Number:21
+Position:F
+Height:6-11
+Weight:250
+Birth:1976-04-25
+Age:39
+Exp:17
+School:Wake Forest
+OwingTeam:SAS

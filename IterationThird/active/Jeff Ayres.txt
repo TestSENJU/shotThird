@@ -1,0 +1,10 @@
+Name:Jeff Ayres
+Number:11
+Position:F-C
+Height:6-9
+Weight:250
+Birth:1987-04-29
+Age:28
+Exp:4
+School:Arizona State
+OwingTeam:SAS

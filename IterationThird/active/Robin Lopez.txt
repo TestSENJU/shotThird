@@ -1,0 +1,10 @@
+Name:Robin Lopez
+Number:42
+Position:C
+Height:7-0
+Weight:255
+Birth:1988-04-01
+Age:27
+Exp:6
+School:Stanford
+OwingTeam:POR

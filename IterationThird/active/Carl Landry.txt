@@ -1,0 +1,10 @@
+Name:Carl Landry
+Number:24
+Position:F
+Height:6-9
+Weight:248
+Birth:1983-09-19
+Age:31
+Exp:7
+School:Purdue
+OwingTeam:SAC

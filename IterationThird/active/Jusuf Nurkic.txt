@@ -1,0 +1,10 @@
+Name:Jusuf Nurkic
+Number:23
+Position:C
+Height:6-11
+Weight:280
+Birth:1994-08-23
+Age:20
+Exp:0
+School:
+OwingTeam:DEN

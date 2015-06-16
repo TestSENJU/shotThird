@@ -1,0 +1,10 @@
+Name:Ognjen Kuzmic
+Number:1
+Position:C
+Height:7-0
+Weight:260
+Birth:1990-05-16
+Age:25
+Exp:1
+School:
+OwingTeam:GSW

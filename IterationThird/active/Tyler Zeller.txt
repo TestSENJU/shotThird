@@ -1,0 +1,10 @@
+Name:Tyler Zeller
+Number:44
+Position:C-F
+Height:7-0
+Weight:253
+Birth:1990-01-17
+Age:25
+Exp:2
+School:North Carolina
+OwingTeam:BOS

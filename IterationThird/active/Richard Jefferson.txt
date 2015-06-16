@@ -1,0 +1,10 @@
+Name:Richard Jefferson
+Number:24
+Position:F
+Height:6-7
+Weight:234
+Birth:1980-06-21
+Age:34
+Exp:13
+School:Arizona
+OwingTeam:DAL

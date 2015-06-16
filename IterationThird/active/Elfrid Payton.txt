@@ -1,0 +1,10 @@
+Name:Elfrid Payton
+Number:4
+Position:G
+Height:6-4
+Weight:185
+Birth:1994-02-22
+Age:21
+Exp:0
+School:Louisiana-Lafayette
+OwingTeam:ORL

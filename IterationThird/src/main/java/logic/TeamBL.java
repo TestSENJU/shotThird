@@ -5,10 +5,13 @@ import java.util.ArrayList;
 import VO.MatchShortVO;
 import VO.PlayerShortVO;
 import VO.TeamHotVO;
+import VO.TeamInfoVO;
 import VO.TeamNumberVO;
 import VO.TeamRateVO;
 
 public interface TeamBL {
+	
+	public TeamInfoVO getTeamInfo(String teamname);
 	
 	public ArrayList<PlayerShortVO> getTeamPlayers(String teamname);
 	

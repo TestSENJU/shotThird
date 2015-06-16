@@ -1,0 +1,10 @@
+Name:Gerald Wallace
+Number:45
+Position:F
+Height:6-7
+Weight:220
+Birth:1982-07-23
+Age:32
+Exp:13
+School:Alabama
+OwingTeam:BOS

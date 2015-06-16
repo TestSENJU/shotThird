@@ -1,0 +1,10 @@
+Name:Serge Ibaka
+Number:9
+Position:F
+Height:6-10
+Weight:245
+Birth:1989-09-18
+Age:25
+Exp:5
+School:Brazzaville
+OwingTeam:OKC
