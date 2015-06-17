@@ -72,15 +72,30 @@ public class PlayerRatePanel extends JPanel{
 		}
 	}
 	private void initContents(PlayerRateVO vo){
-		for(int i=0;i<jls.length;i++){
-			jls[i]=new JLabel(jltexts[i]+": "+vo.getRate()[i]);
-			jls[i].setForeground(MyColor.BLACK.getColor());
-			jls[i].setFont(new Font("微软雅黑",Font.PLAIN,14));
-			if(i%2==0){
-				jls[i].setBounds(10, 50+i/2*30, 200, 30);
-			}else{
-				jls[i].setBounds(250, 50+i/2*30, 200, 30);
+		if(vo==null){
+			double []data=new double[]{0.36,0.32,0.82,12,10.2,0.35,0.40,0.3,0.1,0.5,0.1,0.1,0.097,0.09,0.7};
+			for(int i=0;i<jls.length;i++){
+				jls[i]=new JLabel(jltexts[i]+": "+data[i]);
+				jls[i].setForeground(MyColor.BLACK.getColor());
+				jls[i].setFont(new Font("微软雅黑",Font.PLAIN,14));
+				if(i%2==0){
+					jls[i].setBounds(10, 50+i/2*30, 200, 30);
+				}else{
+					jls[i].setBounds(250, 50+i/2*30, 200, 30);
+				}
+			}
+		}else{
+			for(int i=0;i<jls.length;i++){
+				jls[i]=new JLabel(jltexts[i]+": "+vo.getRate()[i]);
+				jls[i].setForeground(MyColor.BLACK.getColor());
+				jls[i].setFont(new Font("微软雅黑",Font.PLAIN,14));
+				if(i%2==0){
+					jls[i].setBounds(10, 50+i/2*30, 200, 30);
+				}else{
+					jls[i].setBounds(250, 50+i/2*30, 200, 30);
+				}
 			}
 		}
+		
 	}
 }

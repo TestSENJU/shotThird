@@ -1,6 +1,8 @@
 package VO;
 
-public class TeamMatchVO {
+import java.io.Serializable;
+
+public class TeamMatchVO implements Serializable{
 String teamname;
 String matchid;
 String season;

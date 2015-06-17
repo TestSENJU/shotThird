@@ -237,9 +237,9 @@ public void setListener(){
 			int row=playertable.getSelectedRowCount();
 			int column=playertable.getSelectedColumnCount();
 			if(row==1){
-				PlayerDetailPanel panel=new PlayerDetailPanel(playerlist.get(column));
-				JumpFrame frame=new JumpFrame(panel);
-				frame.open();
+//				PlayerDetailPanel panel=new PlayerDetailPanel(playerlist.get(column));
+//				JumpFrame frame=new JumpFrame(panel);
+//				frame.open();
 				
 			}
 		}

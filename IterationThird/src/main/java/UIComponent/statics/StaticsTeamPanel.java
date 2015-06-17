@@ -95,14 +95,12 @@ public void initComponent(){
 	ratejsp.setBounds(0, 175, 900, 445);
 	 TableColumnModel tcm2 = rateTable.getColumnModel();
      tcm2.getColumn(0).setPreferredWidth(120);
-	for(int i=0;i<30;i++){
-		ratemodel.addRow(new String[]{"as","1","1","1","1","1","1","1","1","1","1"});
-	}
+	
 	
 	num=new JLabel("数字");
 	num.setForeground(MyColor.BLUE.getColor());
 	num.setOpaque(true);
-	num.setBackground(MyColor.WHITE.getColor());
+	num.setBackground(MyColor.LIGHTBLUE.getColor());
 	num.setHorizontalAlignment(SwingConstants.CENTER);
 	num.setFont(new Font("黑体",Font.PLAIN,14));
 	num.setBounds(10, 130, 40, 40);
@@ -110,7 +108,7 @@ public void initComponent(){
 	rate=new JLabel("%");
 	rate.setForeground(MyColor.BLUE.getColor());
 	rate.setOpaque(true);
-	rate.setBackground(MyColor.LIGHTBLUE.getColor());
+	rate.setBackground(MyColor.WHITE.getColor());
 	rate.setHorizontalAlignment(SwingConstants.CENTER);
 	rate.setFont(new Font("黑体",Font.PLAIN,14));
 	rate.setBounds(60, 130, 40, 40);

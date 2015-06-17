@@ -1,7 +1,10 @@
 package logic;
 
 import java.util.ArrayList;
+import java.util.Set;
 
+import Data.PlayerData;
+import Data.PlayerData_Impl;
 import VO.PlayerHotVO;
 import VO.PlayerInfoVO;
 import VO.PlayerMatchVO;
@@ -10,6 +13,7 @@ import VO.PlayerRateVO;
 import VO.PlayerShortVO;
 
 public class PlayerBL_Impl implements PlayerBL{
+	private PlayerData data=new PlayerData_Impl();
 	  private static PlayerBL_Impl instance ;
 	    private PlayerBL_Impl() {
 
@@ -23,18 +27,29 @@ public class PlayerBL_Impl implements PlayerBL{
 		@Override
 		public ArrayList<PlayerShortVO> getPlayerList() {
 			// TODO Auto-generated method stub
-			return null;
+			java.util.Hashtable<String,PlayerShortVO> list=data.getPlayerShort();
+					data.getPlayerShort();
+			Set<String>keys=list.keySet();
+			ArrayList<PlayerShortVO>playerlist=new ArrayList<PlayerShortVO>();
+			for(String key:keys){
+				playerlist.add(list.get(key));
+			}
+			return playerlist;
 		}
+		
 		@Override
 		public PlayerInfoVO getPlayerInfoVO(String playerid) {
 			// TODO Auto-generated method stub
-			return null;
+			java.util.Hashtable<String,PlayerInfoVO> list=data.getPlayerinfo();
+			return list.get(playerid);
 		}
 		@Override
 		public PlayerNumberVO getPlayerAverageNumber(String playerid,
 				String season, int isAfter) {
 			// TODO Auto-generated method stub
-			return null;
+			java.util.Hashtable<String,PlayerNumberVO> list=data.getPlayerAverNumber();
+			
+			return list.get(playerid);
 		}
 		@Override
 		public PlayerNumberVO getPlayerAllNumber(String playerid,

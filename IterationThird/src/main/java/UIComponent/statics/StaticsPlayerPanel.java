@@ -3,6 +3,7 @@ package UIComponent.statics;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -10,10 +11,13 @@ import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 
+import logic.BLimp;
 import UIComponent.MyColor;
 import UIComponent.MyComboBox;
 import UIComponent.MyScrollPane;
 import UIComponent.MyTable;
+import VO.PlayerNumberVO;
+import VO.PlayerRateVO;
 
 public class StaticsPlayerPanel extends JPanel{
 
@@ -114,9 +118,13 @@ public void initComponent(){
 	};
 	numTable=new MyTable(nummodel,0,1);
 	numjsp=new MyScrollPane(numTable);
-	for(int i=0;i<30;i++){
-		nummodel.addRow(new String[]{"1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1"});
+//	"名字","所属球队","参赛场数","先发场数","篮板","助攻","在场时间"
+//	,"进攻数","防守数","抢断数","盖帽数","失误数","犯规数","得分"
+	ArrayList<PlayerNumberVO>list=new BLimp().getPlayerNumberVos();
+	for(int i=0;i<list.size();i++){
+		nummodel.addRow(list.get(i).getFakeData());
 	}
+	numTable.setRowHeight(40);
 	numjsp.setBounds(0, 175, 900, 445);
 	 TableColumnModel tcm1 = numTable.getColumnModel();
      tcm1.getColumn(0).setPreferredWidth(120);
@@ -133,6 +141,10 @@ public void initComponent(){
 	rateTable=new MyTable(ratemodel,0,-1);
 	ratejsp=new MyScrollPane(rateTable);
 	ratejsp.setBounds(0, 175, 900, 445);
+//	ArrayList<PlayerRateVO>lis1t=new BLimp().getPlayerRateVOs();
+//	for(int i=0;i<lis1t.size();i++){
+//		nummodel.addRow(lis1t.get(i).getFakeData());
+//	}
 	 TableColumnModel tcm2 = rateTable.getColumnModel();
      tcm2.getColumn(0).setPreferredWidth(120);
      tcm2.getColumn(1).setPreferredWidth(40);
@@ -143,14 +155,12 @@ public void initComponent(){
   for(int i=10;i<16;i++){
 	     tcm2.getColumn(i).setPreferredWidth(40);
   }
-	for(int i=0;i<30;i++){
-		ratemodel.addRow(new String[]{"1","1","1","1","1","1","1","1","1","1"});
-	}
+	
 	
 	num=new JLabel("数字");
 	num.setForeground(MyColor.BLUE.getColor());
 	num.setOpaque(true);
-	num.setBackground(MyColor.WHITE.getColor());
+	num.setBackground(MyColor.LIGHTBLUE.getColor());
 	num.setHorizontalAlignment(SwingConstants.CENTER);
 	num.setFont(new Font("黑体",Font.PLAIN,14));
 	num.setBounds(10, 130, 40, 40);
@@ -158,7 +168,7 @@ public void initComponent(){
 	rate=new JLabel("%");
 	rate.setForeground(MyColor.BLUE.getColor());
 	rate.setOpaque(true);
-	rate.setBackground(MyColor.LIGHTBLUE.getColor());
+	rate.setBackground(MyColor.WHITE.getColor());
 	rate.setHorizontalAlignment(SwingConstants.CENTER);
 	rate.setFont(new Font("黑体",Font.PLAIN,14));
 	rate.setBounds(60, 130, 40, 40);
@@ -240,7 +250,7 @@ public void addComponent(){
 	this.add(league);
 	this.add(loca);
 	this.add(location);
-	this.add(ratejsp);
+	this.add(numjsp);
 	this.add(rate);
 	this.add(num);
 	this.add(aver);

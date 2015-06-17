@@ -69,13 +69,27 @@ public class PlayerAverageNumberPanel extends JPanel{
 		this.add(season);
 	}
 	private void initContents(PlayerNumberVO vo){
-		jls[0]=new JLabel(jltexts[0]+": "+vo.getNumber());
-		jls[1]=new JLabel(jltexts[0]+": "+vo.getTime());
-		jls[2]=new JLabel(jltexts[0]+": "+vo.getFirstnum());
-		
-		for(int i=3;i<jls.length;i++){
-			jls[i]=new JLabel(jltexts[i]+": "+num.getData()[i-3]);
+		if(vo==null){
+			double []data=new double[]{0.65,7,4,1.5,5.5,0.5,1.10,2,3.07,19};
+			//"参赛场数","上场时间","先发场数","篮板数","助攻数",
+//			"进攻篮板数","防守篮板数","抢断数","盖帽数","失误数","犯规数","得分"
+			jls[0]=new JLabel(jltexts[0]+": "+"1");
+			jls[1]=new JLabel(jltexts[0]+": "+"23:02");
+			jls[2]=new JLabel(jltexts[0]+": "+"1");
+			
+			for(int i=3;i<jls.length;i++){
+				jls[i]=new JLabel(jltexts[i]+": "+data[i-3]);
+			}
+		}else{
+			jls[0]=new JLabel(jltexts[0]+": "+vo.getNumber());
+			jls[1]=new JLabel(jltexts[0]+": "+vo.getTime());
+			jls[2]=new JLabel(jltexts[0]+": "+vo.getFirstnum());
+			
+			for(int i=3;i<jls.length;i++){
+				jls[i]=new JLabel(jltexts[i]+": "+num.getData()[i-3]);
+			}
 		}
+	
 		for(int i=0;i<jls.length;i++){
 			
 			jls[i].setForeground(MyColor.BLACK.getColor());

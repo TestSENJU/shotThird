@@ -30,6 +30,7 @@ public class PlayerDetailPanel extends JPanel{
 	private static final long serialVersionUID = 1L;
 private PlayerBL playerbl=PlayerBL_Impl.getInstance();	
 private PlayerShortVO player;
+private String playername;
 JLabel name;
 JLabel number;
 JLabel position,height,weight,birth,age,exp,school,team,teamname;
@@ -43,8 +44,9 @@ PlayerAllNumberPanel playerallPanel;
 PlayerAverageNumberPanel playeraverPanel;
 PlayerRatePanel playerratepanel;
 //TODO
-public PlayerDetailPanel(PlayerShortVO theplayer){
+public PlayerDetailPanel(PlayerShortVO theplayer,String str){
 	this.player=theplayer;
+	this.playername=str;
 
 	initJLabel();
 	initJPanel();
@@ -55,9 +57,9 @@ public PlayerDetailPanel(PlayerShortVO theplayer){
 public void initJLabel(){
 	playerallPanel=new PlayerAllNumberPanel(playerbl.getPlayerAllNumber(this.player.getPlayername(), "2014-2015", 1));
 	playerallPanel.setBounds(0,290,500,290);
-	playeraverPanel=new PlayerAverageNumberPanel(new PlayerNumberVO("0"));
+	playeraverPanel=new PlayerAverageNumberPanel(null);
 	playeraverPanel.setBounds(0,290,500,290);
-	playerratepanel=new PlayerRatePanel(new PlayerRateVO("0"));
+	playerratepanel=new PlayerRatePanel(null);
 	playerratepanel.setBounds(0,290,500,290);
 		
 	avernumber=new JLabel("场均");
@@ -111,7 +113,7 @@ public void initJLabel(){
 	change1.setBounds(63, 190, 10, 10);
 	change2.setBounds(77, 190,10,10);
 	
-	String ss="名字: "+this.player;
+	String ss="名字: "+this.playername;
 	PlayerInfoVO info=playerbl.getPlayerInfoVO(this.player.getPlayername());
 
 	if(ss.length()<=16){

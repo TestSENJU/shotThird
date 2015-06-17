@@ -539,18 +539,23 @@ private int isAfter(String season,String time){
 }
 private void ReadPlayer(){
 	String filenames[]=new File("active/").list();
-	
 	try {
 		for(int i=0;i<filenames.length;i++){
 			@SuppressWarnings("resource")
 			BufferedReader br=new BufferedReader(
-					new InputStreamReader(new FileInputStream("active/Aaron Brooks.txt"),"UTF-8"));
+					new InputStreamReader(new FileInputStream("active/"+filenames[i]),"UTF-8"));
 			String str=br.readLine();
 			
 			PlayerInfoVO info=new PlayerInfoVO(str.split(":")[1].trim());
 			String data[]=new String[8];
 			for(int j=0;j<8;j++){
-				data[j]=br.readLine().split(":")[1].trim();
+				String s=br.readLine();
+				String ss[]=s.split(":");
+				if(ss.length==2){
+					data[j]=ss[1];
+				}else{
+				data[j]=" ";	
+				}
 			}
 			info.setData(data);
 			String team=br.readLine().split(":")[1].trim();

@@ -123,7 +123,7 @@ public void addComponent(){
 	title.add(miniButton);
 	title.add(closeButton);
 
-   west.add(first);
+//   west.add(first);
    west.add(player);
    west.add(team);
    west.add(match);

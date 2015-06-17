@@ -39,6 +39,15 @@ public TeamRateVO(String name){
 		this.rate[i]=0.0;
 	}
 }
+
+public TeamRateVO(String teamname, String season, int isAfter, double[] rate) {
+	super();
+	this.teamname = teamname;
+	this.season = season;
+	this.isAfter = isAfter;
+	this.rate = rate;
+}
+
 public String getTeamname() {
 	return teamname;
 }

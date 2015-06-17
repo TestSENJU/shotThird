@@ -10,6 +10,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.MatteBorder;
 
+import UIComponent.Player.PlayerAnalysisPanel;
+
 public class JumpFrame extends JFrame{
 
 	/**
@@ -52,6 +54,10 @@ public class JumpFrame extends JFrame{
 		this.setUndecorated(true);
 		this.setVisible(false);
 		
+	}
+	public static void main(String args[]){
+		JumpFrame frame=new JumpFrame(new PlayerAnalysisPanel("a"));
+		frame.open();
 	}
 	public void setListener(){
 		closeButton.addMouseListener(new MouseAdapter(){

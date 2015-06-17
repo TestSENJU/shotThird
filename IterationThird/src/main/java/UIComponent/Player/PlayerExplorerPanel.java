@@ -1,6 +1,7 @@
 package UIComponent.Player;
 
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
@@ -117,7 +118,8 @@ public class PlayerExplorerPanel extends JPanel{
 		list=playerdata.getPlayerList();
 		for(int i=0;i<list.size();i++){
 			Object[] ob=new Object[4];
-			ob[0]=new ImageIcon("playerHead/"+list.get(i).getPlayername()+".png");
+			ob[0]=new ImageIcon("playerHead/"+list.get(i).getPlayername()+".png")
+			.getImage().getScaledInstance(100, 50, Image.SCALE_DEFAULT);
 			ob[1]=list.get(i).getPlayername();
 			ob[2]=list.get(i).getTeam();
 			ob[3]=list.get(i).getLocation();
@@ -131,7 +133,7 @@ public class PlayerExplorerPanel extends JPanel{
 				int row=table.getSelectedRow();
 				String playerName=(String)table.getValueAt(row, 1);
 				if(getComponentAt(550,275)instanceof JLabel){
-					PlayerDetailPanel panel=new PlayerDetailPanel(list.get(row));
+					PlayerDetailPanel panel=new PlayerDetailPanel(list.get(row),playerName);
 					panel.setBounds(400,0,500, 580);
 					remove(tip);
 					add(panel);
@@ -139,7 +141,7 @@ public class PlayerExplorerPanel extends JPanel{
 				}else if(getComponentAt(550,275)instanceof PlayerDetailPanel){
 					PlayerDetailPanel player=(PlayerDetailPanel)getComponentAt(550,275);
 					if(!playerName.equals(player.getName())){
-						PlayerDetailPanel panel=new PlayerDetailPanel(list.get(row));
+						PlayerDetailPanel panel=new PlayerDetailPanel(list.get(row),playerName);
 						panel.setBounds(400,0,500, 580);
 						remove(getComponentAt(550,275));
 						add(panel);

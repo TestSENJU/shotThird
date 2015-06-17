@@ -41,6 +41,16 @@ public class TeamNumberVO implements Serializable {
 			this.data[i]=0.0;
 		}
 	}
+	
+	public TeamNumberVO(String teamname, int number, String season,
+			int isAfter, double[] data) {
+
+		this.teamname = teamname;
+		this.number = number;
+		this.season = season;
+		this.isAfter = isAfter;
+		this.data = data;
+	}
 	public int getNumber() {
 		return number;
 	}

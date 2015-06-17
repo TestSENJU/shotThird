@@ -63,6 +63,28 @@ public PlayerNumberVO(String id){
 		this.data[i]=0.0;
 	}
 }
+public PlayerNumberVO(String playername, String time, int number, int firstnum,
+		String team, String season, double[] data) {
+	super();
+	this.playername = playername;
+	this.time = time;
+	this.number = number;
+	this.firstnum = firstnum;
+	this.team = team;
+	this.season = season;
+	this.data = data;
+}
+public String[] getFakeData(){
+	String data[]=new String[13];
+	data[0]=this.playername;
+	data[1]=this.team;
+	data[2]=this.number+"";
+	data[3]=this.firstnum+"";
+	for(int i=0;i<this.data.length;i++){
+		data[i+4]=this.data[i]+"";
+	}
+	return data;
+}
 public void addTime(String t){
 	String ss[]=new String[2];
 	String s[]=new String[2];
@@ -124,7 +146,7 @@ public String getTime() {
 	return time;
 }
 public int getNumber() {
-	return number;
+	return this.number;
 }
 public int getFirstnum() {
 	return firstnum;

@@ -41,6 +41,14 @@ public PlayerRateVO(String id){
 	
 }
 
+public PlayerRateVO(String playername, String season, int isAfter, double[] rate) {
+	super();
+	this.playername = playername;
+	this.season = season;
+	this.isAfter = isAfter;
+	this.rate = rate;
+}
+
 public int getIsAfter() {
 	return isAfter;
 }

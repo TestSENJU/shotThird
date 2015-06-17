@@ -145,9 +145,9 @@ public void setListener(){
 			int row=winnertable.getSelectedRowCount();
 			int column=winnertable.getSelectedColumnCount();
 			if(column==0){
-				PlayerDetailPanel panel=new PlayerDetailPanel(playerbl.getPlayerShortByID(match.getLoserlist().get(row).getPlayername()));
-				JumpFrame frame=new JumpFrame(panel);
-				frame.open();
+//				PlayerDetailPanel panel=new PlayerDetailPanel(playerbl.getPlayerShortByID(match.getLoserlist().get(row).getPlayername()));
+//				JumpFrame frame=new JumpFrame(panel);
+//				frame.open();
 			}
 		}
 	});
@@ -156,9 +156,9 @@ public void setListener(){
 			int row=winnertable.getSelectedRowCount();
 			int column=winnertable.getSelectedColumnCount();
 			if(column==0){
-				PlayerDetailPanel panel=new PlayerDetailPanel(playerbl.getPlayerShortByID(match.getWinnerlist().get(row).getPlayername()));
-				JumpFrame frame=new JumpFrame(panel);
-				frame.open();
+//				PlayerDetailPanel panel=new PlayerDetailPanel(playerbl.getPlayerShortByID(match.getWinnerlist().get(row).getPlayername()));
+//				JumpFrame frame=new JumpFrame(panel);
+//				frame.open();
 			}
 		}
 	});
