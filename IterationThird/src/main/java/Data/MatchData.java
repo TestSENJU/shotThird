@@ -1,18 +1,16 @@
 package Data;
 
-import java.util.ArrayList;
+import java.util.Hashtable;
 
 import VO.MatchShortVO;
 import VO.MatchVO;
 
 public interface MatchData {
 
-	public MatchVO getMatchByID(String matchid);
+	public Hashtable<String,MatchVO> getMatchvotable();
 	
-	public ArrayList<MatchShortVO> getAllMatches(int num);
+	public Hashtable<String,MatchShortVO> getMatchShorttable();
 	
-	public ArrayList<MatchShortVO> getMatchByPlayer(String playername);
 	
-	public ArrayList<MatchShortVO> getMatchByConditions(String teamname,String time,String season,int after);
 
 }

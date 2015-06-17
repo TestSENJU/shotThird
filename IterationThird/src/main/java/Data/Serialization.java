@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -76,30 +77,30 @@ public void writeteamrate(){
 	FileReadAndWriteBuffer.write_to_file(teamratepath, teamratetable);
 }
 
-static  Hashtable<String,TeamHotVO> teamseasontable=new Hashtable<String,TeamHotVO>();
+static  Hashtable<String,Double> teamseasontable=new Hashtable<String,Double>();
 private static String teamseasonpath="Serialization/matchfolder/teamseason";
 public void writeteamseason(){
 	FileReadAndWriteBuffer.write_to_file(teamseasonpath, teamseasontable);}
-
+//team_season_isafter_option
 static  Hashtable<String,TeamHotVO> teamaverseasontable=new Hashtable<String,TeamHotVO>();
 private static String teamaverseasonpath="Serialization/matchfolder/teamaverseason";
 public void writeteamaverseason(){
 	FileReadAndWriteBuffer.write_to_file(teamaverseasonpath, teamaverseasontable);
 }
-
+//team_season_isafter_option
 static  Hashtable<String,TeamHotVO> teamseasonmediantable=new Hashtable<String,TeamHotVO>();
 private static String teamseasonmedianpath="Serialization/matchfolder/teamseasonmedian";
 public void writeteamseasonmedian(){
 	FileReadAndWriteBuffer.write_to_file(teamseasonmedianpath, teamseasonmediantable);
 }
-
-static  Hashtable<String,TeamHotVO> teammediantable=new Hashtable<String,TeamHotVO>();
+//season_isafter_option
+static  Hashtable<String,Double> teammediantable=new Hashtable<String,Double>();
 private static String teammedianpath="Serialization/matchfolder/teammedian";
 public void writeteammedian(){
 	FileReadAndWriteBuffer.write_to_file(teammedianpath, teammediantable);
 }
 
-static  Hashtable<String,TeamHotVO> teamvariancetable=new Hashtable<String,TeamHotVO>();
+static  Hashtable<String,Double> teamvariancetable=new Hashtable<String,Double>();
 private static String teamvariancepath="Serialization/matchfolder/teamvariance";
 public void writeteamvariance(){
 	FileReadAndWriteBuffer.write_to_file(teamvariancepath, teamvariancetable);}
@@ -190,6 +191,8 @@ public Serialization(){
 	ReadMatch();
 	ReadPlayer();
 	ReadTeam();
+	getTeamHotVOs();
+	getPlayerHotVOs();
 	
 	writeplayermedianseason();
 	writeplayervariseason();
@@ -275,6 +278,34 @@ private void ReadMatch(){
 		e.printStackTrace();
 	}
 	
+}
+
+private  void getTeamHotVOs(){
+	//TODO
+	//team_season_isafter_option//season_isafter_option
+	Set<String> keys=teammatchtable.keySet();
+	double alldata[]=new double[15];
+	for(String key:keys){
+		ArrayList<TeamMatchVO>list=teammatchtable.get(key);
+		double [] teamdata=new double[15];
+		for(int i=0;i<list.size();i++){
+			double data[]=list.get(i).getData();
+			for(int j=0;j<data.length;j++){
+				teamdata[j]+=data[j];
+			}
+		}
+		for(int i=0;i<teamdata.length;i++){
+			alldata[i]+=teamdata[i]/list.size();
+		}
+	}
+	for(int i=0;i<alldata.length;i++){
+		TeamHotVO vo=new TeamHotVO("season");
+		vo.setData(alldata[i]/keys.size());
+//		teamseasontable.put(key, arg1)
+	}
+}
+private void getPlayerHotVOs(){
+	//TODO
 }
 private void getMatchData(ArrayList<String[]> teamlist1,ArrayList<String[]>teamlist2,String team1,String team2,String season,String time){
 	int after=isAfter(season,time);
