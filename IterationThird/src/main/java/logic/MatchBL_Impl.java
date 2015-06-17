@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import VO.MatchShortVO;
 import VO.MatchVO;
-import VO.PlayerShortVO;
 /**
  * at the moment this class is still a stub
  * @author Administrator
@@ -41,11 +40,6 @@ public class MatchBL_Impl implements MatchBL{
 		public ArrayList<String> getScoreListByShortVO(MatchShortVO match) {
 			// TODO Auto-generated method stub
 //			ArrayList<String>list=data.getMatchDetail(match.getMatchid()).getScorelist();
-			return null;
-		}
-		@Override
-		public ArrayList<PlayerShortVO> getMatchKing(String matchid, int option) {
-			// TODO Auto-generated method stub
 			return null;
 		}
 		@Override

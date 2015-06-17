@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import VO.MatchShortVO;
 import VO.MatchVO;
-import VO.PlayerShortVO;
 
 public interface MatchBL {
     public MatchVO getMatchByID(String matchid);
