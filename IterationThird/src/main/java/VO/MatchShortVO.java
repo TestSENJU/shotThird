@@ -17,22 +17,15 @@ String season;
 int isAfter;
 public MatchShortVO(String id){
 	this.matchid=id;
-	this.winner="";
+	String strs[]=id.split("_");
+
+	this.season=strs[0];
+	this.time=strs[1];
 	this.loser="";
+	this.isAfter=Integer.parseInt(strs[4]);
+	this.winner="";
 	this.score="";
-	this.time="";
-	this.season="";
-	this.isAfter=-1;
 }
-//public MatchShortVO(MatchShortPO po){
-//	this.matchid=po.getMatchid();
-//	this.winner=po.getWinner();
-//	this.loser=po.getLoser();
-//	this.score=po.getScore();
-//	this.time=po.getTime();
-//	this.season=po.getSeason();
-//	this.score=po.getScore();
-//}
 public String getWinner() {
 	return winner;
 }
@@ -54,20 +47,11 @@ public void setScore(String score) {
 public String getTime() {
 	return time;
 }
-public void setTime(String time) {
-	this.time = time;
-}
 public String getSeason() {
 	return season;
 }
-public void setSeason(String season) {
-	this.season = season;
-}
 public int getIsAfter() {
 	return isAfter;
-}
-public void setIsAfter(int isAfter) {
-	this.isAfter = isAfter;
 }
 public String getMatchid() {
 	return matchid;

@@ -20,10 +20,11 @@ ArrayList<PlayerMatchVO> loserlist=new ArrayList<PlayerMatchVO>();
 
 public MatchVO(String id){
 	this.matchid=id;
-	this.season="";
-	this.time="";
+	String strs[]=id.split("_");
+	this.season=strs[0];
+	this.time=strs[1];
 	this.loser="";
-	this.isAfter=-1;
+	this.isAfter=Integer.parseInt(strs[4]);
 	this.winner="";
 	this.score="";
 }
@@ -40,16 +41,8 @@ public String getSeason() {
 	return season;
 }
 
-public void setSeason(String season) {
-	this.season = season;
-}
-
 public String getTime() {
 	return time;
-}
-
-public void setTime(String time) {
-	this.time = time;
 }
 
 public String getLoser() {
@@ -70,10 +63,6 @@ public void setWinner(String winner) {
 
 public int getIsAfter() {
 	return isAfter;
-}
-
-public void setIsAfter(int isAfter) {
-	this.isAfter = isAfter;
 }
 
 public ArrayList<PlayerMatchVO> getWinnerlist() {

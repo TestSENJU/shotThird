@@ -67,34 +67,40 @@ public void addTime(String t){
 	String ss[]=new String[2];
 	String s[]=new String[2];
 		if(t.charAt(0)<='9'&&t.charAt(0)>='0'){
-			ss=t.split(":");			
+			ss=t.split(":");		
+			 s=this.time.split(":");		
+				int seconds=0;
+				if(ss[1].equals(" "))return;
+				seconds=Integer.parseInt(ss[1].trim())+Integer.parseInt(s[1].trim());
+				if(seconds<60){
+					this.time=(Integer.parseInt(ss[0].trim())+Integer.parseInt(s[0].trim())+"")
+							+":"	+(seconds+"");	
+				}else{
+					this.time=(Integer.parseInt(ss[0].trim())+Integer.parseInt(s[0].trim())+1+"")
+							+":"	+(seconds-60+"");	
+				}
 		}
-	  s=this.time.split(":");		
-		int seconds=0;
-		seconds=Integer.parseInt(ss[1])+Integer.parseInt(s[1]);
-		if(seconds<60){
-			this.time=(Integer.parseInt(ss[0])+Integer.parseInt(s[0])+"")
-					+":"	+(seconds+"");	
-		}else{
-			this.time=(Integer.parseInt(ss[0])+Integer.parseInt(s[0])+1+"")
-					+":"	+(seconds-60+"");	
-		}
+	 
 }
-public void addAverTime(String t){String ss[]=new String[2];
+public void addAverTime(String t){
+	String ss[]=new String[2];
 String s[]=new String[2];
 if(t.charAt(0)<='9'&&t.charAt(0)>='0'){
-	ss=t.split(":");			
+	ss=t.split(":");	
+	s=this.time.split(":");		
+	int seconds=0;
+
+	if(ss[1].equals(" "))return;
+	seconds=(Integer.parseInt(ss[1].trim())*this.number+Integer.parseInt(s[1].trim()))/(this.number+1);
+	if(seconds<60){
+		this.time=((Integer.parseInt(ss[1].trim())*this.number+Integer.parseInt(s[1].trim()))/(this.number+1)+"")
+				+":"	+(seconds+"");	
+	}else{
+		this.time=((Integer.parseInt(ss[1].trim())*this.number+Integer.parseInt(s[1].trim()))/(this.number+1)+1+"")
+				+":"	+(seconds-60+"");	
+	}
 }
-s=this.time.split(":");		
-int seconds=0;
-seconds=(Integer.parseInt(ss[1])*this.number+Integer.parseInt(s[1]))/(this.number+1);
-if(seconds<60){
-	this.time=((Integer.parseInt(ss[1])*this.number+Integer.parseInt(s[1]))/(this.number+1)+"")
-			+":"	+(seconds+"");	
-}else{
-	this.time=((Integer.parseInt(ss[1])*this.number+Integer.parseInt(s[1]))/(this.number+1)+1+"")
-			+":"	+(seconds-60+"");	
-}}
+}
 public void addAverData(double[]d){
 	for(int i=0;i<this.data.length;i++){
 		this.data[i]=(this.data[i]*this.number+d[i])/(this.number+1);
