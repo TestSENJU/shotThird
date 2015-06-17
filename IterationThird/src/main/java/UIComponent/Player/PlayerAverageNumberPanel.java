@@ -47,7 +47,7 @@ public class PlayerAverageNumberPanel extends JPanel{
 		choose.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				int i=after.getSelectedIndex();
-				PlayerNumberVO newNumber=bl.getPlayerAverageNumber(num.getPlayerid(), (String)season.getSelectedItem(), i);
+				PlayerNumberVO newNumber=bl.getPlayerAverageNumber(num.getPlayername(), (String)season.getSelectedItem(), i);
 				initContents(newNumber);
 				repaint();
 			}

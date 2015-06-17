@@ -49,7 +49,7 @@ public class PlayerRatePanel extends JPanel{
 		choose.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				int i=after.getSelectedIndex();
-				PlayerRateVO newNumber=bl.getPlayerRate(num.getPlayerid(), (String)season.getSelectedItem(), i);
+				PlayerRateVO newNumber=bl.getPlayerRate(num.getPlayername(), (String)season.getSelectedItem(), i);
 				initContents(newNumber);
 				repaint();
 			}

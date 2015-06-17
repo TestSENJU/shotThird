@@ -122,7 +122,7 @@ public class PlayerExplorerPanel extends JPanel{
 			ob[2]=list.get(i).getTeam();
 			ob[3]=list.get(i).getLocation();
 			model.addRow(ob);
-			idlist.add(list.get(i).getPlayerid());
+			idlist.add(list.get(i).getPlayername());
 		}
 	}
 	public void setListener(){

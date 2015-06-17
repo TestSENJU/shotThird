@@ -34,14 +34,12 @@ public class MatchDetailPanel extends JPanel{
 private String id;
 JLabel winnerIcon,loserIcon;
 JLabel winnerName,loserName;
-MyTable scoreTable;
 JLabel winner,loser;
 //JLabel king;
 MyScrollPane winnerjsp;
 MyScrollPane loserjsp;
 MyTable winnertable;
 MyTable losertable;
-MatchKingPanel kingpanel;
 JLabel name1,name2;
 private MatchVO match;
 private MatchBL bl=MatchBL_Impl.getInstance();
@@ -71,9 +69,6 @@ public String[][] getStringArrays(ArrayList<PlayerMatchVO>list){
 }
 public void initComponent(){
 	
-	kingpanel=new MatchKingPanel(this.id);
-	kingpanel.setBounds(0,290,500,290);
-	
 	winnertable=new MyTable(getStringArrays(this.match.getWinnerlist()),new String[]{"姓名","位置","时间","投篮命中数","三分命中数","三分出手数","罚球命中数","罚球出手数","进攻篮板数"
 		,"防守篮板数","总篮板数","助攻数","抢断数","盖帽数","失误数","犯规数","得分"},-1,0);
 	winnerjsp=new MyScrollPane(winnertable);
@@ -99,14 +94,6 @@ public void initComponent(){
 	loser.setHorizontalAlignment(SwingConstants.CENTER);
 	loser.setFont(new Font("黑体",Font.PLAIN,16));
 	loser.setBounds(65,240,50,30);
-	
-//	king=new JLabel("数据王");
-//	king.setForeground(MyColor.BLUE.getColor());
-//	king.setOpaque(true);
-//	king.setBackground(MyColor.WHITE.getColor());
-//	king.setHorizontalAlignment(SwingConstants.CENTER);
-//	king.setFont(new Font("黑体",Font.PLAIN,16));
-//	king.setBounds(120,240,50,30);
 	
 	winnerIcon=new JLabel(new ImageIcon("team/"+this.match.getWinner()+".png"));
 	winnerIcon.setBounds(80,20,100,100);
@@ -138,30 +125,6 @@ public void initComponent(){
 	name2.setBounds(320,130,120,30);
 	name2.setHorizontalAlignment(SwingConstants.CENTER);
 	
-	ArrayList<String> scorelist=this.match.getScorelist();
-	String[][]data=new String[scorelist.size()][1];
-	String []head=new String[scorelist.size()+1];
-	if(scorelist.size()==4){
-		head=new String[]{"总比分","第一节","第二节","第三节","第四节"};
-	}else if(scorelist.size()==5){
-		head=new String[]{"总比分","第一节","第二节","第三节","第四节","第五节"};
-	}
-	for(int i=0;i<scorelist.size();i++){
-		data[i][0]=scorelist.get(i);
-	}
-	scoreTable=new MyTable(data,head,-1,-1){
-		/**
-		 * 
-		 */
-		private static final long serialVersionUID = 1L;
-
-		public boolean isCellEditable(int row,int column){
-			return false;
-		}
-	};
-	scoreTable.getTableHeader().setBounds(70, 180, 375, 20);
-	scoreTable.setBounds(70, 200, 400, 50);
-	
 }
 public void initPanel(){
 	this.setBackground(MyColor.WHITE.getColor());
@@ -171,13 +134,10 @@ public void initPanel(){
 public void addComponent(){
 	this.add(winner);
 	this.add(loser);
-//	this.add(king);
 	this.add(winnerIcon);
 	this.add(loserIcon);
 	this.add(winnerName);
 	this.add(loserName);
-	this.add(scoreTable.getTableHeader());
-	this.add(scoreTable);
 }
 public void setListener(){
 	losertable.addMouseListener(new MouseAdapter(){
@@ -185,7 +145,7 @@ public void setListener(){
 			int row=winnertable.getSelectedRowCount();
 			int column=winnertable.getSelectedColumnCount();
 			if(column==0){
-				PlayerDetailPanel panel=new PlayerDetailPanel(playerbl.getPlayerShortByID(match.getLoserlist().get(row).getPlayerid()));
+				PlayerDetailPanel panel=new PlayerDetailPanel(playerbl.getPlayerShortByID(match.getLoserlist().get(row).getPlayername()));
 				JumpFrame frame=new JumpFrame(panel);
 				frame.open();
 			}
@@ -196,7 +156,7 @@ public void setListener(){
 			int row=winnertable.getSelectedRowCount();
 			int column=winnertable.getSelectedColumnCount();
 			if(column==0){
-				PlayerDetailPanel panel=new PlayerDetailPanel(playerbl.getPlayerShortByID(match.getWinnerlist().get(row).getPlayerid()));
+				PlayerDetailPanel panel=new PlayerDetailPanel(playerbl.getPlayerShortByID(match.getWinnerlist().get(row).getPlayername()));
 				JumpFrame frame=new JumpFrame(panel);
 				frame.open();
 			}
@@ -228,18 +188,6 @@ public void setListener(){
 			repaint();
 		}
 	});
-//	king.addMouseListener(new MouseAdapter(){
-//		public void mouseClicked(MouseEvent e){
-//			winner.setBackground(MyColor.WHITE.getColor());
-//			loser.setBackground(MyColor.WHITE.getColor());
-//			king.setBackground(MyColor.WHITE.getColor());
-//			
-//			king.setBackground(MyColor.LIGHTBLUE.getColor());
-//			remove(getComponentAt(0,290));
-//			add(kingpanel);
-//			repaint();
-//		}
-//	});
 	name1.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
 			TeamDetailPanel jp=new TeamDetailPanel(match.getWinner());

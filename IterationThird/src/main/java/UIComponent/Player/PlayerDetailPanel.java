@@ -53,7 +53,7 @@ public PlayerDetailPanel(PlayerShortVO theplayer){
 	setListener();
 }
 public void initJLabel(){
-	playerallPanel=new PlayerAllNumberPanel(playerbl.getPlayerAllNumber(this.player.getPlayerid(), "2014-2015", 1));
+	playerallPanel=new PlayerAllNumberPanel(playerbl.getPlayerAllNumber(this.player.getPlayername(), "2014-2015", 1));
 	playerallPanel.setBounds(0,290,500,290);
 	playeraverPanel=new PlayerAverageNumberPanel(new PlayerNumberVO("0"));
 	playeraverPanel.setBounds(0,290,500,290);
@@ -112,7 +112,7 @@ public void initJLabel(){
 	change2.setBounds(77, 190,10,10);
 	
 	String ss="名字: "+this.player;
-	PlayerInfoVO info=playerbl.getPlayerInfoVO(this.player.getPlayerid());
+	PlayerInfoVO info=playerbl.getPlayerInfoVO(this.player.getPlayername());
 
 	if(ss.length()<=16){
 		name=new JLabel(ss);
@@ -211,7 +211,7 @@ public void addComponent(){
 public void setListener(){
 	showmore.addMouseListener(new MouseAdapter(){
 		public void mouseClicked(MouseEvent e){
-			AnalysisFrame frame=new AnalysisFrame(0,player.getPlayerid());
+			AnalysisFrame frame=new AnalysisFrame(0,player.getPlayername());
 			frame.open();
 		}
 		public void mouseEntered(MouseEvent e){
@@ -290,6 +290,6 @@ public void setListener(){
 	});
 }
 public String getName(){
-	return this.player.getPlayerid();
+	return this.player.getPlayername();
 }
 }
